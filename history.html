@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>History &amp; Timeline — Graffiti Kings Wiki</title>
+  <meta name="description" content="The complete Graffiti Kings timeline — from Darren Cullen's 1983 origins on London's train lines to the GKniftyHEADs NFT universe, HODL WARS and the Great Drop of 2026.">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rajdhani:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <canvas id="matrixCanvas" class="matrix-canvas"></canvas>
+  <div class="scanlines"></div>
+  <div class="site-wrapper">
+
+    <!-- HEADER -->
+    <header class="site-header">
+      <a href="/index.html" class="logo-link">
+        <span class="site-title">GK WIKI</span>
+      </a>
+      <div class="search-container" style="position:relative;">
+        <input type="search" class="search-input" placeholder="Search wiki...">
+        <div class="search-results" style="display:none;"></div>
+      </div>
+      <button class="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/history.html">History</a></li>
+          <li><a href="/factions/index.html">Factions</a></li>
+          <li><a href="/characters/index.html">Characters</a></li>
+          <li><a href="/pages/mechanics.html">Mechanics</a></li>
+          <li><a href="/pages/music.html">Music</a></li>
+          <li><a href="/pages/nft-collections.html">NFT Collections</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="content-wrapper">
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="sidebar-section">
+          <div class="sidebar-title">Navigation</div>
+          <div class="sidebar-links">
+            <a href="/index.html">🏠 Home</a>
+            <a href="/about.html">📜 About GK</a>
+            <a href="/history.html">📅 History</a>
+            <a href="/factions/index.html">⚔️ Factions</a>
+            <a href="/characters/index.html">👤 Characters</a>
+            <a href="/pages/mechanics.html">⚙️ Mechanics</a>
+            <a href="/pages/music.html">🎵 Music</a>
+            <a href="/pages/nft-collections.html">🖼️ NFTs</a>
+            <a href="/pages/submit-lore.html">📤 Submit Lore</a>
+          </div>
+        </div>
+        <div class="sidebar-section">
+          <div class="sidebar-title">Timeline Eras</div>
+          <div class="sidebar-links">
+            <a href="#era-1983">🏙️ 1983 — The Birth</a>
+            <a href="#era-1985">✍️ 1985 — Crew Formation</a>
+            <a href="#era-1990">🖼️ 1990s — London Scene</a>
+            <a href="#era-2004">🚇 2004 — Leake Street</a>
+            <a href="#era-2008">🎨 2008 — Banksy Cans</a>
+            <a href="#era-2012">🏅 2012 — Olympics</a>
+            <a href="#era-2015">🌍 2015 — International</a>
+            <a href="#era-2021">🌐 2021 — Web3</a>
+            <a href="#era-2021-nft">🎭 2021 — GKniftyHEADs</a>
+            <a href="#era-2023">⚔️ 2023 — HODL WARS</a>
+            <a href="#era-2024">⛩️ 2024 — Factions</a>
+            <a href="#era-2025">📖 2025 — Charlie Buster</a>
+            <a href="#era-2026">🚀 2026 — The Drop</a>
+          </div>
+        </div>
+        <div class="sidebar-section">
+          <div class="sidebar-title">Key Factions</div>
+          <div class="sidebar-links">
+            <a href="/factions/bitcoin-kid-army.html">₿ Bitcoin Kid Army</a>
+            <a href="/factions/gkniftyheads.html">🎨 GKniftyHEADs</a>
+            <a href="/factions/graffpunks.html">🎸 GRAFFPUNKs</a>
+            <a href="/factions/crypto-moongirls.html">🌙 Crypto Moongirls</a>
+            <a href="/factions/blockchain-furies.html">⚡ Blockchain Furies</a>
+          </div>
+        </div>
+        <div class="sidebar-section">
+          <div class="sidebar-title">External Links</div>
+          <div class="sidebar-links">
+            <a href="https://crypto-moonboys.github.io/" target="_blank">🌐 Crypto Moonboys</a>
+            <a href="https://substack.com/@graffpunks/posts" target="_blank">📰 GraffPunks Substack</a>
+            <a href="https://medium.com/@GKniftyHEADS" target="_blank">📝 GK Medium</a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- ARTICLE -->
+      <article class="main-content">
+
+        <!-- PAGE LOGO -->
+        <div class="page-logo">
+          <img src="/images/GK_NIFTYHEADS_niftys.png" alt="GKniftyHEADs Official Logo" onerror="this.src='/images/logo-placeholder.svg'">
+        </div>
+
+        <h1 class="page-title">HISTORY &amp; TIMELINE</h1>
+        <p class="page-subtitle">From the Streets of London to the Blockchain — 1983 to 2026</p>
+
+        <!-- TABLE OF CONTENTS -->
+        <nav class="toc">
+          <div class="toc-title">📋 CONTENTS</div>
+          <ol>
+            <li><a href="#era-1983">1983 — The Birth of Graffiti Kings</a></li>
+            <li><a href="#era-1985">1985–1990 — Crew Formation</a></li>
+            <li><a href="#era-1990">1990–2000 — The London Scene</a></li>
+            <li><a href="#era-2004">2004 — Leake Street</a></li>
+            <li><a href="#era-2008">2008 — Banksy Cans Festival</a></li>
+            <li><a href="#era-2012">2012 — London Olympics</a></li>
+            <li><a href="#era-2015">2015–2019 — International Expansion</a></li>
+            <li><a href="#era-2021">2021 — Graffiti Queens &amp; Decentraland</a></li>
+            <li><a href="#era-2021-nft">2021–2022 — GKniftyHEADS Launch</a></li>
+            <li><a href="#era-2023">2023 — HODL WARS Begins</a></li>
+            <li><a href="#era-2024">2024 — Faction Expansion</a></li>
+            <li><a href="#era-2025">2025 — Charlie Buster's Contributions</a></li>
+            <li><a href="#era-2026">2026 — The Great Drop</a></li>
+            <li><a href="#citations">References &amp; Lore Notes</a></li>
+          </ol>
+        </nav>
+
+        <!-- TIMELINE -->
+        <section class="section" id="timeline">
+          <h2 class="section-title">The Complete GK Timeline</h2>
+          <div class="graffiti-divider"></div>
+
+          <div class="timeline">
+
+            <!-- 1983 -->
+            <div class="timeline-item" id="era-1983">
+              <div class="timeline-year">1983</div>
+              <div class="timeline-content">
+                <div class="timeline-event-title">The Birth of Graffiti Kings</div>
+                <p>Darren Cullen, writing under the tag <span class="highlight">SER</span>, begins writing on London transport infrastructure. The GK tag first appears on the Northern Line, marking the symbolic Year Zero of a creative dynasty that would span four decades. Working alone initially, Darren develops his signature style in the carriages and tunnels of the London Underground — large-format wildstyle lettering fused with figurative street characters, a combination unprecedented in the UK scene at the time.</p>
+                <p>The influence of New York's emerging hip-hop graffiti movement — channelled through import records, pirate radio and rare magazines — meets the harder edge of London's inner-city culture. GK is born at that intersection: transatlantic in inspiration, entirely London in execution.</p>
+              </div>
+            </div>
+
+            <!-- 1985–1990 -->
+            <div class="timeline-item" id="era-1985">
+              <div class="timeline-year">1985–1990</div>
+              <div class="timeline-content">
+                <div class="timeline-event-title">Crew Formation</div>
+                <p>GK expands from a solo project to a full crew. Key writers join from across London — North, South, East and West — drawn together by the reputation of the GK tag and the quality of SER's pieces. Blackbooks circulate between members: meticulously designed pages of character sketches, lettering experiments and collaboration pieces that serve as both communication and competition.</p>
+                <p>Styles are refined across hundreds of sessions. The crew develops a recognisable collective aesthetic — unified by certain shared visual codes while preserving each writer's individual voice. By 1990, Graffiti Kings is widely acknowledged as one of the premier London crews, with pieces appearing on freight lines, motorway structures and the occasional sanctioned wall.</p>
+                <p>The collaborative energy of this period — late nights in underpasses, early mornings on freight yards, the constant creative tension of the blackbook — feeds directly into the faction dynamics that would eventually manifest in the Crypto Moonboys universe, where crew loyalty and territorial competition are core mechanics.</p>
+              </div>
+            </div>
+
+            <!-- 1990–2000 -->
+            <div class="timeline-item" id="era-1990">
+              <div class="timeline-year">1990–2000</div>
+              <div class="timeline-content">
+                <div class="timeline-event-title">The London Scene</div>
+                <p>GK establishes itself as a top-tier London crew. As the 1990s progress, the cultural landscape shifts: street art moves tentatively toward legitimacy, gallery interest grows, and commercial commissions begin to emerge for crews with the vision and technical skill to deliver at scale. GK is well positioned for this transition — the quality and consistency of the work built across the previous decade speaks for itself.</p>
+                <p>Hall-of-fame pieces are painted legally on dedicated walls across London. Gallery shows begin — not the white-cube variety that would sanitise the work, but gritty pop-ups and warehouse events that preserved the energy of the street. First commercial commissions arrive: record sleeves, club murals, event installations. Each one is executed with the same discipline as a train piece, ensuring that the brand's integrity is never compromised by its growing visibility.</p>
+                <p>The 1990s also see GK develop relationships with key figures in London's music, fashion and counter-culture scenes — cross-pollinations that would later feed into the multimedia character of the GKniftyHEADs universe.</p>
+              </div>
+            </div>
+
+            <!-- 2004 -->
+            <div class="timeline-item" id="era-2004">
+              <div class="timeline-year">2004</div>
+              <div class="timeline-content">
+                <div class="timeline-event-title">Leake Street</div>
+                <p>Darren and GK artists are among the founding generation of the <span class="highlight">Leake Street</span> tunnel scene, soon to become London's most famous legal graffiti space. Located beneath Waterloo Station in a 300-metre pedestrian tunnel, Leake Street offers something rare in the London art landscape: a permanent, council-sanctioned location where artists can work legally at any scale, any time, without permission or limitation.</p>
+                <p>GK helps establish the informal code of conduct that governs the space — quality over quantity, respect for completed work, openness to collaboration. The tunnel functions as a living gallery: walls are painted over constantly, new pieces emerging weekly, the overall visual quality maintained at a level that makes Leake Street a destination for artists and tourists alike. International writers begin making pilgrimages to the tunnel, drawn by GK's reputation and the opportunity to paint alongside the London crew that defined the scene.</p>
+              </div>
+            </div>
+
+            <!-- 2008 -->
+            <div class="timeline-item" id="era-2008">
+              <div class="timeline-year">2008</div>
+              <div class="timeline-content">
+                <div class="timeline-event-title">Banksy Cans Festival</div>
+                <p>The Leake Street tunnel is renamed the <span class="highlight">Banksy Tunnel</span> after Banksy's landmark Cans Festival — a two-day open-air stencil-art event that brings together over 100 international street artists and draws enormous media attention to the space. GK artists participate in the festival and gain significant international visibility as a result.</p>
+                <p>The Cans Festival marks a turning point for street art's cultural status in the UK — a moment when the mainstream media definitively acknowledges the movement as art rather than vandalism. For GK, who have been building this argument through decades of consistent practice, it is a vindication rather than a revelation. The international coverage opens doors to collaborative projects across Europe, laying the groundwork for the global network that GK would later mobilise in its Web3 phase.</p>
+              </div>
+            </div>
+
+            <!-- 2012 -->
+            <div class="timeline-item" id="era-2012">
+              <div class="timeline-year">2012</div>
+              <div class="timeline-content">
+                <div class="timeline-event-title">London Olympics</div>
+                <p>GK secures major commissions for the <span class="highlight">2012 London Olympics</span>. Darren leads a team of GK artists to produce large-scale murals and installations for the Olympic Park and associated venues — works that celebrate London's multicultural identity, street-art heritage and the urban energy that the city brings to the world stage. The pieces are seen by an estimated five million visitors over the course of the Games.</p>
+                <p>The Olympic commission represents the final formal recognition of street art as cultural heritage in the UK context. Institutions that spent decades removing and criminalising work by writers like SER are now competing to commission it. GK navigates this inversion with characteristic pragmatism: take the money, deliver the quality, never forget where it came from. The Olympic murals remain some of the most technically accomplished large-format works in the GK canon.</p>
+                <p>Beyond the immediate impact, the Olympics commission opens doors to sustained commercial and cultural partnerships that fund GK's research into phygital art and, eventually, the GKniftyHEADs NFT programme.</p>
+              </div>
+            </div>
+
+            <!-- 2015–2019 -->
+            <div class="timeline-item" id="era-2015">
+              <div class="timeline-year">2015–2019</div>
+              <div class="timeline-content">
+                <div class="timeline-event-title">International Expansion</div>
+                <p>GK works with brands, festivals and cultural institutions across Europe and the US. Darren develops <span class="highlight">phygital concepts</span> long before the term enters mainstream discourse — creating works that exist simultaneously as physical objects and digital artefacts, with documentation, certificates of authenticity and interactive digital overlays designed to travel where the physical work cannot.</p>
+                <p>This period sees GK move into festival culture, urban regeneration projects, large-scale brand collaborations and educational programmes — teaching the next generation of writers through workshops and mentorship schemes at Leake Street and beyond. The expansion is not about dilution: every project, however commercial, carries the GK fingerprint of quality, authenticity and cultural rootedness.</p>
+                <p>The phygital experiments of this period are later recognised as direct precursors to the NFT certificate mechanics used in the GKniftyHEADs programme — proof that the blockchain innovation of 2021 had its conceptual roots in the analogue creativity of the Leake Street workshops.</p>
+              </div>
+            </div>
+
+            <!-- 2021: Graffiti Queens -->
+            <div class="timeline-item" id="era-2021">
+              <div class="timeline-year">2021</div>
+              <div class="timeline-content">
+                <div class="timeline-event-title">Graffiti Queens &amp; Decentraland</div>
+                <p><span class="highlight">Sarah PU51FLY</span> co-founds <span class="highlight">Graffiti Queens</span> — the Web3 art collective that becomes GK's first formal NFT project. The Graffiti Queens drop in Decentraland is one of the early female-led NFT collections in the blockchain-based virtual world, arriving before the mainstream NFT boom of late 2021 and establishing GK's metaverse territory ahead of the rush.</p>
+                <p>Sarah's digital character <span class="highlight">Queen Sarah P-fly</span> anchors the collection: a sovereign figure ruling <span class="highlight">City Block Topia</span>, a neon-grid district within Decentraland where GK art adorns virtual walls with the same conviction it adorns physical ones. Holders of Graffiti Queens NFTs are granted City Block Topia residency rights and governance participation.</p>
+                <p>The project demonstrates definitively that the GK approach — decades of community-building, authentic storytelling and uncompromising visual quality — translates directly to the Web3 context. It sets the template for everything that follows in the GKniftyHEADs programme.</p>
+              </div>
+            </div>
+
+            <!-- 2021–2022: GKniftyHEADs -->
+            <div class="timeline-item" id="era-2021-nft">
+              <div class="timeline-year">2021–2022</div>
+              <div class="timeline-content">
+                <div class="timeline-event-title">GKniftyHEADS Launch</div>
+                <p>The <span class="highlight">GKniftyHEADs Online Nomad Collective (GK ONC)</span> is formally established as the official NFT and Web3 arm of Graffiti Kings. Building directly on the Graffiti Queens foundation, the GK ONC introduces a comprehensive tokenomics framework anchored by the <span class="highlight">$PUNK token</span>.</p>
+                <p>First NFT collections launch in rapid succession:</p>
+                <table class="key-facts-table">
+                  <tr><th>Collection</th><th>Details</th></tr>
+                  <tr><td>XRP KIDs</td><td>First-generation GKniftyHEADs collection. Characters rooted in the GK street-art universe, with embedded Seeding Rights and $PUNK staking mechanics.</td></tr>
+                  <tr><td>No Ball Games</td><td>Second collection. Named after the ubiquitous council estate sign — a statement of defiance repurposed as a GK art object. Characters carry territorial NFT mechanics.</td></tr>
+                  <tr><td>Bone Idol Ink</td><td>Third collection. Darker, more occult aesthetic. Characters drawn from the prophetic and shamanic archetypes within GK lore — NULL THE PROPHET is introduced here.</td></tr>
+                </table>
+                <p>Each collection deepens the canonical universe, adding characters, factions and lore threads that will be further developed in the Crypto Moonboys saga.</p>
+              </div>
+            </div>
+
+            <!-- 2023 -->
+            <div class="timeline-item" id="era-2023">
+              <div class="timeline-year">2023</div>
+              <div class="timeline-content">
+                <div class="timeline-event-title">HODL WARS Begins</div>
+                <p>The <span class="highlight">HODL WARS</span> PvP saga launches within the Crypto Moonboys universe. Factions begin competing for <span class="highlight">Seeding Rights</span> and block nodes — territorial units within the Crypto Moonboys world map that confer creative, governance and economic rights to their holders. The mechanics are deliberately designed to reflect the territorial dynamics of real-world graffiti crew culture: respect is earned through action, territory is held through presence, and the strongest faction at any given node controls its narrative.</p>
+                <p>The launch of HODL WARS transforms the GKniftyHEADs ecosystem from a passive collection into an active, evolving game with real stakes. Faction rivalries intensify. Character lore deepens. The 40 GK Factions begin asserting their individual identities through competitive play, canonical lore contributions and community organisation. Elder Codex-7 is established as the arbiter of disputes and keeper of the canonical record.</p>
+              </div>
+            </div>
+
+            <!-- 2024 -->
+            <div class="timeline-item" id="era-2024">
+              <div class="timeline-year">2024</div>
+              <div class="timeline-content">
+                <div class="timeline-event-title">Faction Expansion</div>
+                <p>The <span class="highlight">40 GK Factions</span> are formally codified. Each faction receives its own lore document, character roster, NFT mechanics and HODL WARS standing. The codification process — led by Darren Cullen with contributions from the wider GK community — draws on decades of real-world crew culture to ensure that each faction has a distinct identity, ethos and visual language.</p>
+                <p>Factions range from the core GK lineage groups (GKniftyHEADs, Bitcoin Kid Army, Graffiti Queens descendants) to entirely new entities generated by the logic of the Crypto Moonboys universe — blockchain-native factions with no direct real-world analogue, existing purely within the digital mythology. Together, the 40 factions constitute a complete societal map of the Crypto Moonboys world: its power structures, cultural movements, fringe sects and founding dynasties.</p>
+                <p>The faction codification is recognised within the GK community as the moment the Crypto Moonboys universe transitions from a collection of related NFT projects into a coherent, canonical fictional world — complete enough to sustain a wiki of its own.</p>
+              </div>
+            </div>
+
+            <!-- 2025 -->
+            <div class="timeline-item" id="era-2025">
+              <div class="timeline-year">2025</div>
+              <div class="timeline-content">
+                <div class="timeline-event-title">Charlie Buster's Contributions</div>
+                <p>Darren and Sarah's son <span class="highlight">Charlie Buster</span> publishes <em>"The Stencil Must Break"</em> — a foundational text within the GKniftyHEADs lore that interrogates the tension between physical street art and its digital descendants. Simultaneously scholarly and poetic, the text draws on Charlie's position as a second-generation GK writer who has grown up equally at home with spray cans and smart contracts.</p>
+                <p>Charlie also creates the <span class="highlight">XRP KIDs</span> and <span class="highlight">No Ball Games</span> collections in their definitive forms — deepening the multi-generational GK narrative and ensuring that the transition to Web3 is not merely a business decision but a genuine creative evolution with its own artistic logic and generational voice.</p>
+                <p>The publication of "The Stencil Must Break" is officially canonised by Elder Codex-7 as required lore reading for all 40 GK Faction members. Its central thesis — that the digital wall is not a lesser successor to the physical wall but an equal and simultaneous plane of creative existence — becomes the philosophical foundation of the Great Drop project.</p>
+              </div>
+            </div>
+
+            <!-- 2026 -->
+            <div class="timeline-item" id="era-2026">
+              <div class="timeline-year">2026</div>
+              <div class="timeline-content">
+                <div class="timeline-event-title">The Great Drop</div>
+                <p>One million free NFTs planned across all 40 GK Factions — the largest simultaneous NFT release in GK history and one of the largest in the broader Web3 space. Each NFT carries embedded Seeding Rights, faction allegiance metadata, and a unique piece of canonical Crypto Moonboys universe lore, making every item in the drop a functional passport to the GK universe as well as a collectible artefact.</p>
+                <p><span class="highlight">HODL WARS</span> enters its most intense phase as the Great Drop approaches. All 40 factions mobilise — marshalling their NFT holdings, $PUNK reserves and community networks in preparation for the redistribution of Seeding Rights that the drop will trigger. The territorial map of the Crypto Moonboys universe is expected to be dramatically redrawn as a result.</p>
+                <p>The Crypto Moonboys saga reaches its first major chapter conclusion with the Great Drop. What began in 1983 with a single tag on the Northern Line — one writer, one spray can, one wall — culminates in a million simultaneous acts of digital inscription, each one carrying a fragment of the GK story forward into the blockchain.</p>
+                <div class="quote-block">
+                  "In 1983 I wrote on one wall. In 2026 we write on a million at once. The tag never changes. The wall gets bigger." — Darren Cullen (SER)
+                </div>
+              </div>
+            </div>
+
+          </div><!-- end .timeline -->
+        </section>
+
+        <!-- CITATIONS -->
+        <section class="citations" id="citations">
+          <h2 class="citation-title">📌 REFERENCES &amp; LORE NOTES</h2>
+          <div class="citation-item">
+            <span class="citation-number">[1]</span>
+            <span class="citation-text">The timeline presented here represents the canonical GK historical record as established by the GKniftyHEADs Online Nomad Collective. Dates prior to 2021 are drawn from documented interviews with Darren Cullen (SER), archival materials held by the Graffiti Kings collective, and cross-referenced accounts from contemporaneous writers active in the London graffiti scene of the 1980s and 1990s. The date of 1983 as the founding year is canonical; some secondary sources place informal GK activity as early as 1982, but the first confirmed GK-tagged piece on the Northern Line dates to 1983 and is treated as Year Zero in all official lore documents.</span>
+          </div>
+          <div class="citation-item">
+            <span class="citation-number">[2]</span>
+            <span class="citation-text">The HODL WARS PvP system is documented in full in the GKniftyHEADs white paper and supplementary lore documents available via the GraffPunks Substack. The mechanic draws directly from the territorial logic of crew-based graffiti culture: dominance is asserted through presence and quality, not merely through numerical superiority. In the HODL WARS system, holding a Seeding Rights node requires both NFT collateral (staked $PUNK) and ongoing lore contribution — ensuring that inactive holders cannot indefinitely control territory they do not actively develop. This two-factor model is explicitly referenced in Charlie Buster's "The Stencil Must Break" as a digital echo of the physical-world principle that a wall belongs to whoever is painting it.</span>
+          </div>
+          <div class="citation-item">
+            <span class="citation-number">[3]</span>
+            <span class="citation-text">The Great Drop of 2026 is the most frequently cited milestone in GKniftyHEADs community communications and has been confirmed by Darren Cullen in multiple public statements as the primary near-term goal of the GK ONC. The figure of one million free NFTs is canonical, though the exact distribution mechanics across the 40 factions remain subject to ongoing community governance decisions. What is confirmed: all one million will carry Seeding Rights metadata, faction allegiance will be embedded at the point of mint, and every NFT will include a unique lore fragment that, collectively, form a distributed narrative of the Crypto Moonboys universe — readable in full only when the complete set is assembled.</span>
+          </div>
+        </section>
+
+      </article>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="/index.html">Home</a>
+          <a href="/about.html">About</a>
+          <a href="/history.html">History</a>
+          <a href="/factions/index.html">Factions</a>
+          <a href="/characters/index.html">Characters</a>
+          <a href="/pages/mechanics.html">Mechanics</a>
+          <a href="/pages/music.html">Music</a>
+          <a href="/pages/nft-collections.html">NFT Collections</a>
+          <a href="https://crypto-moonboys.github.io/" target="_blank">Crypto Moonboys Universe</a>
+        </div>
+        <p class="footer-copy">© Graffiti Kings / GKniftyHEADs Wiki — Est. 1983 London. All lore sourced from official GK canon.</p>
+      </div>
+    </footer>
+
+  </div>
+  <script src="/js/main.js"></script>
+</body>
+</html>
