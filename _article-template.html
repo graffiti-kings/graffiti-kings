@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARTICLE TITLE — Graffiti Kings Wiki</title>
+  <meta name="description" content="ARTICLE DESCRIPTION">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rajdhani:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <canvas id="matrixCanvas" class="matrix-canvas"></canvas>
+  <div class="scanlines"></div>
+  <div class="site-wrapper">
+
+    <!-- HEADER -->
+    <header class="site-header">
+      <a href="../index.html" class="logo-link">
+        <span class="site-title">GK WIKI</span>
+      </a>
+      <div class="search-container" style="position:relative;">
+        <input type="search" class="search-input" placeholder="Search wiki...">
+        <div class="search-results" style="display:none;"></div>
+      </div>
+      <button class="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../history.html">History</a></li>
+          <li><a href="../factions/index.html">Factions</a></li>
+          <li><a href="../characters/index.html">Characters</a></li>
+          <li><a href="../pages/mechanics.html">Mechanics</a></li>
+          <li><a href="../pages/music.html">Music</a></li>
+          <li><a href="../pages/nft-collections.html">NFT Collections</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="content-wrapper">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="sidebar-section">
+          <div class="sidebar-title">Navigation</div>
+          <div class="sidebar-links">
+            <a href="../index.html">🏠 Home</a>
+            <a href="../about.html">📜 About GK</a>
+            <a href="../history.html">📅 History</a>
+            <a href="../factions/index.html">⚔️ Factions</a>
+            <a href="../characters/index.html">👤 Characters</a>
+            <a href="../pages/mechanics.html">⚙️ Mechanics</a>
+            <a href="../pages/music.html">🎵 Music</a>
+            <a href="../pages/nft-collections.html">🖼️ NFTs</a>
+            <a href="../pages/submit-lore.html">📤 Submit Lore</a>
+          </div>
+        </div>
+        <div class="sidebar-section">
+          <div class="sidebar-title">Key Factions</div>
+          <div class="sidebar-links">
+            <a href="../factions/bitcoin-kid-army.html">₿ Bitcoin Kid Army</a>
+            <a href="../factions/gkniftyheads.html">🎨 GKniftyHEADs</a>
+            <a href="../factions/graffpunks.html">🎸 GRAFFPUNKs</a>
+            <a href="../factions/crypto-moongirls.html">🌙 Crypto Moongirls</a>
+            <a href="../factions/blockchain-furies.html">⚡ Blockchain Furies</a>
+          </div>
+        </div>
+        <div class="sidebar-section">
+          <div class="sidebar-title">External Links</div>
+          <div class="sidebar-links">
+            <a href="https://crypto-moonboys.github.io/" target="_blank">🌐 Crypto Moonboys</a>
+            <a href="https://substack.com/@graffpunks/posts" target="_blank">📰 GraffPunks Substack</a>
+            <a href="https://medium.com/@GKniftyHEADS" target="_blank">📝 GK Medium</a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- ARTICLE -->
+      <article class="main-content">
+        <!-- CENTRED LOGO under page title -->
+        <div class="page-logo">
+          <img src="../images/GK_NIFTYHEADS_niftys.png" alt="GKniftyHEADs Official Logo" onerror="this.src='../images/logo-placeholder.svg'">
+        </div>
+
+        <h1 class="page-title">ARTICLE TITLE</h1>
+        <p class="page-subtitle">ARTICLE SUBTITLE</p>
+
+        <!-- INFOBOX -->
+        <div class="infobox">
+          <div class="infobox-title">INFOBOX TITLE</div>
+          <div class="infobox-image" style="background: linear-gradient(135deg, #1a1a2e, #16213e); display:flex; align-items:center; justify-content:center; height:200px; font-size:4rem;">🎨</div>
+          <table>
+            <tr><td>Field</td><td>Value</td></tr>
+          </table>
+        </div>
+
+        <!-- TABLE OF CONTENTS -->
+        <nav class="toc">
+          <div class="toc-title">📋 CONTENTS</div>
+          <ol>
+            <li><a href="#section-1">Section 1</a></li>
+            <li><a href="#section-2">Section 2</a></li>
+          </ol>
+        </nav>
+
+        <!-- CONTENT SECTIONS -->
+        <section class="section" id="section-1">
+          <h2 class="section-title">Section 1</h2>
+          <div class="graffiti-divider"></div>
+          <p>Content here.</p>
+        </section>
+
+        <section class="section" id="section-2">
+          <h2 class="section-title">Section 2</h2>
+          <div class="graffiti-divider"></div>
+          <p>Content here.</p>
+        </section>
+
+        <!-- VISUAL GALLERY -->
+        <section class="section" id="gallery">
+          <h2 class="section-title">Visual Gallery</h2>
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <div class="gallery-item-placeholder">🎨</div>
+              <div class="gallery-caption">Caption — [Image Placeholder — to be replaced]</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CITATIONS -->
+        <section class="citations" id="citations">
+          <h2 class="citation-title">📌 REFERENCES & LORE NOTES</h2>
+          <div class="citation-item">
+            <span class="citation-number">[1]</span>
+            <span class="citation-text">Citation text with extended lore context...</span>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="../index.html">Home</a>
+          <a href="../about.html">About</a>
+          <a href="../history.html">History</a>
+          <a href="../factions/index.html">Factions</a>
+          <a href="../characters/index.html">Characters</a>
+          <a href="https://crypto-moonboys.github.io/" target="_blank">Crypto Moonboys Universe</a>
+        </div>
+        <p class="footer-copy">© Graffiti Kings / GKniftyHEADs Wiki — Est. 1983 London. All lore sourced from official GK canon.</p>
+      </div>
+    </footer>
+  </div>
+  <script src="../js/main.js"></script>
+</body>
+</html>
