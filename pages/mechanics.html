@@ -1,1 +1,222 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Mechanics — Graffiti Kings Wiki</title><link rel="stylesheet" href="../css/style.css"></head><body><div class="site-wrapper"><header class="site-header"><a href="../index.html" class="logo-link"><span class="site-title">GK WIKI</span></a></header><main class="content-wrapper" style="display:block; max-width:1000px; margin:0 auto; padding:2rem;"><h1 class="page-title">Mechanics</h1><p>Game, lore, NFT and faction mechanics notes will be added here.</p><p><a class="btn btn-outline" href="../index.html">Back Home</a></p></main></div><script src="../js/main.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mechanics — Graffiti Kings Wiki</title>
+  <meta name="description" content="Long-form mechanics guide for the Graffiti Kings / GKniftyHEADS / Crypto Moonboys universe, based on W81 canon.">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rajdhani:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <canvas id="matrixCanvas" class="matrix-canvas"></canvas>
+  <div class="scanlines"></div>
+
+  <div class="site-wrapper">
+    <header class="site-header">
+      <a href="../index.html" class="logo-link"><span class="site-title">GK WIKI</span></a>
+      <button class="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../history.html">History</a></li>
+          <li><a href="../factions/index.html">Factions</a></li>
+          <li><a href="../characters/index.html">Characters</a></li>
+          <li><a href="mechanics.html">Mechanics</a></li>
+          <li><a href="music.html">Music</a></li>
+          <li><a href="nft-collections.html">NFT Collections</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="content-wrapper">
+      <aside class="sidebar">
+        <div class="sidebar-section">
+          <div class="sidebar-title">Mechanics Index</div>
+          <div class="sidebar-links">
+            <a href="#overview">System Overview</a>
+            <a href="#street-memory">Street Memory</a>
+            <a href="#chain-memory">Chain Memory</a>
+            <a href="#factions">Faction Logic</a>
+            <a href="#seeding">Seeding Rights</a>
+            <a href="#hardfork">Hard Fork Program</a>
+            <a href="#hodl-wars">HODL WARS</a>
+            <a href="#burn">Burn / Earn / Own</a>
+            <a href="#tokens">$PUNK / $STAKE</a>
+            <a href="#codex">Codex / Scrolls</a>
+            <a href="#games">Game Systems</a>
+            <a href="#sam">SAM / GK Brain</a>
+            <a href="#canon">Canon Rules</a>
+          </div>
+        </div>
+        <div class="sidebar-section">
+          <div class="sidebar-title">Core Pages</div>
+          <div class="sidebar-links">
+            <a href="../about.html">About</a>
+            <a href="../history.html">History</a>
+            <a href="../factions/index.html">Factions</a>
+            <a href="../characters/index.html">Characters</a>
+            <a href="nft-collections.html">NFT Collections</a>
+          </div>
+        </div>
+      </aside>
+
+      <article class="main-content">
+        <h1 class="page-title">MECHANICS</h1>
+        <p class="page-subtitle">The operating systems behind Graffiti Kings, GKniftyHEADS, GraffPUNKS and the Crypto Moonboys universe.</p>
+
+        <nav class="toc">
+          <div class="toc-title">Contents</div>
+          <ol>
+            <li><a href="#overview">What mechanics means in this universe</a></li>
+            <li><a href="#street-memory">Street memory and real-world proof</a></li>
+            <li><a href="#chain-memory">Chain memory and permanent records</a></li>
+            <li><a href="#factions">Faction logic</a></li>
+            <li><a href="#seeding">Seeding rights and territory</a></li>
+            <li><a href="#hardfork">The Hard Fork Program</a></li>
+            <li><a href="#hodl-wars">HODL WARS</a></li>
+            <li><a href="#burn">Burn, earn and own</a></li>
+            <li><a href="#tokens">$PUNK, $STAKE and the economy of sovereignty</a></li>
+            <li><a href="#codex">Codex relics, scrolls and lore keys</a></li>
+            <li><a href="#games">Game, quest and progression systems</a></li>
+            <li><a href="#sam">SAM, GK Brain and archive intelligence</a></li>
+            <li><a href="#canon">Canon limits for future builds</a></li>
+          </ol>
+        </nav>
+
+        <section class="section" id="overview">
+          <h2 class="section-title">What Mechanics Means In The GK Wiki</h2>
+          <div class="graffiti-divider"></div>
+          <p>In this wiki, mechanics does not mean one narrow game feature. It means the full operating logic of the Graffiti Kings / GKniftyHEADS / Crypto Moonboys world: how art becomes identity, how identity becomes faction, how faction becomes territory, how territory becomes story, and how story becomes a system that holders, players, artists and builders can use.</p>
+          <p>The W81 archive treats the universe as a layered machine. At the base is real street culture: names, tags, walls, crews, reputation, memory and public proof. Above that is the digital layer: NFTs, tokens, scrolls, sigils, metadata, wallets, missions, burns, drops, leaderboards and faction allegiance. Above that is the mythic layer: Block Topia, the Street Kingdoms, the Grid, the Hard Fork Program, the Crypto Moonboys, the Moongirls, the GraffPUNKS, the HODL Warriors and the future-history of 3008.</p>
+          <p>The important rule is that these layers are not separate products. W81 describes them as one connected system. A character is not only a picture. A faction is not only a logo. A token is not only a market object. A game is not only entertainment. Every part carries memory, alignment and possible future utility inside the universe.</p>
+        </section>
+
+        <section class="section" id="street-memory">
+          <h2 class="section-title">Street Memory: The First Mechanic</h2>
+          <div class="graffiti-divider"></div>
+          <p>The first mechanic is street memory. Before any chain, token, game or digital faction, the Graffiti Kings root is physical reputation. The W81 canon repeatedly frames GK as a culture built from walls, roads, estates, boroughs, London codes, illegal-to-legal movement, graffiti inheritance and public visual proof. In that structure, a wall is never just a surface. It is a record of who was there, what they risked, who saw it, who respected it, and who later painted over it.</p>
+          <p>That street logic becomes the template for the digital world. A wallet acts like a blackbook. A faction acts like a crew. A mint acts like a mark. A burn acts like a sacrifice. A leaderboard acts like a wall of fame. A lore page acts like an archive tag, preserving what would otherwise be lost in scrolls, screenshots, chats and old posts.</p>
+          <p>This is why the wiki has to be long-form. Short notes do not carry the full mechanic. The world is built on accumulated detail: who belongs to which faction, what their role is, how they connect to Block Topia, what threat they oppose, what kind of rebellion they represent, and what chain memory they leave behind.</p>
+        </section>
+
+        <section class="section" id="chain-memory">
+          <h2 class="section-title">Chain Memory: Permanent Record</h2>
+          <div class="graffiti-divider"></div>
+          <p>The blockchain layer extends the wall. Where street art can be buffed, painted over, photographed badly or misremembered, chain memory is designed to lock proof into a more permanent structure. The W81 archive describes blockchain as a modern cipher and a record of truth for artists who have historically been erased, underpaid, copied or treated as disposable content suppliers.</p>
+          <p>GKniftyHEADS and Crypto Moonboys use that idea as a world-building rule. The chain does not replace the street. It records the street. It turns characters, factions, scrolls, sigils, traits, missions, burn events and drops into objects that can persist beyond a single social feed. The wiki then sits above that as the readable layer: the place where the meaning of those objects is explained.</p>
+          <p>In the W81 framing, a holder is not meant to be a passive collector only. A holder can become a carrier of lore. The wallet holds the item, but the item holds a fragment of a wider narrative. The mechanics page exists to explain how those fragments fit together.</p>
+        </section>
+
+        <section class="section" id="factions">
+          <h2 class="section-title">Faction Logic</h2>
+          <div class="graffiti-divider"></div>
+          <p>The 40-faction system is the main social mechanic of the universe. Each faction represents a different psychological, cultural or tactical position inside the GK / Crypto Moonboys world. Some factions carry the original street lineage. Some act as creative rebels. Some protect economic belief systems. Some are arena fighters, fashion houses, hybrid tribes, prophets, watchers, scavengers, rebels, defenders or mystery operators.</p>
+          <p>The factions are not decoration. They are how users find their place. W81 frames the faction system as a way for every holder, player or builder to find a home inside the world: artist, warrior, collector, rebel, architect, prophet, coder, street runner, fashion icon, chaos agent, economic defender or lore archivist.</p>
+          <p>A faction page must therefore answer more than “what is the faction called?” It must explain the faction’s identity, operating zone, visual codes, enemies, alliances, social role, chain role, and mythic function in the 3008 future-history. The current hub lists the full 40-faction structure, while each faction page should eventually become a dedicated long-form article.</p>
+        </section>
+
+        <section class="section" id="seeding">
+          <h2 class="section-title">Seeding Rights And Territory</h2>
+          <div class="graffiti-divider"></div>
+          <p>Seeding is one of the core territorial ideas in the W81 canon. It connects holder participation to the idea of planting influence inside the universe. In street terms, seeding is putting a mark into the environment so it can spread. In chain terms, it is attaching identity, metadata, faction alignment or future rights to a digital object or location.</p>
+          <p>W81 links seeding to survival, earned position and future expansion. Characters and holders are not granted importance only by birth or status. They earn position through submission, survival, action, purpose, faction alignment and participation in the chain. The same idea appears across Block Topia, the Street Kingdoms, Hard Fork material and the Moonboy future-history.</p>
+          <p>For the wiki, seeding means every page should be treated as planted lore. A character page seeds a character. A faction page seeds a crew. An NFT page seeds the object’s story. A mechanics page seeds the rules. A holder or builder who uses the IP should be able to follow those seeds and understand how to build without breaking canon.</p>
+        </section>
+
+        <section class="section" id="hardfork">
+          <h2 class="section-title">The Hard Fork Program</h2>
+          <div class="graffiti-divider"></div>
+          <p>The Hard Fork Program is one of the major W81 mechanics. It is both a lore event and a structural model for transformation. A hard fork is not only technical. In this world, it is cultural, psychological and territorial. It marks the moment where one system can no longer contain all possible futures, so the world splits into new paths.</p>
+          <p>The Hard Fork material connects directly to HODL Warriors, Block Topia, the Crypto Moonboys, the Street Kingdoms, faction rebellion, lore-based game drops, Codex rewards and future-history. It is the mechanism by which new identities emerge from broken systems. A character can be forked. A faction can fork. A city can fork. A chain can fork. A memory can fork. A user can choose which side of the fork they stand on.</p>
+          <p>In practical wiki terms, Hard Fork content should be used to explain origin shifts, faction splits, timeline changes, game eras, character awakenings and major canon upgrades. It should not be treated as a vague buzzword. It is the system’s transformation engine.</p>
+        </section>
+
+        <section class="section" id="hodl-wars">
+          <h2 class="section-title">HODL WARS</h2>
+          <div class="graffiti-divider"></div>
+          <p>HODL WARS is the conflict layer. W81 frames it as more than a market slogan. It is the war between passive consumption and active sovereignty; between fiat sleep and self-owned identity; between controlled platforms and street-level chain culture; between scrubbed memory and permanent proof.</p>
+          <p>The HODL Warriors sit inside this conflict as one of the clearest user-facing identities. They are not simply people who hold tokens. They are aligned with endurance, stack culture, chain belief, refusal to fold under pressure, and the idea that rebellion requires patience as much as aggression. In HODL WARS, survival is a mechanic. Holding position is a mechanic. Refusing the wrong trade is a mechanic.</p>
+          <p>HODL WARS also gives the world its competitive structure. It supports faction wars, raid concepts, territory claims, leaderboards, weekly events, burn choices, alliance logic, betrayals, propaganda, resistance broadcasts and the sense that every page of the wiki is part of a wider conflict map.</p>
+        </section>
+
+        <section class="section" id="burn">
+          <h2 class="section-title">Burn, Earn And Own</h2>
+          <div class="graffiti-divider"></div>
+          <p>The W81 archive describes a creator-economy mechanic built around burn, earn and own. The burn is a strategic destruction mechanic. A user gives up one object to unlock another form of value: rarity, upgrade path, access, status, progression or future AI-infused / game-connected assets. This mirrors the street idea that some marks vanish so stronger marks can replace them.</p>
+          <p>Earn describes the participation layer: playing, holding, completing missions, joining factions, collecting scrolls, staking where applicable, winning battles, tagging spaces, entering events or contributing to the world. The W81 framing repeatedly points toward free entry, play-to-earn style access, online games, Telegram incubator structures and reward systems aimed at bringing users into the world without traditional gatekeeping.</p>
+          <p>Own is the IP layer. The archive points toward users owning or using character-linked identity inside the world, building around faction material, and turning GK IP into a participatory universe rather than a closed top-down brand. Ownership here does not mean ignoring canon. It means building from the correct source material so the wider universe remains coherent.</p>
+        </section>
+
+        <section class="section" id="tokens">
+          <h2 class="section-title">$PUNK, $STAKE And The Economy Of Sovereignty</h2>
+          <div class="graffiti-divider"></div>
+          <p>W81 describes $PUNK and $STAKE as part of a dual-engine economy. The archive frames $PUNK as the currency of rebellion and kinetic street energy: the fuel used for action, conflict, movement, burn paths and cultural pressure. $STAKE is framed around stability, commitment and longer-term weight inside the system.</p>
+          <p>This page does not define live financial terms, token prices or legal claims. It records the lore mechanics. In-world, $PUNK behaves like the gas of the streets: movement, minting, warfare, burn decisions, faction action and rebel utility. $STAKE behaves like the stabilising force: commitment, locked belief, influence and long-term alignment. Together they create the circular economy described in the W81 material, where action and commitment have separate but connected roles.</p>
+          <p>The wiki should keep token discussion in this lore-mechanics lane unless a separate current tokenomics page is created and maintained from live verified data. The W81 canon supports the symbolic and structural role of the tokens; live financial claims must not be invented here.</p>
+        </section>
+
+        <section class="section" id="codex">
+          <h2 class="section-title">Codex Relics, Scrolls And Lore Keys</h2>
+          <div class="graffiti-divider"></div>
+          <p>The Codex system is the archive mechanic inside the world. W81 describes Codex relics, scroll systems, readable NFT-style items, lore drops, buffs, progression keys, mission unlocks and trait boosters. The Codex is not only a book. It is the way hidden knowledge becomes playable, collectible and usable.</p>
+          <p>Scrolls and relics act as compressed story devices. A scroll can carry an origin. A relic can unlock a path. A sigil can modify identity. A Codex item can reveal a piece of history, point to a faction, strengthen a loadout, or mark a holder as someone who has crossed a particular mission threshold.</p>
+          <p>For page building, Codex material should be used carefully. A page should not claim a relic exists unless the source supports it. When a relic, scroll, sigil or Codex entry is added, it should include its source role, unlock logic, faction relevance, character relevance and whether it belongs to gameplay, lore, NFT metadata or future expansion.</p>
+        </section>
+
+        <section class="section" id="games">
+          <h2 class="section-title">Game, Quest And Progression Systems</h2>
+          <div class="graffiti-divider"></div>
+          <p>W81 contains multiple game-facing structures: lore-based Web3 game drops, P2E concepts, faction wars, live tag events, dynamic maps, base building, mural defense, player identity NFTs, loadouts, spray items, scrolls, sigils, missions, raids, progression paths and the wider “Bitcoin KiD Protocol” style of game concept.</p>
+          <p>The common mechanic is progression through action. Players do not only read the world; they move through it. Missions reveal lore. Battles create faction pressure. Burns reshape supply and identity. Scrolls unlock knowledge. Loadouts create abilities. Territory gives context. Weekly or seasonal events turn the static archive into a changing war map.</p>
+          <p>The game layer should be treated as modular canon. Some elements are fully named, some are concept-level, and some are future build notes. The wiki can explain the intended structure, but it must not pretend every proposed feature is already live. A strong mechanics page separates three states clearly: canon lore, proposed game system, and live implementation.</p>
+          <table class="key-facts-table">
+            <tr><th>Mechanic</th><th>Role In The Universe</th></tr>
+            <tr><td>Faction Wars</td><td>Competitive conflict between aligned crews, tribes and houses.</td></tr>
+            <tr><td>Spray-to-Claim</td><td>Tagging / mural action used as territory, reward or proof logic.</td></tr>
+            <tr><td>Codex Scrolls</td><td>Lore objects that can function as keys, buffs or progression markers.</td></tr>
+            <tr><td>Loadout NFTs</td><td>Playable or identity-linked objects used for missions and combat concepts.</td></tr>
+            <tr><td>Burn Paths</td><td>Upgrade or rarity mechanics based on destroying older assets.</td></tr>
+            <tr><td>Seasonal Raids</td><td>Event structures that push factions into recurring conflict.</td></tr>
+            <tr><td>SoulTags</td><td>Player identity objects that evolve through action and alignment.</td></tr>
+          </table>
+        </section>
+
+        <section class="section" id="sam">
+          <h2 class="section-title">SAM, GK Brain And Archive Intelligence</h2>
+          <div class="graffiti-divider"></div>
+          <p>SAM and GK Brain represent the archive-intelligence layer. In W81, the universe is not only a set of posts. It is a memory system that needs to be searched, condensed, interpreted and redeployed without losing the original street energy. SAM functions as a guide, operator or archive intelligence that helps turn rough lore, scattered drops and faction material into usable structure.</p>
+          <p>GK Brain is the larger idea: a connected memory system for the wiki, game, lore, characters, factions, drops and user-built IP. This matters because the source archive is large, messy and alive. Without an archive brain, future pages would become inconsistent. With one, the wiki can become the readable surface of a much deeper canon store.</p>
+          <p>The correct use of SAM / GK Brain is not to replace the archive with generic AI writing. It is to preserve the archive, organise it, and convert it into usable pages while keeping W81 terminology, faction logic, tone and structure intact.</p>
+        </section>
+
+        <section class="section" id="canon">
+          <h2 class="section-title">Canon Rules For Future Mechanics Pages</h2>
+          <div class="graffiti-divider"></div>
+          <p>Every future mechanics page must follow the same rule: W81 first. Do not invent a system because it sounds useful. Do not shorten a mechanic until the meaning is lost. Do not replace the raw GK / GraffPUNKS / Crypto Moonboys tone with clean corporate language. The mechanics are supposed to feel like street culture translated into chain culture, not a generic game design document.</p>
+          <p>Future pages should identify whether a mechanic is live, lore-only, proposed, concept-level or future implementation. This protects the wiki from overclaiming while still allowing the full world to be documented. The point is not to make the universe smaller so it feels safer. The point is to make the archive readable without breaking it.</p>
+          <p>Mechanics pages should be deep enough for builders. A user should be able to read this wiki and understand how to write a character bio, design a faction page, build a game mission, describe an NFT collection, create a holder role or expand a lore event without losing the canon thread.</p>
+        </section>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="../index.html">Home</a>
+          <a href="../about.html">About</a>
+          <a href="../history.html">History</a>
+          <a href="../factions/index.html">Factions</a>
+          <a href="../characters/index.html">Characters</a>
+          <a href="mechanics.html">Mechanics</a>
+        </div>
+        <p class="footer-copy">© Graffiti Kings / GKniftyHEADS Wiki — mechanics rebuilt from W81 canon.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
