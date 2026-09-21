@@ -3,23 +3,203 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Graffiti Kings × GKniftyHEADs Wiki</title>
-  <meta name="description" content="The official Graffiti Kings and GKniftyHEADs wiki. Street art history, characters, factions, NFT lore and the Crypto Moonboys universe.">
+  <title>Graffiti Kings Wiki — Home</title>
+  <meta name="description" content="The official Graffiti Kings & GKniftyHEADs Wiki. London's legendary street-art dynasty since 1983, now evolving into the GKniftyHEADs NFT universe and Crypto Moonboys blockchain saga.">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rajdhani:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* ── Homepage-specific styles ── */
+    .home-section {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+    .home-section-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      color: var(--neon-gold);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      text-shadow: 0 0 20px rgba(255,215,0,0.5);
+      border-bottom: 2px solid #333;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+      position: relative;
+    }
+    .home-section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 80px;
+      height: 2px;
+      background: var(--neon-gold);
+      box-shadow: 0 0 10px var(--neon-gold);
+    }
+    /* Characters grid */
+    .characters-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 1.2rem;
+    }
+    .char-card {
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 1.2rem 1rem;
+      background: rgba(255,255,255,0.02);
+      text-align: center;
+      text-decoration: none;
+      transition: all 0.3s;
+      display: block;
+    }
+    .char-card:hover {
+      border-color: var(--neon-gold);
+      background: rgba(255,215,0,0.05);
+      transform: translateY(-3px);
+      box-shadow: 0 0 20px rgba(255,215,0,0.15);
+    }
+    .char-card-emoji {
+      font-size: 2.8rem;
+      display: block;
+      margin-bottom: 0.6rem;
+      line-height: 1;
+    }
+    .char-card-name {
+      font-family: 'Oswald', sans-serif;
+      color: var(--neon-gold);
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      line-height: 1.3;
+    }
+    /* Updates section */
+    .updates-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .update-card {
+      border: 1px solid var(--neon-cyan);
+      border-radius: 8px;
+      padding: 1.5rem;
+      background: rgba(0,255,255,0.03);
+      box-shadow: 0 0 15px rgba(0,255,255,0.05);
+      transition: all 0.3s;
+    }
+    .update-card:hover {
+      border-color: var(--neon-gold);
+      box-shadow: 0 0 20px rgba(255,215,0,0.1);
+    }
+    .update-date {
+      color: var(--neon-cyan);
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+      font-family: 'Oswald', sans-serif;
+    }
+    .update-title {
+      font-family: 'Oswald', sans-serif;
+      color: var(--neon-gold);
+      font-size: 1.05rem;
+      margin-bottom: 0.6rem;
+      letter-spacing: 1px;
+    }
+    .update-text {
+      color: var(--text-dim);
+      font-size: 0.9rem;
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+    /* Factions quick links */
+    .factions-quick-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 0.8rem;
+    }
+    .faction-badge {
+      display: block;
+      padding: 0.6rem 1rem;
+      border: 1px solid #333;
+      border-radius: 6px;
+      background: rgba(255,255,255,0.02);
+      color: var(--text-dim);
+      text-decoration: none;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 0.88rem;
+      letter-spacing: 0.5px;
+      transition: all 0.25s;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .faction-badge:hover {
+      border-color: var(--neon-gold);
+      color: var(--neon-gold);
+      background: rgba(255,215,0,0.05);
+      box-shadow: 0 0 10px rgba(255,215,0,0.1);
+    }
+    /* Quick links footer bar */
+    .quick-links-bar {
+      background: rgba(0,0,0,0.8);
+      border-top: 1px solid var(--neon-gold);
+      border-bottom: 1px solid var(--neon-gold);
+      padding: 1rem 2rem;
+    }
+    .quick-links-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+    }
+    .quick-link {
+      color: var(--text-dim);
+      text-decoration: none;
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      padding: 0.3rem 0.8rem;
+      border: 1px solid #333;
+      border-radius: 4px;
+      transition: all 0.3s;
+    }
+    .quick-link:hover {
+      color: var(--neon-gold);
+      border-color: var(--neon-gold);
+      background: rgba(255,215,0,0.05);
+    }
+    .section-divider {
+      border: none;
+      height: 1px;
+      background: linear-gradient(to right, transparent, #333, transparent);
+      margin: 0;
+    }
+    @media (max-width: 600px) {
+      .characters-grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); }
+      .factions-quick-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+    }
+  </style>
 </head>
 <body>
   <canvas id="matrixCanvas" class="matrix-canvas"></canvas>
   <div class="scanlines"></div>
   <div class="site-wrapper">
+
+    <!-- HEADER -->
     <header class="site-header">
-      <a href="index.html" class="logo-link"><span class="site-title">GK WIKI</span></a>
+      <a href="index.html" class="logo-link">
+        <span class="site-title">GK WIKI</span>
+      </a>
       <div class="search-container" style="position:relative;">
         <input type="search" class="search-input" placeholder="Search wiki...">
         <div class="search-results" style="display:none;"></div>
       </div>
-      <button class="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      <button class="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
       <nav class="main-nav">
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
@@ -34,58 +214,182 @@
       </nav>
     </header>
 
+    <!-- HERO -->
     <section class="hero">
       <div class="hero-logo">
         <img src="images/GK_NIFTYHEADS_niftys.png" alt="GKniftyHEADs Official Logo" onerror="this.src='images/logo-placeholder.svg'" style="max-width:420px;">
       </div>
       <h1 class="hero-title">GRAFFITI KINGS × GKniftyHEADs</h1>
       <p class="hero-subtitle">The Official Wiki</p>
-      <p class="tagline">London street-art history, GK family lore, GKniftyHEADs characters, NFT culture and the wider Crypto Moonboys universe.</p>
+      <p class="tagline">London's legendary street-art dynasty since 1983 — now evolving into the GKniftyHEADs NFT universe and Crypto Moonboys blockchain saga.</p>
       <div style="margin-top:2rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
         <a href="about.html" class="btn btn-primary">Explore the Lore</a>
-        <a href="characters/index.html" class="btn btn-outline">View Characters</a>
+        <a href="factions/index.html" class="btn btn-outline">View All Factions</a>
       </div>
     </section>
 
-    <main class="content-wrapper" style="display:block; max-width:1400px; margin:0 auto; padding:2rem;">
-      <section class="section">
-        <h2 class="section-title">Featured Characters</h2>
-        <div class="grid cards-grid" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:1rem;">
-          <a class="card" href="characters/darren-cullen.html"><h3>Darren Cullen (SER)</h3><p>Graffiti Kings founder figure and core canon anchor.</p></a>
-          <a class="card" href="characters/sarah-pu51fly.html"><h3>Sarah PU51FLY</h3><p>Queen Sarah / PU51FLY storyline and family canon.</p></a>
-          <a class="card" href="characters/charlie-buster.html"><h3>Charlie Buster</h3><p>Street artist, Grime Art thread and universe builder.</p></a>
-          <a class="card" href="characters/alfie-bitcoin-kid.html"><h3>Alfie Bitcoin Kid</h3><p>Next-generation crypto/street character thread.</p></a>
-          <a class="card" href="characters/null-the-prophet.html"><h3>NULL THE PROPHET</h3><p>Prophecy and network mythos inside the GK universe.</p></a>
-          <a class="card" href="characters/thera-9.html"><h3>Thera-9</h3><p>AI, archive and future-canon thread.</p></a>
-        </div>
-      </section>
+    <hr class="section-divider">
 
-      <section class="section">
-        <h2 class="section-title">Wiki Areas</h2>
-        <p>This site is structured as a working archive: history, characters, factions, mechanics, music links, NFT collections and lore notes. The live GitHub Pages build now uses project-safe relative paths so CSS, JavaScript, images and internal navigation load under <code>/graffiti-kings/</code>.</p>
-        <div style="display:flex; flex-wrap:wrap; gap:0.8rem; margin-top:1.2rem;">
-          <a class="btn btn-outline" href="about.html">About</a>
-          <a class="btn btn-outline" href="history.html">History</a>
-          <a class="btn btn-outline" href="factions/index.html">Factions</a>
-          <a class="btn btn-outline" href="characters/index.html">Characters</a>
-          <a class="btn btn-outline" href="pages/nft-collections.html">NFTs</a>
-        </div>
-      </section>
-    </main>
+    <!-- FEATURED CHARACTERS -->
+    <section class="home-section">
+      <h2 class="home-section-title">Featured Characters</h2>
+      <div class="characters-grid">
+        <a href="characters/darren-cullen.html" class="char-card">
+          <span class="char-card-emoji">👑</span>
+          <div class="char-card-name">Darren Cullen (SER)</div>
+        </a>
+        <a href="characters/sarah-pu51fly.html" class="char-card">
+          <span class="char-card-emoji">🌺</span>
+          <div class="char-card-name">Sarah PU51FLY</div>
+        </a>
+        <a href="characters/charlie-buster.html" class="char-card">
+          <span class="char-card-emoji">🎨</span>
+          <div class="char-card-name">Charlie Buster</div>
+        </a>
+        <a href="characters/alfie-bitcoin-kid.html" class="char-card">
+          <span class="char-card-emoji">💎</span>
+          <div class="char-card-name">Alfie "Bitcoin Kid"</div>
+        </a>
+        <a href="characters/null-the-prophet.html" class="char-card">
+          <span class="char-card-emoji">🔮</span>
+          <div class="char-card-name">NULL THE PROPHET</div>
+        </a>
+        <a href="characters/elder-codex-7.html" class="char-card">
+          <span class="char-card-emoji">📜</span>
+          <div class="char-card-name">Elder Codex-7</div>
+        </a>
+        <a href="characters/thera-9.html" class="char-card">
+          <span class="char-card-emoji">🤖</span>
+          <div class="char-card-name">Thera-9</div>
+        </a>
+        <a href="characters/lady-ink.html" class="char-card">
+          <span class="char-card-emoji">✒️</span>
+          <div class="char-card-name">Lady-INK</div>
+        </a>
+      </div>
+      <div style="text-align:center; margin-top:2rem;">
+        <a href="characters/index.html" class="btn btn-outline">All Characters →</a>
+      </div>
+    </section>
 
+    <hr class="section-divider">
+
+    <!-- LATEST UPDATES -->
+    <section class="home-section" style="background: linear-gradient(180deg, transparent, rgba(0,255,255,0.02), transparent);">
+      <h2 class="home-section-title">Latest HODL WARS &amp; Factions Updates</h2>
+      <div class="updates-grid">
+        <div class="update-card">
+          <div class="update-date">📅 2025 — Week 24</div>
+          <div class="update-title">HODL WARS: Faction Seeding Rights Disputed</div>
+          <p class="update-text">The Bitcoin Kid Army and the Blockchain Furies have entered a contested Seeding Rights battle over Node Block 77 — a prime territorial node in the Crypto Moonboys universe. Elder Codex-7 has issued a canonical lore decree: all disputes must be resolved through verified on-chain HODL WARS combat. The outcome will determine which faction gains dominance over the northern district of City Block Topia for the next cycle. NULL THE PROPHET has reportedly foreseen the result — but refuses to speak it aloud.</p>
+        </div>
+        <div class="update-card">
+          <div class="update-date">📅 2025 — Week 21</div>
+          <div class="update-title">New GKniftyHEADs Lore Drop: The Stencil Must Break</div>
+          <p class="update-text">Charlie Buster's landmark text "The Stencil Must Break" has been officially canonised as required reading within the GKniftyHEADs Online Nomad Collective. The text, which explores the philosophical tension between physical street art and its digital descendants, has been serialised across the GraffPunks Substack. Faction leaders across all 40 GK factions have acknowledged the text as foundational doctrine for the upcoming Great Drop in 2026. XRP KIDs and No Ball Games holders receive exclusive annotated editions.</p>
+        </div>
+        <div class="update-card">
+          <div class="update-date">📅 2025 — Week 18</div>
+          <div class="update-title">The Great Drop Countdown: 1 Million Free NFTs in 2026</div>
+          <p class="update-text">Graffiti Kings has officially confirmed the timeline for the Great Drop — a planned release of 1 million free NFTs across all 40 GK Factions, scheduled for 2026. Each NFT will carry embedded Seeding Rights, faction allegiance metadata, and a unique piece of canonical Crypto Moonboys universe lore. Darren Cullen (SER) described the drop as "the moment the streets go on-chain permanently." Thera-9 and Lady-INK are confirmed as the two key characters whose storylines converge at the Great Drop event horizon.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- ALL 40 FACTIONS QUICK LINKS -->
+    <section class="home-section">
+      <h2 class="home-section-title">All 40 GK Factions</h2>
+      <p style="color:var(--text-dim); margin-bottom:1.8rem; font-size:0.95rem;">The full council of Graffiti Kings factions — each a sovereign force within the Crypto Moonboys universe. Click any faction to explore their lore, characters and HODL WARS standing.</p>
+      <div class="factions-quick-grid">
+        <a href="factions/bitcoin-kid-army.html" class="faction-badge">₿ Bitcoin Kid Army</a>
+        <a href="factions/gkniftyheads.html" class="faction-badge">🎨 GKniftyHEADs</a>
+        <a href="factions/graffpunks.html" class="faction-badge">🎸 GRAFFPUNKs</a>
+        <a href="factions/crypto-moongirls.html" class="faction-badge">🌙 Crypto Moongirls</a>
+        <a href="factions/blockchain-furies.html" class="faction-badge">⚡ Blockchain Furies</a>
+        <a href="factions/nomad-bears.html" class="faction-badge">🐻 Nomad Bears</a>
+        <a href="factions/allcity-bulls.html" class="faction-badge">🐂 AllCity Bulls</a>
+        <a href="factions/bally-boys.html" class="faction-badge">🎯 BALLY BOYS</a>
+        <a href="factions/ducky-boys.html" class="faction-badge">🦆 DUCKY BOYS</a>
+        <a href="factions/xrp-kids.html" class="faction-badge">💧 XRP KIDs</a>
+        <a href="factions/no-ball-games.html" class="faction-badge">🚫 No Ball Games Crew</a>
+        <a href="factions/bone-idol-ink.html" class="faction-badge">💀 Bone Idol Ink</a>
+        <a href="factions/leake-street-legends.html" class="faction-badge">🏙️ Leake Street Legends</a>
+        <a href="factions/satoshi-saints.html" class="faction-badge">🕊️ Satoshi Saints</a>
+        <a href="factions/neon-ghost-writers.html" class="faction-badge">👻 Neon Ghost Writers</a>
+        <a href="factions/crypto-monks.html" class="faction-badge">🧘 The Crypto Monks</a>
+        <a href="factions/wild-style-warriors.html" class="faction-badge">🌀 Wild Style Warriors</a>
+        <a href="factions/hash-rate-hunters.html" class="faction-badge">⚙️ Hash Rate Hunters</a>
+        <a href="factions/tag-and-destroy.html" class="faction-badge">🖊️ Tag &amp; Destroy</a>
+        <a href="factions/defi-desperados.html" class="faction-badge">🤠 DeFi Desperados</a>
+        <a href="factions/metaverse-militants.html" class="faction-badge">🌐 Metaverse Militants</a>
+        <a href="factions/phygital-phantoms.html" class="faction-badge">👁️ Phygital Phantoms</a>
+        <a href="factions/steel-scribes.html" class="faction-badge">🔩 The Steel Scribes</a>
+        <a href="factions/midnight-bombers.html" class="faction-badge">🌑 Midnight Bombers</a>
+        <a href="factions/laser-eyes-legion.html" class="faction-badge">🔴 Laser Eyes Legion</a>
+        <a href="factions/block-party-bandits.html" class="faction-badge">🎉 Block Party Bandits</a>
+        <a href="factions/moonshot-mob.html" class="faction-badge">🚀 The Moonshot Mob</a>
+        <a href="factions/city-block-topia-crew.html" class="faction-badge">🏗️ City Block Topia Crew</a>
+        <a href="factions/decentraland-disciples.html" class="faction-badge">🗺️ Decentraland Disciples</a>
+        <a href="factions/stencil-saints.html" class="faction-badge">🪄 The Stencil Saints</a>
+        <a href="factions/punk-protocol.html" class="faction-badge">📡 Punk Protocol</a>
+        <a href="factions/zero-knowledge-knights.html" class="faction-badge">🔑 Zero Knowledge Knights</a>
+        <a href="factions/spray-can-shamans.html" class="faction-badge">🌿 Spray Can Shamans</a>
+        <a href="factions/vibe-check-collective.html" class="faction-badge">✌️ Vibe Check Collective</a>
+        <a href="factions/layer-2-lads.html" class="faction-badge">🔗 Layer 2 Lads</a>
+        <a href="factions/ordinal-outlaws.html" class="faction-badge">⛓️ Ordinal Outlaws</a>
+        <a href="factions/paint-and-profit-guild.html" class="faction-badge">🖌️ Paint &amp; Profit Guild</a>
+        <a href="factions/nifty-nomads.html" class="faction-badge">🧭 Nifty Nomads</a>
+        <a href="factions/soul-token-syndicate.html" class="faction-badge">💫 Soul Token Syndicate</a>
+        <a href="factions/genesis-block-gang.html" class="faction-badge">🧱 Genesis Block Gang</a>
+      </div>
+      <div style="text-align:center; margin-top:2rem;">
+        <a href="factions/index.html" class="btn btn-outline">Full Factions Index →</a>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- QUICK LINKS BAR -->
+    <div class="quick-links-bar">
+      <div class="quick-links-inner">
+        <span style="font-family:'Oswald',sans-serif; color:var(--neon-gold); font-size:0.8rem; letter-spacing:2px;">EXPLORE:</span>
+        <a href="about.html" class="quick-link">📜 About GK</a>
+        <a href="history.html" class="quick-link">📅 History</a>
+        <a href="factions/index.html" class="quick-link">⚔️ Factions</a>
+        <a href="characters/index.html" class="quick-link">👤 Characters</a>
+        <a href="pages/mechanics.html" class="quick-link">⚙️ Mechanics</a>
+        <a href="pages/music.html" class="quick-link">🎵 Music</a>
+        <a href="pages/nft-collections.html" class="quick-link">🖼️ NFTs</a>
+        <a href="https://crypto-moonboys.github.io/" target="_blank" class="quick-link">🌐 Crypto Moonboys</a>
+        <a href="pages/submit-lore.html" class="quick-link">📤 Submit Lore</a>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
     <footer class="site-footer">
       <div class="footer-content">
+        <div style="margin-bottom:1.5rem;">
+          <img src="images/GK_NIFTYHEADS_niftys.png" alt="GK Logo" onerror="this.src='images/logo-placeholder.svg'" style="max-height:60px; opacity:0.6;">
+        </div>
         <div class="footer-links">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
           <a href="history.html">History</a>
-          <a href="characters/index.html">Characters</a>
           <a href="factions/index.html">Factions</a>
+          <a href="characters/index.html">Characters</a>
+          <a href="pages/mechanics.html">Mechanics</a>
+          <a href="pages/music.html">Music</a>
+          <a href="pages/nft-collections.html">NFT Collections</a>
           <a href="https://crypto-moonboys.github.io/" target="_blank">Crypto Moonboys Universe</a>
+          <a href="https://substack.com/@graffpunks/posts" target="_blank">GraffPunks Substack</a>
+          <a href="https://medium.com/@GKniftyHEADS" target="_blank">GK Medium</a>
         </div>
-        <p class="footer-copy">© Graffiti Kings / GKniftyHEADs Wiki — Est. 1983 London.</p>
+        <p class="footer-copy">© Graffiti Kings / GKniftyHEADs Wiki — Est. 1983 London. All lore sourced from official GK canon.</p>
       </div>
     </footer>
+
   </div>
   <script src="js/main.js"></script>
 </body>
