@@ -4,182 +4,137 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Graffiti Kings Wiki — Home</title>
-  <meta name="description" content="The official Graffiti Kings & GKniftyHEADs Wiki. London's legendary street-art dynasty since 1983, now evolving into the GKniftyHEADs NFT universe and Crypto Moonboys blockchain saga.">
+  <meta name="description" content="The Graffiti Kings / GKniftyHEADS wiki home page, rebuilt as a long-form W81 canon gateway into the Crypto Moonboys universe, Block Topia, factions, characters, games, lore and archive system.">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rajdhani:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
-    /* ── Homepage-specific styles ── */
-    .home-section {
+    .home-hero {
       max-width: 1400px;
       margin: 0 auto;
-      padding: 3rem 2rem;
-    }
-    .home-section-title {
-      font-family: 'Oswald', sans-serif;
-      font-size: clamp(1.4rem, 3vw, 2rem);
-      color: var(--neon-gold);
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      text-shadow: 0 0 20px rgba(255,215,0,0.5);
-      border-bottom: 2px solid #333;
-      padding-bottom: 0.8rem;
-      margin-bottom: 2rem;
-      position: relative;
-    }
-    .home-section-title::after {
-      content: '';
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      width: 80px;
-      height: 2px;
-      background: var(--neon-gold);
-      box-shadow: 0 0 10px var(--neon-gold);
-    }
-    /* Characters grid */
-    .characters-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-      gap: 1.2rem;
-    }
-    .char-card {
-      border: 1px solid #333;
-      border-radius: 8px;
-      padding: 1.2rem 1rem;
-      background: rgba(255,255,255,0.02);
+      padding: 4rem 2rem 2rem;
       text-align: center;
-      text-decoration: none;
-      transition: all 0.3s;
-      display: block;
     }
-    .char-card:hover {
-      border-color: var(--neon-gold);
-      background: rgba(255,215,0,0.05);
-      transform: translateY(-3px);
-      box-shadow: 0 0 20px rgba(255,215,0,0.15);
-    }
-    .char-card-emoji {
-      font-size: 2.8rem;
-      display: block;
-      margin-bottom: 0.6rem;
-      line-height: 1;
-    }
-    .char-card-name {
-      font-family: 'Oswald', sans-serif;
-      color: var(--neon-gold);
-      font-size: 0.85rem;
-      letter-spacing: 1px;
-      line-height: 1.3;
-    }
-    /* Updates section */
-    .updates-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 1.5rem;
-    }
-    .update-card {
-      border: 1px solid var(--neon-cyan);
-      border-radius: 8px;
-      padding: 1.5rem;
-      background: rgba(0,255,255,0.03);
-      box-shadow: 0 0 15px rgba(0,255,255,0.05);
-      transition: all 0.3s;
-    }
-    .update-card:hover {
-      border-color: var(--neon-gold);
-      box-shadow: 0 0 20px rgba(255,215,0,0.1);
-    }
-    .update-date {
-      color: var(--neon-cyan);
-      font-size: 0.8rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 0.5rem;
-      font-family: 'Oswald', sans-serif;
-    }
-    .update-title {
-      font-family: 'Oswald', sans-serif;
-      color: var(--neon-gold);
-      font-size: 1.05rem;
-      margin-bottom: 0.6rem;
-      letter-spacing: 1px;
-    }
-    .update-text {
-      color: var(--text-dim);
-      font-size: 0.9rem;
-      line-height: 1.7;
-      margin-bottom: 0;
-    }
-    /* Factions quick links */
-    .factions-quick-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 0.8rem;
-    }
-    .faction-badge {
-      display: block;
-      padding: 0.6rem 1rem;
-      border: 1px solid #333;
-      border-radius: 6px;
-      background: rgba(255,255,255,0.02);
-      color: var(--text-dim);
-      text-decoration: none;
+    .home-kicker {
+      color: var(--accent-color, #00ff9d);
       font-family: 'Rajdhani', sans-serif;
-      font-size: 0.88rem;
-      letter-spacing: 0.5px;
-      transition: all 0.25s;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
     }
-    .faction-badge:hover {
-      border-color: var(--neon-gold);
-      color: var(--neon-gold);
-      background: rgba(255,215,0,0.05);
-      box-shadow: 0 0 10px rgba(255,215,0,0.1);
+    .home-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(2.4rem, 7vw, 5.8rem);
+      line-height: .95;
+      margin: 0 0 1rem;
+      text-transform: uppercase;
+      text-shadow: 0 0 24px rgba(0,255,157,.22);
     }
-    /* Quick links footer bar */
-    .quick-links-bar {
-      background: rgba(0,0,0,0.8);
-      border-top: 1px solid var(--neon-gold);
-      border-bottom: 1px solid var(--neon-gold);
-      padding: 1rem 2rem;
+    .home-subtitle {
+      max-width: 980px;
+      margin: 0 auto 2rem;
+      color: var(--text-muted, #b8c7d9);
+      font-size: clamp(1.05rem, 2vw, 1.35rem);
+      line-height: 1.55;
     }
-    .quick-links-inner {
-      max-width: 1400px;
-      margin: 0 auto;
+    .home-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
       justify-content: center;
-      align-items: center;
+      margin: 2rem 0 0;
     }
-    .quick-link {
-      color: var(--text-dim);
+    .home-button {
+      border: 1px solid rgba(0,255,157,.35);
+      color: var(--text-color, #ffffff);
       text-decoration: none;
+      padding: .9rem 1.2rem;
+      border-radius: 999px;
+      background: rgba(0,255,157,.08);
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+    .home-section {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    .home-section-title {
       font-family: 'Oswald', sans-serif;
-      font-size: 0.9rem;
-      letter-spacing: 1px;
-      padding: 0.3rem 0.8rem;
-      border: 1px solid #333;
-      border-radius: 4px;
-      transition: all 0.3s;
+      font-size: clamp(1.7rem, 3vw, 2.5rem);
+      text-transform: uppercase;
+      margin: 0 0 1rem;
+      color: var(--accent-color, #00ff9d);
     }
-    .quick-link:hover {
-      color: var(--neon-gold);
-      border-color: var(--neon-gold);
-      background: rgba(255,215,0,0.05);
+    .home-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1.5rem;
     }
-    .section-divider {
-      border: none;
-      height: 1px;
-      background: linear-gradient(to right, transparent, #333, transparent);
-      margin: 0;
+    .home-card {
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(5,10,18,.72);
+      border-radius: 18px;
+      padding: 1.25rem;
+      box-shadow: 0 0 28px rgba(0,0,0,.25);
     }
-    @media (max-width: 600px) {
-      .characters-grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); }
-      .factions-quick-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+    .home-card h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.25rem;
+      margin: 0 0 .7rem;
+      text-transform: uppercase;
+      color: var(--text-color, #fff);
+    }
+    .home-card p, .home-section p, .home-section li {
+      color: var(--text-muted, #b8c7d9);
+      line-height: 1.65;
+      font-size: 1.02rem;
+    }
+    .home-card a {
+      color: var(--accent-color, #00ff9d);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .home-longform {
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(5,10,18,.72);
+      border-radius: 20px;
+      padding: clamp(1.25rem, 3vw, 2rem);
+      margin-top: 1.25rem;
+    }
+    .home-callout {
+      border-left: 4px solid var(--accent-color, #00ff9d);
+      background: rgba(0,255,157,.08);
+      padding: 1rem 1.25rem;
+      border-radius: 0 14px 14px 0;
+      margin: 1.25rem 0;
+      color: var(--text-color, #fff);
+      line-height: 1.6;
+    }
+    .home-list {
+      display: grid;
+      gap: .8rem;
+      padding-left: 1.25rem;
+    }
+    .home-pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .7rem;
+      margin-top: 1rem;
+    }
+    .home-pill {
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 999px;
+      padding: .45rem .75rem;
+      color: var(--text-muted, #b8c7d9);
+      background: rgba(255,255,255,.04);
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 700;
     }
   </style>
 </head>
@@ -188,7 +143,6 @@
   <div class="scanlines"></div>
   <div class="site-wrapper">
 
-    <!-- HEADER -->
     <header class="site-header">
       <a href="index.html" class="logo-link">
         <span class="site-title">GK WIKI</span>
@@ -214,165 +168,155 @@
       </nav>
     </header>
 
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero-logo">
-        <img src="images/GK_NIFTYHEADS_niftys.png" alt="GKniftyHEADs Official Logo" onerror="this.src='images/logo-placeholder.svg'" style="max-width:420px;">
-      </div>
-      <h1 class="hero-title">GRAFFITI KINGS × GKniftyHEADs</h1>
-      <p class="hero-subtitle">The Official Wiki</p>
-      <p class="tagline">London's legendary street-art dynasty since 1983 — now evolving into the GKniftyHEADs NFT universe and Crypto Moonboys blockchain saga.</p>
-      <div style="margin-top:2rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
-        <a href="about.html" class="btn btn-primary">Explore the Lore</a>
-        <a href="factions/index.html" class="btn btn-outline">View All Factions</a>
-      </div>
-    </section>
-
-    <hr class="section-divider">
-
-    <!-- FEATURED CHARACTERS -->
-    <section class="home-section">
-      <h2 class="home-section-title">Featured Characters</h2>
-      <div class="characters-grid">
-        <a href="characters/darren-cullen.html" class="char-card">
-          <span class="char-card-emoji">👑</span>
-          <div class="char-card-name">Darren Cullen (SER)</div>
-        </a>
-        <a href="characters/sarah-pu51fly.html" class="char-card">
-          <span class="char-card-emoji">🌺</span>
-          <div class="char-card-name">Sarah PU51FLY</div>
-        </a>
-        <a href="characters/charlie-buster.html" class="char-card">
-          <span class="char-card-emoji">🎨</span>
-          <div class="char-card-name">Charlie Buster</div>
-        </a>
-        <a href="characters/alfie-bitcoin-kid.html" class="char-card">
-          <span class="char-card-emoji">💎</span>
-          <div class="char-card-name">Alfie "Bitcoin Kid"</div>
-        </a>
-        <a href="characters/null-the-prophet.html" class="char-card">
-          <span class="char-card-emoji">🔮</span>
-          <div class="char-card-name">NULL THE PROPHET</div>
-        </a>
-        <a href="characters/elder-codex-7.html" class="char-card">
-          <span class="char-card-emoji">📜</span>
-          <div class="char-card-name">Elder Codex-7</div>
-        </a>
-        <a href="characters/thera-9.html" class="char-card">
-          <span class="char-card-emoji">🤖</span>
-          <div class="char-card-name">Thera-9</div>
-        </a>
-        <a href="characters/lady-ink.html" class="char-card">
-          <span class="char-card-emoji">✒️</span>
-          <div class="char-card-name">Lady-INK</div>
-        </a>
-      </div>
-      <div style="text-align:center; margin-top:2rem;">
-        <a href="characters/index.html" class="btn btn-outline">All Characters →</a>
-      </div>
-    </section>
-
-    <hr class="section-divider">
-
-    <!-- LATEST UPDATES -->
-    <section class="home-section" style="background: linear-gradient(180deg, transparent, rgba(0,255,255,0.02), transparent);">
-      <h2 class="home-section-title">Latest HODL WARS &amp; Factions Updates</h2>
-      <div class="updates-grid">
-        <div class="update-card">
-          <div class="update-date">📅 2025 — Week 24</div>
-          <div class="update-title">HODL WARS: Faction Seeding Rights Disputed</div>
-          <p class="update-text">The Bitcoin Kid Army and the Blockchain Furies have entered a contested Seeding Rights battle over Node Block 77 — a prime territorial node in the Crypto Moonboys universe. Elder Codex-7 has issued a canonical lore decree: all disputes must be resolved through verified on-chain HODL WARS combat. The outcome will determine which faction gains dominance over the northern district of City Block Topia for the next cycle. NULL THE PROPHET has reportedly foreseen the result — but refuses to speak it aloud.</p>
+    <main>
+      <section class="home-hero">
+        <div class="page-logo">
+          <img src="images/GK_NIFTYHEADS_niftys.png" alt="GKniftyHEADS Official Logo" onerror="this.src='images/logo-placeholder.svg'">
         </div>
-        <div class="update-card">
-          <div class="update-date">📅 2025 — Week 21</div>
-          <div class="update-title">New GKniftyHEADs Lore Drop: The Stencil Must Break</div>
-          <p class="update-text">Charlie Buster's landmark text "The Stencil Must Break" has been officially canonised as required reading within the GKniftyHEADs Online Nomad Collective. The text, which explores the philosophical tension between physical street art and its digital descendants, has been serialised across the GraffPunks Substack. Faction leaders across all 40 GK factions have acknowledged the text as foundational doctrine for the upcoming Great Drop in 2026. XRP KIDs and No Ball Games holders receive exclusive annotated editions.</p>
+        <div class="home-kicker">Official Graffiti Kings / GKniftyHEADS Canon Gateway</div>
+        <h1 class="home-title">GRAFFITI KINGS WIKI</h1>
+        <p class="home-subtitle">The public archive for the street-born, chain-mutated, lore-heavy world that grows from Graffiti Kings into GKniftyHEADS, GraffPUNKS, Crypto Moonboys, Block Topia, the Grid, the forty faction system, the Hard Fork wars, and the future-history signal of the year 3008.</p>
+        <div class="home-actions">
+          <a class="home-button" href="about.html">Read the About Page</a>
+          <a class="home-button" href="history.html">Open the Timeline</a>
+          <a class="home-button" href="factions/index.html">Explore Factions</a>
+          <a class="home-button" href="characters/index.html">View Characters</a>
         </div>
-        <div class="update-card">
-          <div class="update-date">📅 2025 — Week 18</div>
-          <div class="update-title">The Great Drop Countdown: 1 Million Free NFTs in 2026</div>
-          <p class="update-text">Graffiti Kings has officially confirmed the timeline for the Great Drop — a planned release of 1 million free NFTs across all 40 GK Factions, scheduled for 2026. Each NFT will carry embedded Seeding Rights, faction allegiance metadata, and a unique piece of canonical Crypto Moonboys universe lore. Darren Cullen (SER) described the drop as "the moment the streets go on-chain permanently." Thera-9 and Lady-INK are confirmed as the two key characters whose storylines converge at the Great Drop event horizon.</p>
+      </section>
+
+      <section class="home-section">
+        <div class="home-longform">
+          <h2 class="home-section-title">What This Wiki Is</h2>
+          <p>This wiki is not a thin brand brochure. It is the working lore archive for the Graffiti Kings / GKniftyHEADS universe. The W81 canon frames the project as a graffiti-rooted world that has expanded into a digital mythology: a network of crews, factions, signals, characters, tokens, games, archives, prophecies, future histories and street-level cultural memory. The site exists to make that world readable, searchable and expandable without flattening it into a simple NFT landing page.</p>
+          <p>The universe begins from a street-art base, but the archive treats graffiti as more than a visual style. Graffiti becomes a system of memory. A wall is a record. A tag is a signal. A crew is a faction. A city is a map of claimed territory. A blockchain is another surface that can hold proof, conflict, identity and myth. This is the logic that connects the physical Graffiti Kings identity to the GKniftyHEADS Web3 layer and the wider Crypto Moonboys world.</p>
+          <p>The homepage is therefore a gateway, not a summary. Every page under this site should grow into a deep wiki entry: enough context for newcomers, enough structure for collectors, enough lore for faction members, and enough source discipline to stop the world from becoming loose fan fiction. W81 is the root archive for this build. Anything not supported by that archive should be treated as non-canon until it is deliberately added through the proper canon process.</p>
+          <div class="home-callout">Canon rule for this version: W81 source material controls the wiki. The site may organise, clarify and format the material, but it must not replace the archive with unsupported inventions.</div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <hr class="section-divider">
+      <section class="home-section">
+        <h2 class="home-section-title">Core Layers of the World</h2>
+        <div class="home-grid">
+          <article class="home-card">
+            <h3>Graffiti Kings</h3>
+            <p>The street root and cultural origin layer. In the W81 structure, Graffiti Kings is the physical-world proof system behind the digital mythology: walls, crews, tags, characters, style, territory and the long memory of urban art culture.</p>
+            <a href="about.html">Read the project foundation</a>
+          </article>
+          <article class="home-card">
+            <h3>GKniftyHEADS</h3>
+            <p>The Web3 and archive-facing identity layer. GKniftyHEADS carries the graffiti lineage into a world of holders, lore entries, canon records, tokenised identity, faction mechanics and digital proof.</p>
+            <a href="factions/gkniftyheads.html">Open GKniftyHEADS</a>
+          </article>
+          <article class="home-card">
+            <h3>GraffPUNKS</h3>
+            <p>The renegade signal layer. GraffPUNKS are framed through the archive as aggressive digital writers, unbuffable cultural malware, street-coded disruptors and archive warriors resisting clean corporate erasure.</p>
+            <a href="factions/graffpunks.html">Open GraffPUNKS</a>
+          </article>
+          <article class="home-card">
+            <h3>Crypto Moonboys</h3>
+            <p>The wider universe name. Crypto Moonboys is deliberately broad: a strange, funny, hard, chaotic world where graffiti culture, blockchain mythology, faction war, games and future-history collapse into one canon.</p>
+            <a href="history.html">Read the timeline</a>
+          </article>
+          <article class="home-card">
+            <h3>Block Topia</h3>
+            <p>The city layer. Block Topia and City Block Topia operate as the urban stage for the archive: a digital-street environment where factions, holders, crews, signals and hard-fork events can be mapped into place.</p>
+            <a href="pages/mechanics.html">View mechanics</a>
+          </article>
+          <article class="home-card">
+            <h3>The Grid</h3>
+            <p>The control layer. W81 repeatedly frames the Grid as the system of surveillance, optimisation, sanitisation and digital control that the street-coded factions either exploit, hack, corrupt, defend or fight against.</p>
+            <a href="history.html#grid">Trace the Grid conflict</a>
+          </article>
+        </div>
+      </section>
 
-    <!-- ALL 40 FACTIONS QUICK LINKS -->
-    <section class="home-section">
-      <h2 class="home-section-title">All 40 GK Factions</h2>
-      <p style="color:var(--text-dim); margin-bottom:1.8rem; font-size:0.95rem;">The full council of Graffiti Kings factions — each a sovereign force within the Crypto Moonboys universe. Click any faction to explore their lore, characters and HODL WARS standing.</p>
-      <div class="factions-quick-grid">
-        <a href="factions/index.html" class="faction-badge">₿ Bitcoin Kid Army</a>
-        <a href="factions/index.html" class="faction-badge">🎨 GKniftyHEADs</a>
-        <a href="factions/index.html" class="faction-badge">🎸 GRAFFPUNKs</a>
-        <a href="factions/index.html" class="faction-badge">🌙 Crypto Moongirls</a>
-        <a href="factions/index.html" class="faction-badge">⚡ Blockchain Furies</a>
-        <a href="factions/index.html" class="faction-badge">🐻 Nomad Bears</a>
-        <a href="factions/index.html" class="faction-badge">🐂 AllCity Bulls</a>
-        <a href="factions/index.html" class="faction-badge">🎯 BALLY BOYS</a>
-        <a href="factions/index.html" class="faction-badge">🦆 DUCKY BOYS</a>
-        <a href="factions/index.html" class="faction-badge">💧 XRP KIDs</a>
-        <a href="factions/index.html" class="faction-badge">🚫 No Ball Games Crew</a>
-        <a href="factions/index.html" class="faction-badge">💀 Bone Idol Ink</a>
-        <a href="factions/index.html" class="faction-badge">🏙️ Leake Street Legends</a>
-        <a href="factions/index.html" class="faction-badge">🕊️ Satoshi Saints</a>
-        <a href="factions/index.html" class="faction-badge">👻 Neon Ghost Writers</a>
-        <a href="factions/index.html" class="faction-badge">🧘 The Crypto Monks</a>
-        <a href="factions/index.html" class="faction-badge">🌀 Wild Style Warriors</a>
-        <a href="factions/index.html" class="faction-badge">⚙️ Hash Rate Hunters</a>
-        <a href="factions/index.html" class="faction-badge">🖊️ Tag &amp; Destroy</a>
-        <a href="factions/index.html" class="faction-badge">🤠 DeFi Desperados</a>
-        <a href="factions/index.html" class="faction-badge">🌐 Metaverse Militants</a>
-        <a href="factions/index.html" class="faction-badge">👁️ Phygital Phantoms</a>
-        <a href="factions/index.html" class="faction-badge">🔩 The Steel Scribes</a>
-        <a href="factions/index.html" class="faction-badge">🌑 Midnight Bombers</a>
-        <a href="factions/index.html" class="faction-badge">🔴 Laser Eyes Legion</a>
-        <a href="factions/index.html" class="faction-badge">🎉 Block Party Bandits</a>
-        <a href="factions/index.html" class="faction-badge">🚀 The Moonshot Mob</a>
-        <a href="factions/index.html" class="faction-badge">🏗️ City Block Topia Crew</a>
-        <a href="factions/index.html" class="faction-badge">🗺️ Decentraland Disciples</a>
-        <a href="factions/index.html" class="faction-badge">🪄 The Stencil Saints</a>
-        <a href="factions/index.html" class="faction-badge">📡 Punk Protocol</a>
-        <a href="factions/index.html" class="faction-badge">🔑 Zero Knowledge Knights</a>
-        <a href="factions/index.html" class="faction-badge">🌿 Spray Can Shamans</a>
-        <a href="factions/index.html" class="faction-badge">✌️ Vibe Check Collective</a>
-        <a href="factions/index.html" class="faction-badge">🔗 Layer 2 Lads</a>
-        <a href="factions/index.html" class="faction-badge">⛓️ Ordinal Outlaws</a>
-        <a href="factions/index.html" class="faction-badge">🖌️ Paint &amp; Profit Guild</a>
-        <a href="factions/index.html" class="faction-badge">🧭 Nifty Nomads</a>
-        <a href="factions/index.html" class="faction-badge">💫 Soul Token Syndicate</a>
-        <a href="factions/index.html" class="faction-badge">🧱 Genesis Block Gang</a>
-      </div>
-      <div style="text-align:center; margin-top:2rem;">
-        <a href="factions/index.html" class="btn btn-outline">Full Factions Index →</a>
-      </div>
-    </section>
+      <section class="home-section">
+        <div class="home-longform">
+          <h2 class="home-section-title">The Main Story Spine</h2>
+          <p>The W81 archive does not describe a small single-plot universe. It describes a layered signal war. The street world mutates into a digital city. The digital city becomes contested territory. Factions emerge from different cultural instincts: builders, rebels, holders, mystics, logisticians, punks, aristocrats, outsiders, mercenaries, archivists, artists and corrupted systems. Characters appear as carriers of memory, prophecy, rebellion or collapse.</p>
+          <p>One major spine is the move from old-world graffiti proof to chain-based memory. The archive keeps returning to the idea that culture can be erased when it is not properly recorded. Graffiti can be buffed. Posts can be buried. Algorithms can sanitise the feed. Financial systems can absorb rebellion and sell it back as lifestyle. The wiki exists inside that conflict. It is a wall that can be read, linked, copied, searched and expanded.</p>
+          <p>Another spine is future-history. W81 repeatedly projects forward into a far-future frame, especially the signal of 3008, where truth has become encrypted, factions are no longer just brands, and archive fragments become survival tools. The future is not clean science fiction. It is graffiti logic pushed through blockchains, AI systems, broken cities, mythic crews and cultural warfare.</p>
+          <p>A third spine is the holder/faction structure. Holders are not treated as passive collectors. They are witnesses, carriers and possible builders. Factions are not just visual categories. They are behavioural codes. Each faction has its own attitude toward the Grid, the chain, the city, the archive and the war. This is why the faction pages must become detailed lore pages rather than short card descriptions.</p>
+          <ul class="home-list">
+            <li><strong>Street memory:</strong> graffiti culture as proof, territory, rebellion and visible authorship.</li>
+            <li><strong>Chain memory:</strong> NFTs, tokens and archive pages as persistent records of characters, factions and events.</li>
+            <li><strong>Grid conflict:</strong> a battle against sanitised, optimised, controlled and erased culture.</li>
+            <li><strong>Faction identity:</strong> each crew carries a worldview, not just a logo.</li>
+            <li><strong>Future signal:</strong> year 3008 material reframes the present as origin history.</li>
+          </ul>
+        </div>
+      </section>
 
-    <hr class="section-divider">
+      <section class="home-section">
+        <h2 class="home-section-title">Start Reading</h2>
+        <div class="home-grid">
+          <article class="home-card">
+            <h3>About the Universe</h3>
+            <p>The long-form explanation of what Graffiti Kings, GKniftyHEADS and Crypto Moonboys are inside the W81 canon. Start here when someone asks what the project actually is.</p>
+            <a href="about.html">Open About</a>
+          </article>
+          <article class="home-card">
+            <h3>History and Timeline</h3>
+            <p>The canon timeline from street root to digital archive, faction expansion, Hard Fork events, games, Grid conflict and future-history framing.</p>
+            <a href="history.html">Open History</a>
+          </article>
+          <article class="home-card">
+            <h3>Faction Index</h3>
+            <p>The faction directory. This is where the 40-faction system should grow into full faction dossiers with origins, behaviour, territory, enemies, allies and canon role.</p>
+            <a href="factions/index.html">Open Factions</a>
+          </article>
+          <article class="home-card">
+            <h3>Character Index</h3>
+            <p>The character archive for named figures, agents, prophets, artists, holders, rebels and signal carriers from the wider universe.</p>
+            <a href="characters/index.html">Open Characters</a>
+          </article>
+          <article class="home-card">
+            <h3>Mechanics</h3>
+            <p>The place for staking logic, seeding rights, faction actions, game mechanics, hard-fork systems, holder roles and other playable or structured parts of the universe.</p>
+            <a href="pages/mechanics.html">Open Mechanics</a>
+          </article>
+          <article class="home-card">
+            <h3>NFT Collections</h3>
+            <p>The collection layer for NFTs as identity, archive fragments, faction proof, character vessels and digital-graffiti artefacts.</p>
+            <a href="pages/nft-collections.html">Open NFT Collections</a>
+          </article>
+        </div>
+      </section>
 
-    <!-- QUICK LINKS BAR -->
-    <div class="quick-links-bar">
-      <div class="quick-links-inner">
-        <span style="font-family:'Oswald',sans-serif; color:var(--neon-gold); font-size:0.8rem; letter-spacing:2px;">EXPLORE:</span>
-        <a href="about.html" class="quick-link">📜 About GK</a>
-        <a href="history.html" class="quick-link">📅 History</a>
-        <a href="factions/index.html" class="quick-link">⚔️ Factions</a>
-        <a href="characters/index.html" class="quick-link">👤 Characters</a>
-        <a href="pages/mechanics.html" class="quick-link">⚙️ Mechanics</a>
-        <a href="pages/music.html" class="quick-link">🎵 Music</a>
-        <a href="pages/nft-collections.html" class="quick-link">🖼️ NFTs</a>
-        <a href="https://crypto-moonboys.github.io/" target="_blank" class="quick-link">🌐 Crypto Moonboys</a>
-        <a href="pages/submit-lore.html" class="quick-link">📤 Submit Lore</a>
-      </div>
-    </div>
+      <section class="home-section">
+        <div class="home-longform">
+          <h2 class="home-section-title">Important Canon Concepts</h2>
+          <p>The wiki should keep these concepts visible across the whole site. They are not decoration; they are the operating language of the archive.</p>
+          <div class="home-pill-row">
+            <span class="home-pill">Street Kingdoms</span>
+            <span class="home-pill">City Block Topia</span>
+            <span class="home-pill">Block Topia</span>
+            <span class="home-pill">The Grid</span>
+            <span class="home-pill">SAM</span>
+            <span class="home-pill">GK Brain</span>
+            <span class="home-pill">Hard Fork Program</span>
+            <span class="home-pill">HODL WARS</span>
+            <span class="home-pill">Seeding Rights</span>
+            <span class="home-pill">Faction Protocols</span>
+            <span class="home-pill">Lore Fragments</span>
+            <span class="home-pill">3008 Signal</span>
+          </div>
+          <p>Street Kingdoms describe the territorial and cultural logic that comes from graffiti crew culture. City Block Topia and Block Topia give that logic a digital urban stage. The Grid represents the systems that classify, optimise, surveil and erase. SAM and the GK Brain represent the archive/intelligence layer: not just a chatbot concept, but a way of indexing, retrieving and activating the lore. The Hard Fork Program and HODL WARS provide event structure, conflict structure and possible game structure. The 3008 signal reframes all of it as future archaeology.</p>
+        </div>
+      </section>
 
-    <!-- FOOTER -->
+      <section class="home-section">
+        <div class="home-longform">
+          <h2 class="home-section-title">Wiki Build Standard</h2>
+          <p>This site should not use shallow entries. A faction page should explain what the faction believes, how it moves, where it fits in the city, what it protects, what it attacks, how it relates to the Grid, how it treats holders, what symbols define it, and what kind of character would belong to it. A character page should explain origin, visual identity, personality, role, relationships, faction links, conflicts, powers or mechanics, and why the character matters to the wider archive.</p>
+          <p>The public visitor should be able to land on any page and understand enough to care. A collector should be able to use the page to understand what they hold. A creator should be able to use it as a canon reference. A future agent or wiki tool should be able to read the page and produce consistent outputs without making up a different universe.</p>
+          <div class="home-callout">Build rule: every page should feel like a proper wiki dossier, not a placeholder. The goal is depth, internal logic, repeatable terminology and a clear connection back to the W81 canon.</div>
+        </div>
+      </section>
+    </main>
+
     <footer class="site-footer">
       <div class="footer-content">
-        <div style="margin-bottom:1.5rem;">
-          <img src="images/GK_NIFTYHEADS_niftys.png" alt="GK Logo" onerror="this.src='images/logo-placeholder.svg'" style="max-height:60px; opacity:0.6;">
-        </div>
         <div class="footer-links">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
@@ -382,11 +326,8 @@
           <a href="pages/mechanics.html">Mechanics</a>
           <a href="pages/music.html">Music</a>
           <a href="pages/nft-collections.html">NFT Collections</a>
-          <a href="https://crypto-moonboys.github.io/" target="_blank">Crypto Moonboys Universe</a>
-          <a href="https://substack.com/@graffpunks/posts" target="_blank">GraffPunks Substack</a>
-          <a href="https://medium.com/@GKniftyHEADS" target="_blank">GK Medium</a>
         </div>
-        <p class="footer-copy">© Graffiti Kings / GKniftyHEADs Wiki — Est. 1983 London. All lore sourced from official GK canon.</p>
+        <p class="footer-copy">© Graffiti Kings / GKniftyHEADS Wiki. W81 canon archive build.</p>
       </div>
     </footer>
 
