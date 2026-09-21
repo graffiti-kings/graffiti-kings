@@ -30,12 +30,73 @@ if (canvas) {
   });
 }
 
+function isNestedPage() {
+  const path = window.location.pathname;
+  return path.includes('/characters/') || path.includes('/factions/') || path.includes('/pages/');
+}
+
+function pathPrefix() {
+  return isNestedPage() ? '../' : '';
+}
+
+function normalizeSiteHeader() {
+  const header = document.querySelector('.site-header');
+  if (!header) return;
+  const prefix = pathPrefix();
+
+  header.innerHTML = `
+    <a href="${prefix}index.html" class="logo-link"><span class="site-title">GK WIKI</span></a>
+    <div class="search-container" style="position:relative;">
+      <input type="search" class="search-input" placeholder="Search wiki...">
+      <div class="search-results" style="display:none;"></div>
+    </div>
+    <button class="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    <nav class="main-nav">
+      <ul class="nav-links">
+        <li><a href="${prefix}index.html">Home</a></li>
+        <li><a href="${prefix}about.html">About</a></li>
+        <li><a href="${prefix}history.html">History</a></li>
+        <li><a href="${prefix}factions/index.html">Factions</a></li>
+        <li><a href="${prefix}characters/index.html">Characters</a></li>
+        <li><a href="${prefix}pages/mechanics.html">Mechanics</a></li>
+        <li><a href="${prefix}pages/music.html">Music</a></li>
+        <li><a href="${prefix}pages/nft-collections.html">NFT Collections</a></li>
+      </ul>
+    </nav>
+  `;
+}
+
 // Sitewide layout fixes
 function applyWikiLayoutFixes() {
   if (!document.getElementById('gk-layout-fix-style')) {
     const style = document.createElement('style');
     style.id = 'gk-layout-fix-style';
     style.textContent = `
+      body .site-header {
+        gap: 1.25rem !important;
+      }
+
+      body .site-header .search-container {
+        flex: 0 0 220px !important;
+      }
+
+      body .site-header .search-input {
+        width: 100% !important;
+      }
+
+      body .site-header .main-nav {
+        margin-left: auto !important;
+      }
+
+      body .site-header .nav-links {
+        align-items: center !important;
+        gap: 1.65rem !important;
+      }
+
+      body .site-header .nav-links a {
+        white-space: nowrap !important;
+      }
+
       body .sidebar {
         height: auto !important;
         max-height: calc(100vh - 112px) !important;
@@ -45,28 +106,12 @@ function applyWikiLayoutFixes() {
         scrollbar-color: var(--neon-gold) #111 !important;
       }
 
-      body .sidebar::-webkit-scrollbar {
-        width: 8px !important;
-      }
+      body .sidebar::-webkit-scrollbar { width: 8px !important; }
+      body .sidebar::-webkit-scrollbar-track { background: #111 !important; border-radius: 8px !important; }
+      body .sidebar::-webkit-scrollbar-thumb { background: var(--neon-gold) !important; border-radius: 8px !important; }
 
-      body .sidebar::-webkit-scrollbar-track {
-        background: #111 !important;
-        border-radius: 8px !important;
-      }
-
-      body .sidebar::-webkit-scrollbar-thumb {
-        background: var(--neon-gold) !important;
-        border-radius: 8px !important;
-      }
-
-      body .sidebar-section {
-        margin-bottom: 1.15rem !important;
-      }
-
-      body .sidebar-title {
-        margin-bottom: 0.65rem !important;
-        padding-bottom: 0.4rem !important;
-      }
+      body .sidebar-section { margin-bottom: 1.15rem !important; }
+      body .sidebar-title { margin-bottom: 0.65rem !important; padding-bottom: 0.4rem !important; }
 
       body .sidebar-links a {
         display: block !important;
@@ -77,6 +122,11 @@ function applyWikiLayoutFixes() {
         font-size: 0.88rem !important;
         word-break: normal !important;
         overflow-wrap: anywhere !important;
+      }
+
+      @media (max-width: 1050px) {
+        body .site-header { flex-wrap: wrap !important; }
+        body .site-header .search-container { order: 3 !important; flex: 1 1 100% !important; }
       }
 
       @media (max-width: 900px) {
@@ -110,7 +160,6 @@ function applyWikiLayoutFixes() {
     }
   });
 
-  // Strip leading emoji/symbol nav markers so sidebars use consistent text labels.
   document.querySelectorAll('.sidebar-links a').forEach((link) => {
     if (!link.dataset.gkCleaned) {
       const cleaned = link.textContent
@@ -122,26 +171,6 @@ function applyWikiLayoutFixes() {
     }
   });
 }
-
-document.addEventListener('DOMContentLoaded', applyWikiLayoutFixes);
-window.addEventListener('load', applyWikiLayoutFixes);
-window.addEventListener('resize', applyWikiLayoutFixes);
-setTimeout(applyWikiLayoutFixes, 250);
-setTimeout(applyWikiLayoutFixes, 1000);
-
-// Hamburger Menu
-const hamburger = document.querySelector('.hamburger');
-const siteHeader = document.querySelector('.site-header');
-if (hamburger && siteHeader) {
-  hamburger.addEventListener('click', () => {
-    siteHeader.classList.toggle('nav-open');
-    hamburger.classList.toggle('active');
-  });
-}
-
-// Search functionality
-const searchInput = document.querySelector('.search-input');
-const searchResults = document.querySelector('.search-results');
 
 const siteIndex = [
   { title: 'Home', type: 'Page', url: 'index.html' },
@@ -235,17 +264,26 @@ const siteIndex = [
 ];
 
 function resolveSearchUrl(url) {
-  const path = window.location.pathname;
-  if (path.includes('/characters/') || path.includes('/factions/') || path.includes('/pages/')) {
-    return '../' + url;
-  }
-  return url;
+  return pathPrefix() + url;
 }
 
-if (searchInput) {
+function bindHeaderInteractions() {
+  const hamburger = document.querySelector('.hamburger');
+  const siteHeader = document.querySelector('.site-header');
+  if (hamburger && siteHeader && !hamburger.dataset.gkBound) {
+    hamburger.addEventListener('click', () => {
+      siteHeader.classList.toggle('nav-open');
+      hamburger.classList.toggle('active');
+    });
+    hamburger.dataset.gkBound = 'true';
+  }
+
+  const searchInput = document.querySelector('.search-input');
+  const searchResults = document.querySelector('.search-results');
+  if (!searchInput || !searchResults || searchInput.dataset.gkBound) return;
+
   searchInput.addEventListener('input', function() {
     const query = this.value.toLowerCase().trim();
-    if (!searchResults) return;
     if (query.length < 2) {
       searchResults.style.display = 'none';
       return;
@@ -266,10 +304,24 @@ if (searchInput) {
 
   document.addEventListener('click', (e) => {
     if (!e.target.closest('.search-container')) {
-      if (searchResults) searchResults.style.display = 'none';
+      searchResults.style.display = 'none';
     }
   });
+
+  searchInput.dataset.gkBound = 'true';
 }
+
+function initGkWiki() {
+  normalizeSiteHeader();
+  applyWikiLayoutFixes();
+  bindHeaderInteractions();
+}
+
+document.addEventListener('DOMContentLoaded', initGkWiki);
+window.addEventListener('load', initGkWiki);
+window.addEventListener('resize', applyWikiLayoutFixes);
+setTimeout(initGkWiki, 250);
+setTimeout(initGkWiki, 1000);
 
 // Smooth scroll for TOC links
 document.querySelectorAll('.toc a[href^="#"]').forEach(link => {
