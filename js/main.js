@@ -33,7 +33,7 @@ if (canvas) {
 // Hamburger Menu
 const hamburger = document.querySelector('.hamburger');
 const siteHeader = document.querySelector('.site-header');
-if (hamburger) {
+if (hamburger && siteHeader) {
   hamburger.addEventListener('click', () => {
     siteHeader.classList.toggle('nav-open');
     hamburger.classList.toggle('active');
@@ -44,34 +44,69 @@ if (hamburger) {
 const searchInput = document.querySelector('.search-input');
 const searchResults = document.querySelector('.search-results');
 
+function getSearchBasePath() {
+  const path = window.location.pathname;
+  if (path.includes('/characters/') || path.includes('/factions/') || path.includes('/pages/')) {
+    return '../';
+  }
+  return '';
+}
+
 // All pages index for search
 const siteIndex = [
-  { title: 'Darren Cullen (SER)', type: 'Person', url: 'characters/darren-cullen.html' },
-  { title: 'Sarah PU51FLY', type: 'Person', url: 'characters/sarah-pu51fly.html' },
-  { title: 'Charlie Buster', type: 'Person', url: 'characters/charlie-buster.html' },
-  { title: 'Alfie "The Bitcoin Kid" Blaze', type: 'Character', url: 'characters/alfie-bitcoin-kid.html' },
-  { title: 'Queen Sarah P-fly', type: 'Character', url: 'characters/queen-sarah-pfly.html' },
-  { title: 'NULL THE PROPHET', type: 'Character', url: 'characters/null-the-prophet.html' },
-  { title: 'Elder Codex-7', type: 'Character', url: 'characters/elder-codex-7.html' },
-  { title: 'Thera-9', type: 'Character', url: 'characters/thera-9.html' },
-  { title: 'The Bitcoin Kid Army', type: 'Faction', url: 'factions/bitcoin-kid-army.html' },
-  { title: 'The GKniftyHEADS', type: 'Faction', url: 'factions/gkniftyheads.html' },
-  { title: 'The Nomad Bears', type: 'Faction', url: 'factions/nomad-bears.html' },
-  { title: 'The AllCity Bulls', type: 'Faction', url: 'factions/allcity-bulls.html' },
-  { title: 'The GRAFFPUNKS', type: 'Faction', url: 'factions/graffpunks.html' },
-  { title: 'The BALLY BOYS', type: 'Faction', url: 'factions/bally-boys.html' },
-  { title: 'The CRYPTO MOONGIRLS', type: 'Faction', url: 'factions/crypto-moongirls.html' },
-  { title: 'The DUCKY BOYS', type: 'Faction', url: 'factions/ducky-boys.html' },
-  { title: 'The BLOCKCHAIN FURIES', type: 'Faction', url: 'factions/blockchain-furies.html' },
-  { title: 'HODLWARRIORS', type: 'Faction', url: 'factions/hodlwarriors.html' },
-  { title: 'NoBallGames Legion', type: 'Faction', url: 'factions/no-ball-games-legion.html' },
-  { title: 'Crypto Moongirls Eternal', type: 'Faction', url: 'factions/crypto-moongirls-eternal.html' },
-  { title: 'House of Rackinsats Eternal', type: 'Faction', url: 'factions/house-of-rackinsats-eternal.html' },
+  { title: 'Home', type: 'Page', url: 'index.html' },
   { title: 'About', type: 'Page', url: 'about.html' },
   { title: 'History & Timeline', type: 'Page', url: 'history.html' },
+  { title: 'Characters', type: 'Directory', url: 'characters/index.html' },
+  { title: 'Factions', type: 'Directory', url: 'factions/index.html' },
   { title: 'Mechanics & Rewards', type: 'Page', url: 'pages/mechanics.html' },
   { title: 'Music & Radio', type: 'Page', url: 'pages/music.html' },
   { title: 'NFT Collections', type: 'Page', url: 'pages/nft-collections.html' },
+  { title: 'Submit Lore', type: 'Page', url: 'pages/submit-lore.html' },
+
+  { title: 'Darren Cullen (SER)', type: 'Person', url: 'characters/darren-cullen.html' },
+  { title: 'Sarah PU51FLY', type: 'Person', url: 'characters/sarah-pu51fly.html' },
+  { title: 'Charlie Buster', type: 'Person', url: 'characters/charlie-buster.html' },
+  { title: 'Alfie Bitcoin Kid', type: 'Character', url: 'characters/alfie-bitcoin-kid.html' },
+  { title: 'Aleema', type: 'Character', url: 'characters/aleema.html' },
+  { title: 'Ava Chen', type: 'Character', url: 'characters/ava-chen.html' },
+  { title: 'Billy Goat Kid', type: 'Character', url: 'characters/billy-goat-kid.html' },
+  { title: 'Bit-Cap 5000', type: 'Character', url: 'characters/bit-cap-5000.html' },
+  { title: 'Dragan Volkov', type: 'Character', url: 'characters/dragan-volkov.html' },
+  { title: 'Elder Codex-7', type: 'Character', url: 'characters/elder-codex-7.html' },
+  { title: 'Forklord You', type: 'Character', url: 'characters/forklord-you.html' },
+  { title: 'Forksplit', type: 'Character', url: 'characters/forksplit.html' },
+  { title: 'GRIT', type: 'Character', url: 'characters/grit.html' },
+  { title: 'Grit42', type: 'Character', url: 'characters/grit42.html' },
+  { title: 'HEX-TAGGER PRIME', type: 'Character', url: 'characters/hex-tagger-prime.html' },
+  { title: 'Iris-7', type: 'Character', url: 'characters/iris-7.html' },
+  { title: 'Jodie ZOOM 2000', type: 'Character', url: 'characters/jodie-zoom.html' },
+  { title: 'Lady-INK', type: 'Character', url: 'characters/lady-ink.html' },
+  { title: 'Loopfiend', type: 'Character', url: 'characters/loopfiend.html' },
+  { title: 'M1NTR-K1LL', type: 'Character', url: 'characters/m1ntr-k1ll.html' },
+  { title: 'NULL THE PROPHET', type: 'Character', url: 'characters/null-the-prophet.html' },
+  { title: 'Patchwork', type: 'Character', url: 'characters/patchwork.html' },
+  { title: 'PYRALITH', type: 'Character', url: 'characters/pyralith.html' },
+  { title: 'Queen Sarah P-fly', type: 'Character', url: 'characters/queen-sarah-pfly.html' },
+  { title: 'Quell', type: 'Character', url: 'characters/quell.html' },
+  { title: 'Rune Tag', type: 'Character', url: 'characters/rune-tag.html' },
+  { title: 'Samael.exe', type: 'Character', url: 'characters/samael-exe.html' },
+  { title: 'SatoRebel', type: 'Character', url: 'characters/satorebel.html' },
+  { title: 'Sister Halcyon', type: 'Character', url: 'characters/sister-halcyon.html' },
+  { title: 'Snipey D-Man', type: 'Character', url: 'characters/snipey-d-man.html' },
+  { title: 'The Princess', type: 'Character', url: 'characters/the-princess.html' },
+  { title: 'The Whitewasher', type: 'Character', url: 'characters/whitewasher.html' },
+  { title: 'Thera-9', type: 'Character', url: 'characters/thera-9.html' },
+  { title: 'Thorne Architect', type: 'Character', url: 'characters/thorne-architect.html' },
+
+  { title: 'Bitcoin Kid Army', type: 'Faction', url: 'factions/bitcoin-kid-army.html' },
+  { title: 'GKniftyHEADS', type: 'Faction', url: 'factions/gkniftyheads.html' },
+  { title: 'GRAFFPUNKS', type: 'Faction', url: 'factions/graffpunks.html' },
+  { title: 'HODLWARRIORS', type: 'Faction', url: 'factions/hodlwarriors.html' },
+  { title: 'NoBallGames Legion', type: 'Faction', url: 'factions/no-ball-games-legion.html' },
+  { title: 'Crypto Moongirls Eternal', type: 'Faction', url: 'factions/crypto-moongirls-eternal.html' },
+  { title: 'Nomad Bears', type: 'Faction', url: 'factions/nomad-bears.html' },
+  { title: 'House of Rackinsats Eternal', type: 'Faction', url: 'factions/house-of-rackinsats-eternal.html' },
 ];
 
 if (searchInput) {
@@ -87,8 +122,10 @@ if (searchInput) {
       searchResults.style.display = 'none';
       return;
     }
-    searchResults.innerHTML = matches.slice(0, 8).map(item =>
-      `<a href="${item.url}" class="search-result-item">
+
+    const basePath = getSearchBasePath();
+    searchResults.innerHTML = matches.slice(0, 12).map(item =>
+      `<a href="${basePath}${item.url}" class="search-result-item">
         <div class="search-result-title">${item.title}</div>
         <div class="search-result-type">${item.type}</div>
       </a>`
