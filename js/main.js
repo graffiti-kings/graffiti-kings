@@ -31,60 +31,103 @@ if (canvas) {
 }
 
 // Sitewide layout fixes
-(function applyWikiLayoutFixes() {
-  const style = document.createElement('style');
-  style.textContent = `
-    .sidebar {
-      max-height: calc(100vh - 110px);
-      overflow-y: auto;
-      overflow-x: hidden;
-      scrollbar-width: thin;
-      scrollbar-color: var(--neon-gold) #111;
-    }
-
-    .sidebar::-webkit-scrollbar {
-      width: 8px;
-    }
-
-    .sidebar::-webkit-scrollbar-track {
-      background: #111;
-      border-radius: 8px;
-    }
-
-    .sidebar::-webkit-scrollbar-thumb {
-      background: var(--neon-gold);
-      border-radius: 8px;
-    }
-
-    .sidebar-section {
-      margin-bottom: 1.25rem;
-    }
-
-    .sidebar-links a {
-      display: block;
-      line-height: 1.25;
-      padding-top: 0.35rem;
-      padding-bottom: 0.35rem;
-      word-break: normal;
-      overflow-wrap: anywhere;
-    }
-
-    @media (max-width: 900px) {
-      .sidebar {
-        position: relative;
-        top: auto;
-        max-height: none;
-        overflow: visible;
+function applyWikiLayoutFixes() {
+  if (!document.getElementById('gk-layout-fix-style')) {
+    const style = document.createElement('style');
+    style.id = 'gk-layout-fix-style';
+    style.textContent = `
+      body .sidebar {
+        height: auto !important;
+        max-height: calc(100vh - 112px) !important;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        scrollbar-width: thin !important;
+        scrollbar-color: var(--neon-gold) #111 !important;
       }
-    }
-  `;
-  document.head.appendChild(style);
 
-  const emojiPrefix = /^[\p{Emoji_Presentation}\p{Extended_Pictographic}\uFE0F\u200D\s]+/u;
-  document.querySelectorAll('.sidebar-links a').forEach((link) => {
-    link.textContent = link.textContent.replace(emojiPrefix, '').trim();
+      body .sidebar::-webkit-scrollbar {
+        width: 8px !important;
+      }
+
+      body .sidebar::-webkit-scrollbar-track {
+        background: #111 !important;
+        border-radius: 8px !important;
+      }
+
+      body .sidebar::-webkit-scrollbar-thumb {
+        background: var(--neon-gold) !important;
+        border-radius: 8px !important;
+      }
+
+      body .sidebar-section {
+        margin-bottom: 1.15rem !important;
+      }
+
+      body .sidebar-title {
+        margin-bottom: 0.65rem !important;
+        padding-bottom: 0.4rem !important;
+      }
+
+      body .sidebar-links a {
+        display: block !important;
+        line-height: 1.18 !important;
+        padding-top: 0.28rem !important;
+        padding-bottom: 0.28rem !important;
+        padding-left: 0.65rem !important;
+        font-size: 0.88rem !important;
+        word-break: normal !important;
+        overflow-wrap: anywhere !important;
+      }
+
+      @media (max-width: 900px) {
+        body .sidebar {
+          position: relative !important;
+          top: auto !important;
+          max-height: none !important;
+          overflow: visible !important;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+  }
+
+  const isDesktop = window.matchMedia('(min-width: 901px)').matches;
+  document.querySelectorAll('.sidebar').forEach((sidebar) => {
+    if (isDesktop) {
+      sidebar.style.setProperty('height', 'auto', 'important');
+      sidebar.style.setProperty('max-height', 'calc(100vh - 112px)', 'important');
+      sidebar.style.setProperty('overflow-y', 'auto', 'important');
+      sidebar.style.setProperty('overflow-x', 'hidden', 'important');
+      sidebar.style.setProperty('position', 'sticky', 'important');
+      sidebar.style.setProperty('top', '80px', 'important');
+    } else {
+      sidebar.style.removeProperty('height');
+      sidebar.style.removeProperty('max-height');
+      sidebar.style.removeProperty('overflow-y');
+      sidebar.style.removeProperty('overflow-x');
+      sidebar.style.removeProperty('position');
+      sidebar.style.removeProperty('top');
+    }
   });
-})();
+
+  // Strip leading emoji/symbol nav markers so sidebars use consistent text labels.
+  document.querySelectorAll('.sidebar-links a').forEach((link) => {
+    if (!link.dataset.gkCleaned) {
+      const cleaned = link.textContent
+        .replace(/^[^\p{L}\p{N}]+/u, '')
+        .replace(/\s+/g, ' ')
+        .trim();
+      if (cleaned) link.textContent = cleaned;
+      link.dataset.gkCleaned = 'true';
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', applyWikiLayoutFixes);
+window.addEventListener('load', applyWikiLayoutFixes);
+window.addEventListener('resize', applyWikiLayoutFixes);
+setTimeout(applyWikiLayoutFixes, 250);
+setTimeout(applyWikiLayoutFixes, 1000);
 
 // Hamburger Menu
 const hamburger = document.querySelector('.hamburger');
