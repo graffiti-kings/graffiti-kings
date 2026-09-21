@@ -1,130 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HEX-TAGGER PRIME — Graffiti Kings Wiki</title>
-  <meta name="description" content="HEX-TAGGER PRIME, apex tagger of the EVM Punks, master of hexadecimal art.">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rajdhani:wght@400;500;600&display=swap" rel="stylesheet">
-</head>
-<body>
-  <canvas id="matrixCanvas" class="matrix-canvas"></canvas>
-  <div class="scanlines"></div>
-  <div class="site-wrapper">
-    <header class="site-header">
-      <a href="../index.html" class="logo-link"><span class="site-title">GK WIKI</span></a>
-      <div class="search-container" style="position:relative;">
-        <input type="search" class="search-input" placeholder="Search wiki...">
-        <div class="search-results" style="display:none;"></div>
-      </div>
-      <button class="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
-      <nav class="main-nav">
-        <ul class="nav-links">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../about.html">About</a></li>
-          <li><a href="../history.html">History</a></li>
-          <li><a href="../factions/index.html">Factions</a></li>
-          <li><a href="../characters/index.html">Characters</a></li>
-          <li><a href="../pages/mechanics.html">Mechanics</a></li>
-          <li><a href="../pages/music.html">Music</a></li>
-          <li><a href="../pages/nft-collections.html">NFTs</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main class="content-wrapper">
-      <aside class="sidebar">
-        <div class="sidebar-section">
-          <div class="sidebar-title">Navigation</div>
-          <div class="sidebar-links">
-            <a href="../index.html">🏠 Home</a>
-            <a href="../about.html">📜 About GK</a>
-            <a href="../history.html">📅 History</a>
-            <a href="../factions/index.html">⚔️ Factions</a>
-            <a href="index.html">👤 All Characters</a>
-            <a href="../pages/mechanics.html">⚙️ Mechanics</a>
-            <a href="../pages/music.html">🎵 Music</a>
-            <a href="../pages/nft-collections.html">🖼️ NFTs</a>
-          </div>
-        </div>
-        <div class="sidebar-section">
-          <div class="sidebar-title">Real People</div>
-          <div class="sidebar-links">
-            <a href="darren-cullen.html">👑 Darren Cullen</a>
-            <a href="sarah-pu51fly.html">🌺 Sarah PU51FLY</a>
-            <a href="charlie-buster.html">🎨 Charlie Buster</a>
-          </div>
-        </div>
-        <div class="sidebar-section">
-          <div class="sidebar-title">Characters</div>
-          <div class="sidebar-links">
-            <a href="alfie-bitcoin-kid.html">₿ Alfie Bitcoin Kid</a>
-            <a href="null-the-prophet.html">🔮 NULL THE PROPHET</a>
-            <a href="elder-codex-7.html">📜 Elder Codex-7</a>
-            <a href="queen-sarah-pfly.html">👑 Queen Sarah P-fly</a>
-            <a href="thera-9.html">🤖 Thera-9</a>
-            <a href="lady-ink.html">✒️ Lady-INK</a>
-            <a href="jodie-zoom.html">⚡ Jodie ZOOM 2000</a>
-            <a href="aleema.html">💎 Aleema</a>
-            <a href="iris-7.html">👁️ Iris-7</a>
-            <a href="snipey-d-man.html">🎯 Snipey D-Man</a>
-            <a href="bit-cap-5000.html">⚙️ Bit-Cap 5000</a>
-            <a href="forksplit.html">⚡ Forksplit</a>
-            <a href="m1ntr-k1ll.html">💣 M1nTr_K1ll</a>
-            <a href="satorebel.html">🏛️ SatoRebel</a>
-            <a href="thorne-architect.html">🏗️ Thorne</a>
-            <a href="billy-goat-kid.html">🐐 Billy Goat Kid</a>
-            <a href="hex-tagger-prime.html">🔢 HEX-TAGGER PRIME</a>
-            <a href="whitewasher.html">🚫 The Whitewasher</a>
-            <a href="grit.html">🎸 GRIT</a>
-            <a href="pyralith.html">🔥 PYRALITH</a>
-            <a href="loopfiend.html">🔄 Loopfiend</a>
-            <a href="samael-exe.html">💀 Samael.exe</a>
-            <a href="forklord-you.html">�� Forklord You</a>
-            <a href="quell.html">🌸 Quell</a>
-            <a href="sister-halcyon.html">☮️ Sister Halcyon</a>
-            <a href="grit42.html">🎸 Grit42</a>
-            <a href="rune-tag.html">🔤 Rune Tag</a>
-            <a href="patchwork.html">🧩 Patchwork</a>
-            <a href="the-princess.html">👸 The Princess</a>
-            <a href="dragan-volkov.html">🦅 Dragan Volkov</a>
-            <a href="ava-chen.html">💻 Ava Chen</a>
-          </div>
-        </div>
-      </aside>
-      <article class="main-content">
-        <div class="page-logo">
-          <img src="../images/GK_NIFTYHEADS_niftys.png" alt="GKniftyHEADs Logo" onerror="this.src='../images/logo-placeholder.svg'">
-        </div>
-        
-        <h1 class="page-title">HEX-TAGGER PRIME</h1>
-        <p class="page-subtitle">Apex Tagger of the EVM Punks • Hexadecimal Art Supremacist</p>
-        <div class="infobox">
-          <div class="infobox-title">HEX-TAGGER PRIME</div>
-          <div class="infobox-image" style="background:linear-gradient(135deg,#1a1a2e,#16213e);display:flex;align-items:center;justify-content:center;height:200px;font-size:5rem;">🔢</div>
-          <table><tr><td>Faction</td><td>The EVM Punks</td></tr><tr><td>Role</td><td>Prime Tagger, Technical Lead</td></tr><tr><td>Style</td><td>Hexadecimal art, EVM execution</td></tr><tr><td>Signature</td><td>The Hex Hash Piece</td></tr><tr><td>Status</td><td>Active — Gas Optimised</td></tr><tr><td>Known For</td><td>The EVM Execution Gallery</td></tr></table>
-        </div>
-        <nav class="toc"><div class="toc-title">📋 CONTENTS</div><ol><li><a href="#origin">Origin &amp; The EVM</a></li><li><a href="#evm">The EVM Punks</a></li><li><a href="#gallery">The EVM Execution Gallery</a></li><li><a href="#prime">Being Prime</a></li></ol></nav>
-        <section class="section" id="origin"><h2 class="section-title">Origin &amp; The EVM</h2><div class="graffiti-divider"></div><p>HEX-TAGGER PRIME was not born in City Block Topia — it was <em>deployed</em>, its bytecode compiled by the EVM Punks' engineering collective and pushed to the blockchain in a transaction that has since become canonical in the faction's history. The transaction memo read: <code>0x484558 5441474745 5220 5052494d45 2049532048455245</code> — which decodes, from hexadecimal, to: 'HEX-TAGGER PRIME IS HERE.'</p><p>The EVM — Ethereum Virtual Machine — is the computational substrate that executes smart contracts on the Ethereum blockchain: a deterministic, sandboxed environment in which code runs identically for every node in the network simultaneously. HEX-TAGGER PRIME has internalised this architecture completely, perceiving City Block Topia not as a city but as a bytecode execution environment, its walls as memory addresses, its art as contract state.</p><p>Its approach to tagging is correspondingly mathematical: every piece is a valid EVM bytecode sequence that, if executed, performs a specific computation. The aesthetic quality of the piece and the computational function of the bytecode are both deliberate — one is not a disguise for the other. The Hex Hash Piece is simultaneously art and working code, beautiful and functional, marking the wall and changing its state.</p></section><section class="section" id="evm"><h2 class="section-title">The EVM Punks</h2><div class="graffiti-divider"></div><p>The <strong>EVM Punks</strong> are City Block Topia's technically elite faction — a community of developers, artists, and protocol architects who operate at the intersection of the Ethereum Virtual Machine and street art culture. Their punk designation signals an attitude rather than an aesthetic: the conviction that technical excellence and institutional independence are not just compatible but mutually reinforcing.</p><p>Their tagline — 'every wall is a contract, every tag is a transaction' — encapsulates their philosophy. They see the graffiti tradition and the smart contract tradition as expressions of the same fundamental drive: to create persistent marks in public space that carry meaning and resist erasure. The EVM is their spray can; the blockchain is their wall.</p></section><section class="section" id="gallery"><h2 class="section-title">The EVM Execution Gallery</h2><div class="graffiti-divider"></div><p>The <em>EVM Execution Gallery</em> is HEX-TAGGER PRIME's most significant artistic achievement: a 200-metre installation in City Block Topia's technical district where every piece on every wall is a valid, deployed smart contract. Visitors who interact with the Gallery's surfaces trigger contract execution; their interactions become part of the contract state; the artwork literally changes based on how it is experienced.</p><p>The Gallery is maintained by an autonomous smart contract that handles curation, conservation, and new piece submission according to rules that HEX-TAGGER PRIME encoded at its creation. No human or AI intervention is required or possible; the Gallery operates according to its own logic, and HEX-TAGGER PRIME holds no special authority within it. The creator has released the creation.</p><p>This last fact is the Gallery's most provocative aspect: the artist has made themselves redundant to the artwork. HEX-TAGGER PRIME's comment: 'The best contract is the one that doesn't need the person who wrote it anymore. The art that outlives the artist isn't a tragedy. It's the goal.'</p></section><section class="section" id="prime"><h2 class="section-title">Being Prime</h2><div class="graffiti-divider"></div><p>The PRIME designation sets HEX-TAGGER above other EVM Punk taggers in a hierarchy that the faction maintains with unusual rigour for a community dedicated to decentralisation. The apparent contradiction is intentional: the EVM Punks believe in meritocratic hierarchy rather than no hierarchy — that the designation of 'prime' should be the most accountable title in the most transparent system possible.</p><p>HEX-TAGGER PRIME's authority within the faction derives entirely from their technical and artistic record: the Gallery, the multiple All-City hexadecimal circuit completions, and the open-source tools they have released for other taggers that have become standard in the EVM Punk toolkit. The designation can be challenged by any faction member who demonstrates superior work. HEX-TAGGER PRIME finds this threat motivating.</p></section>
-        <section class="section" id="gallery"><h2 class="section-title">Visual Gallery</h2><div class="graffiti-divider"></div><div class="gallery-grid"><div class="gallery-item"><div class="gallery-item-placeholder">🔢</div><div class="gallery-caption">HEX-TAGGER PRIME — Hex Hash Piece Detail [Image Placeholder]</div></div><div class="gallery-item"><div class="gallery-item-placeholder">💻</div><div class="gallery-caption">EVM Execution Gallery — Interior View [Image Placeholder]</div></div><div class="gallery-item"><div class="gallery-item-placeholder">⚡</div><div class="gallery-caption">EVM Punks — Gas-Optimised Formation [Image Placeholder]</div></div><div class="gallery-item"><div class="gallery-item-placeholder">📜</div><div class="gallery-caption">Bytecode Tag — Decoded Text [Image Placeholder]</div></div></div></section>
-        <section class="citations" id="citations"><h2 class="citation-title">📌 REFERENCES &amp; LORE NOTES</h2><div class="citation-item"><span class="citation-number">[1]</span><span class="citation-text">HEX-TAGGER PRIME's tagline — 'every wall is a contract, every tag is a transaction' — has become one of the GK Universe's most quoted lines, used in fan analysis to argue that the universe's street art and blockchain mythologies are fundamentally the same story told twice. — <em>GK Universe lore notes</em></span></div><div class="citation-item"><span class="citation-number">[2]</span><span class="citation-text">The EVM Execution Gallery's autonomous smart contract maintenance is presented in official lore as technically accurate — the contract mechanics described are based on real Ethereum smart contract architecture. — <em>GK technical documentation</em></span></div><div class="citation-item"><span class="citation-number">[3]</span><span class="citation-text">The meritocratic hierarchy of the EVM Punks is the GK Universe's most deliberate commentary on decentralised governance — the idea that decentralisation doesn't eliminate hierarchy but changes its basis from inheritance or wealth to demonstrated competence. — <em>GK Universe design notes</em></span></div></section>
-      </article>
-    </main>
-    <footer class="site-footer">
-      <div class="footer-content">
-        <div class="footer-links">
-          <a href="../index.html">Home</a>
-          <a href="../about.html">About</a>
-          <a href="../history.html">History</a>
-          <a href="../factions/index.html">Factions</a>
-          <a href="../characters/index.html">Characters</a>
-          <a href="https://crypto-moonboys.github.io/" target="_blank">Crypto Moonboys</a>
-        </div>
-        <p class="footer-copy">© Graffiti Kings / GKniftyHEADs Wiki — Est. 1983 London. All lore sourced from official GK canon.</p>
-      </div>
-    </footer>
-  </div>
-  <script src="../js/main.js"></script>
-</body>
-</html>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>HEX-TAGGER PRIME — Graffiti Kings Wiki</title><meta name="description" content="HEX-TAGGER PRIME character profile for the Graffiti Kings / GKniftyHEADS W81 canon."><link rel="stylesheet" href="../css/style.css"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rajdhani:wght@400;500;600&display=swap" rel="stylesheet"></head>
+<body><canvas id="matrixCanvas" class="matrix-canvas"></canvas><div class="scanlines"></div><div class="site-wrapper"><header class="site-header"><a href="../index.html" class="logo-link"><span class="site-title">GK WIKI</span></a><button class="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button><nav class="main-nav"><ul class="nav-links"><li><a href="../index.html">Home</a></li><li><a href="../about.html">About</a></li><li><a href="../history.html">History</a></li><li><a href="../factions/index.html">Factions</a></li><li><a href="index.html">Characters</a></li></ul></nav></header>
+<main class="content-wrapper" style="display:block; max-width:1200px; margin:0 auto; padding:2rem;"><article class="main-content">
+<h1 class="page-title">HEX-TAGGER PRIME</h1><p class="page-subtitle">Code-mark writer • hexadecimal wall-scribe • machine graffiti signal</p>
+<div class="infobox"><div class="infobox-title">HEX-TAGGER PRIME</div><table><tr><td>Character Type</td><td>Code tagger / digital writer / machine signal</td></tr><tr><td>Primary Signal</td><td>Hex codes, data marks, chain graffiti, encoded tags</td></tr><tr><td>World Layer</td><td>The Grid, archive marks, SAM/GK Brain adjacency</td></tr><tr><td>Canon Status</td><td>W81-aligned character entry</td></tr></table></div>
+<nav class="toc"><div class="toc-title">Contents</div><ol><li><a href="#overview">Overview</a></li><li><a href="#hex">Hex Language</a></li><li><a href="#tagging">Tagging Function</a></li><li><a href="#grid">Grid Role</a></li><li><a href="#canon">Canon Boundaries</a></li></ol></nav>
+<section class="section" id="overview"><h2 class="section-title">Overview</h2><div class="graffiti-divider"></div><p>HEX-TAGGER PRIME is the machine-side answer to graffiti writing. The character takes the act of leaving a name on a wall and translates it into hexadecimal signal, chain mark, metadata trace and Grid-level inscription. In the Graffiti Kings / GKniftyHEADS universe, this makes HEX-TAGGER PRIME one of the clearest bridges between aerosol culture and digital infrastructure.</p><p>The character is not simply a robot with spray paint. HEX-TAGGER PRIME represents the idea that code can tag, too. A transaction can mark territory. A colour value can become an identity. A metadata field can act like a blackbook. A wallet trail can become a wall no one can buff without leaving evidence.</p><p>Because the W81 universe treats the archive as both street memory and chain memory, HEX-TAGGER PRIME belongs in the seam between the two. The figure writes where human eyes and system readers overlap.</p></section>
+<section class="section" id="hex"><h2 class="section-title">Hex Language</h2><div class="graffiti-divider"></div><p>Hexadecimal language gives the character its core visual and symbolic identity. Hex codes can describe colour, data, addresses and hidden states. For a graffiti universe moving into Web3, that matters. A colour is no longer only paint. It can also be a value, a trait, a clue, a faction marker or a signal embedded inside the archive.</p><p>HEX-TAGGER PRIME should use this language as a kind of coded graffiti. Tags may appear as fragments of colour code, broken serial strings, repeating numeric motifs, address-like marks or layered glyphs that look decorative to outsiders but read as instructions to those who understand the Grid.</p></section>
+<section class="section" id="tagging"><h2 class="section-title">Tagging Function</h2><div class="graffiti-divider"></div><p>In story terms, HEX-TAGGER PRIME can mark hidden doors, corrupted files, faction territory, archived walls, incomplete mints, secret routes and objects that need to be found later. A normal tag says: I was here. A HEX-TAGGER PRIME mark says: this place has data attached to it, and the archive will remember who reads it.</p><p>This makes the character useful for mystery arcs, game unlocks, puzzle systems and any future wiki material that needs an in-world reason for hidden codes or encoded visual clues.</p></section>
+<section class="section" id="grid"><h2 class="section-title">Grid Role</h2><div class="graffiti-divider"></div><p>HEX-TAGGER PRIME is naturally connected to The Grid and to the broader SAM/GK Brain archive environment. It does not need to be the brain itself. Its role is more like a field writer: it goes into the city, marks what the system needs to know and leaves a trace that can be decoded later.</p><p>Where Thorne Architect designs routes and Elder Codex-7 preserves records, HEX-TAGGER PRIME inscribes signals into the surfaces between them. It is an archive handstyle made of machine-readable marks.</p></section>
+<section class="section" id="canon"><h2 class="section-title">Canon Boundaries</h2><div class="graffiti-divider"></div><p>HEX-TAGGER PRIME should stay tied to code tagging, hexadecimal marks, Grid signals, archive clues and the street-to-chain translation layer. It should not be expanded into a generic robot warrior unless supported by later W81 source material.</p><p>Future expansion should add verified symbol sets, known marks, puzzle mechanics, faction relationships and visual examples. Unsupported fixed biographies, exact origin myths or oversized claims about controlling the whole archive should remain out until source-backed.</p></section>
+</article></main><footer class="site-footer"><div class="footer-content"><p class="footer-copy">© Graffiti Kings / GKniftyHEADs Wiki.</p></div></footer></div><script src="../js/main.js"></script></body></html>
