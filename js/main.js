@@ -30,6 +30,62 @@ if (canvas) {
   });
 }
 
+// Sitewide layout fixes
+(function applyWikiLayoutFixes() {
+  const style = document.createElement('style');
+  style.textContent = `
+    .sidebar {
+      max-height: calc(100vh - 110px);
+      overflow-y: auto;
+      overflow-x: hidden;
+      scrollbar-width: thin;
+      scrollbar-color: var(--neon-gold) #111;
+    }
+
+    .sidebar::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .sidebar::-webkit-scrollbar-track {
+      background: #111;
+      border-radius: 8px;
+    }
+
+    .sidebar::-webkit-scrollbar-thumb {
+      background: var(--neon-gold);
+      border-radius: 8px;
+    }
+
+    .sidebar-section {
+      margin-bottom: 1.25rem;
+    }
+
+    .sidebar-links a {
+      display: block;
+      line-height: 1.25;
+      padding-top: 0.35rem;
+      padding-bottom: 0.35rem;
+      word-break: normal;
+      overflow-wrap: anywhere;
+    }
+
+    @media (max-width: 900px) {
+      .sidebar {
+        position: relative;
+        top: auto;
+        max-height: none;
+        overflow: visible;
+      }
+    }
+  `;
+  document.head.appendChild(style);
+
+  const emojiPrefix = /^[\p{Emoji_Presentation}\p{Extended_Pictographic}\uFE0F\u200D\s]+/u;
+  document.querySelectorAll('.sidebar-links a').forEach((link) => {
+    link.textContent = link.textContent.replace(emojiPrefix, '').trim();
+  });
+})();
+
 // Hamburger Menu
 const hamburger = document.querySelector('.hamburger');
 const siteHeader = document.querySelector('.site-header');
