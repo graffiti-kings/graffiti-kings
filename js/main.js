@@ -16,6 +16,8 @@ const siteIndex = [
   { title: 'Graffiti Kings WAX NFT Collections', type: 'Archive', url: 'pages/graffiti-kings-wax-nft-collections.html' },
   { title: 'Graffiti Queens Second NFT Art Festival 2022', type: 'Archive', url: 'pages/graffiti-queens-nft-festival-2022.html' },
   { title: 'Graffiti Kings Web3 Partnerships SYNC Alien Worlds', type: 'Archive', url: 'pages/graffiti-kings-web3-partnerships.html' },
+  { title: 'Crypto Moonboys GKniftyHEADS GraffPUNKS Connected Network', type: 'Archive', url: 'pages/crypto-moonboys-gkniftyheads-network.html' },
+  { title: 'Bitcoin Kid Invasion Toys Vinyl NFT Archive', type: 'Archive', url: 'pages/bitcoin-kid-invasion-toys-archive.html' },
   { title: 'Darren Cullen SER', type: 'Person', url: 'characters/darren-cullen.html' },
   { title: 'Sarah PU51FLY', type: 'Person', url: 'characters/sarah-pu51fly.html' },
   { title: 'Charlie Buster', type: 'Person', url: 'characters/charlie-buster.html' },
