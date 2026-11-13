@@ -30,6 +30,8 @@ The site's lore features **Block Topia**, **the Grid**, **40 factions**, the **H
 | [Press, website and social-source network](pages/graffiti-kings-web-network.html) | Categorised research directory of journalism, broadcast, auction, radio, project sites and declared social handles |
 | [Graffiti Queens in Decentraland (2021)](pages/graffiti-queens-decentraland-2021.html) | Independently attributed history of the all-women 2021 NFT exhibition and related Decentraland Art Week programme |
 | [Graffiti Kings WAX collection registry](pages/graffiti-kings-wax-nft-collections.html) | Seven collection identifiers and direct marketplace links, separating project claims from on-chain verification |
+| [Graffiti Queens NFT festival (2022)](pages/graffiti-queens-nft-festival-2022.html) | Separate second annual virtual gallery event and independent artist/exhibition records |
+| [Graffiti Kings Web3 partnerships](pages/graffiti-kings-web3-partnerships.html) | SYNC Network and Alien Worlds source records, grant listings and historical project claims |
 
 When the site is published, these paths are accessible relative to the website URL above.
 
