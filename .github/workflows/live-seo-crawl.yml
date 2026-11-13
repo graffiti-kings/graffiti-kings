@@ -1,0 +1,29 @@
+name: Graffiti Kings live SEO crawl
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 8 * * 1,4'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: graffiti-kings-live-seo
+  cancel-in-progress: false
+
+jobs:
+  deployed-site:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Set up Node.js 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Verify deployed site against the main-branch sitemap
+        run: node scripts/check-live-seo.mjs
