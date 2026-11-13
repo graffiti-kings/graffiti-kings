@@ -26,6 +26,8 @@ The site's lore features **Block Topia**, **the Grid**, **40 factions**, the **H
 | [Music](pages/music.html) | Music and culture within the project |
 | [NFT collections](pages/nft-collections.html) | Collectibles and their place in the universe |
 | [Submit lore](pages/submit-lore.html) | Lore submission information |
+| [SER documented history](pages/darren-cullen-ser-history.html) | Source-led career history with external interviews, railway murals, ITV, auction records and WAX reporting |
+| [Press, website and social-source network](pages/graffiti-kings-web-network.html) | Categorised research directory of journalism, broadcast, auction, radio, project sites and declared social handles |
 
 When the site is published, these paths are accessible relative to the website URL above.
 
@@ -78,3 +80,9 @@ When proposing updates, keep navigation links valid, use the existing article te
 ---
 
 **Graffiti Kings Wiki** — graffiti culture, digital mythology and an expanding fictional universe.
+
+## Real-world evidence and social-link policy
+
+The SER / Graffiti Kings research pages distinguish third-party reporting, first-person interviews, historical auction catalogues, project-authored publicity and publicly declared account handles. External links are a curated reference trail; they **do not** imply an incoming backlink, current account control, endorsement or a currently operating legacy app. Real-world history must remain separate from fictional W81/Year 3008 lore. Do not copy copyrighted articles or image assets into this repository.
+
+The expanded history is at [SER documented history](pages/darren-cullen-ser-history.html); original source links and account provenance are in the [web network directory](pages/graffiti-kings-web-network.html).
