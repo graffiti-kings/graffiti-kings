@@ -141,7 +141,18 @@ export async function auditLiveSite({ baseUrl = SITE, checkHosts = baseUrl === S
   }
   const missingPath = '/page-not-found-seo-monitor-2026-11-13';
   const notFound = await read(target(missingPath), 404, 'text/html');
-  if (notFound && !/Page not found/i.test(await notFound.text())) errors.push('Custom 404 page is not being served');
+  if (notFound) {
+    const html = await notFound.text();
+    // A generic host 404 can say "Page not found" and still return HTTP 404.
+    // Require markers from our actual branded 404.html, including a way back
+    // into the wiki, so a missing custom error document fails this check.
+    const hasBrand = html.includes('That page is not in the Graffiti Kings archive.');
+    const hasWikiHome = /<a\s+href=["']\/["'][^>]*>\s*Wiki home\s*<\/a>/i.test(html);
+    const hasCharacterLink = /<a\s+href=["']\/characters\/["'][^>]*>\s*Characters\s*<\/a>/i.test(html);
+    if (!hasBrand || !hasWikiHome || !hasCharacterLink) {
+      errors.push('Custom Graffiti Kings 404 page is not being served (missing archive branding or navigation)');
+    }
+  }
 
   if (checkHosts) {
     for (const [url, label] of [
