@@ -100,14 +100,15 @@ function prefixPath(url) {
 
 function buildCanonicalHeader() {
   const header = document.querySelector('.site-header');
-  if (!header) return;
+  if (!header || header.dataset.gkHeaderBuilt === 'true') return;
+  header.dataset.gkHeaderBuilt = 'true';
   header.innerHTML = `
     <a href="${prefixPath('index.html')}" class="logo-link"><span class="site-title">GK WIKI</span></a>
     <div class="search-container" style="position:relative;">
       <input type="search" class="search-input" placeholder="Search wiki..." autocomplete="off">
       <div class="search-results" style="display:none;"></div>
     </div>
-    <button class="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
     <nav class="main-nav">
       <ul class="nav-links">
         <li><a href="${prefixPath('index.html')}">Home</a></li>
@@ -130,6 +131,7 @@ function bindHamburger() {
   hamburger.addEventListener('click', () => {
     siteHeader.classList.toggle('nav-open');
     hamburger.classList.toggle('active');
+    hamburger.setAttribute('aria-expanded', String(siteHeader.classList.contains('nav-open')));
   });
 }
 
@@ -216,6 +218,8 @@ function applyWikiLayoutFixes() {
       sidebar.style.setProperty('overflow-x', 'hidden', 'important');
       sidebar.style.setProperty('position', 'sticky', 'important');
       sidebar.style.setProperty('top', '80px', 'important');
+    } else {
+      ['height', 'max-height', 'overflow-y', 'overflow-x', 'position', 'top'].forEach((property) => sidebar.style.removeProperty(property));
     }
   });
   document.querySelectorAll('.sidebar-links a').forEach((link) => {
@@ -244,11 +248,17 @@ setTimeout(initGKWiki, 1000);
 const canvas = document.getElementById('matrixCanvas');
 if (canvas) {
   const ctx = canvas.getContext('2d');
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
   const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$₿⚡🎨';
   const fontSize = 14;
-  const drops = Array(Math.floor(canvas.width / fontSize)).fill(1);
+  const drops = [];
+  function resizeMatrix() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    const previousColumns = drops.length;
+    drops.length = Math.ceil(canvas.width / fontSize);
+    for (let i = previousColumns; i < drops.length; i++) drops[i] = 1;
+  }
+  resizeMatrix();
   function drawMatrix() {
     ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -262,10 +272,7 @@ if (canvas) {
     });
   }
   setInterval(drawMatrix, 50);
-  window.addEventListener('resize', () => {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  });
+  window.addEventListener('resize', resizeMatrix);
 }
 
 // Smooth scroll for TOC links

@@ -2,10 +2,10 @@
 
 **Graffiti Kings / GKniftyHEADS — an illustrated wiki and lore archive rooted in graffiti culture.**
 
-**Website (GitHub Pages project URL):** https://graffiti-kings.github.io/graffiti-kings/  
+**Website (custom domain):** https://graffitikings.com/  
 **Source repository:** https://github.com/graffiti-kings/graffiti-kings
 
-> The URL above is the standard GitHub Pages address for this project repository. Public deployment at that address has not been independently verified. If GitHub Pages is not enabled, configure it under **Settings → Pages**.
+> The site is hosted on GitHub Pages using the verified custom domain `graffitikings.com`. Domain DNS is managed through GoDaddy.
 
 ## About the website
 
@@ -61,7 +61,7 @@ Then open http://localhost:8000/.
 
 ## Publication
 
-This repository's default branch is `main`. To publish as a GitHub Pages project site, enable GitHub Pages in the repository settings and select the appropriate publishing source. The standard project URL is https://graffiti-kings.github.io/graffiti-kings/.
+This repository's default branch is `main`. To publish as a GitHub Pages project site, enable GitHub Pages in the repository settings and select the appropriate publishing source. The public website URL is https://graffitikings.com/. Configure this under **Settings → Pages → Custom domain**.
 
 ## Lore and source notes
 
