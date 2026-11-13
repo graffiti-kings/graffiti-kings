@@ -28,6 +28,8 @@ The site's lore features **Block Topia**, **the Grid**, **40 factions**, the **H
 | [Submit lore](pages/submit-lore.html) | Lore submission information |
 | [SER documented history](pages/darren-cullen-ser-history.html) | Source-led career history with external interviews, railway murals, ITV, auction records and WAX reporting |
 | [Press, website and social-source network](pages/graffiti-kings-web-network.html) | Categorised research directory of journalism, broadcast, auction, radio, project sites and declared social handles |
+| [Graffiti Queens in Decentraland (2021)](pages/graffiti-queens-decentraland-2021.html) | Independently attributed history of the all-women 2021 NFT exhibition and related Decentraland Art Week programme |
+| [Graffiti Kings WAX collection registry](pages/graffiti-kings-wax-nft-collections.html) | Seven collection identifiers and direct marketplace links, separating project claims from on-chain verification |
 
 When the site is published, these paths are accessible relative to the website URL above.
 
