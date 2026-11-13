@@ -10,6 +10,8 @@ const siteIndex = [
   { title: 'Music', type: 'Page', url: 'pages/music.html' },
   { title: 'NFT Collections', type: 'Page', url: 'pages/nft-collections.html' },
   { title: 'Submit Lore', type: 'Page', url: 'pages/submit-lore.html' },
+  { title: 'Darren Cullen SER Documented History', type: 'Archive', url: 'pages/darren-cullen-ser-history.html' },
+  { title: 'Graffiti Kings Press Web and Social Sources', type: 'Archive', url: 'pages/graffiti-kings-web-network.html' },
   { title: 'Darren Cullen SER', type: 'Person', url: 'characters/darren-cullen.html' },
   { title: 'Sarah PU51FLY', type: 'Person', url: 'characters/sarah-pu51fly.html' },
   { title: 'Charlie Buster', type: 'Person', url: 'characters/charlie-buster.html' },
