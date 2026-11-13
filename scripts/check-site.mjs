@@ -19,7 +19,7 @@ function visit(dir) {
 visit('.');
 
 const read = (file) => readFileSync(path.join(root, file), 'utf8');
-const publicPages = [...files].filter((file) => file.endsWith('.html') && file !== '_article-template.html').sort();
+const publicPages = [...files].filter((file) => file.endsWith('.html') && file !== '_article-template.html' && file !== '404.html').sort();
 const canonicalUrl = (file) => home + (file === 'index.html' ? '' : file.endsWith('/index.html') ? file.slice(0, -10) : file);
 const ids = new Map();
 

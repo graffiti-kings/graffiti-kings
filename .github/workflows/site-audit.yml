@@ -23,3 +23,5 @@ jobs:
         run: node --check js/main.js
       - name: Audit internal links and SEO
         run: node scripts/check-site.mjs
+      - name: Validate social metadata, schema and technical SEO
+        run: node scripts/check-seo.mjs
