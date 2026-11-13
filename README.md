@@ -32,6 +32,8 @@ The site's lore features **Block Topia**, **the Grid**, **40 factions**, the **H
 | [Graffiti Kings WAX collection registry](pages/graffiti-kings-wax-nft-collections.html) | Seven collection identifiers and direct marketplace links, separating project claims from on-chain verification |
 | [Graffiti Queens NFT festival (2022)](pages/graffiti-queens-nft-festival-2022.html) | Separate second annual virtual gallery event and independent artist/exhibition records |
 | [Graffiti Kings Web3 partnerships](pages/graffiti-kings-web3-partnerships.html) | SYNC Network and Alien Worlds source records, grant listings and historical project claims |
+| [Crypto Moonboys / GKniftyHEADS / GraffPUNKS network](pages/crypto-moonboys-gkniftyheads-network.html) | Current official creator-umbrella model, two routes, licence limits, radio, games, sources and 3008 fiction boundaries |
+| [Bitcoin Kid x Invasion Toys archive](pages/bitcoin-kid-invasion-toys-archive.html) | Externally published designer-toy and WAX NFT plans with source date, rarity arithmetic and delivery-status caveats |
 
 When the site is published, these paths are accessible relative to the website URL above.
 
