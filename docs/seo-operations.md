@@ -16,6 +16,16 @@ DNS: GoDaddy; keep existing A/CNAME/NS records intact while verifying search acc
 
 All modifications require a successful **Graffiti Kings site audit** workflow before merge.
 
+## PR #6 — deployed production verification
+
+The source checks above cannot tell whether GitHub Pages is actually serving the merged files. The separate **Graffiti Kings live SEO crawl** workflow checks production against the checked-out `main` sitemap every **Monday and Thursday at 08:17 UTC**, or when manually triggered from **Actions → Graffiti Kings live SEO crawl → Run workflow**.
+
+The crawl checks the deployed XML sitemap against the repository's sitemap, reads all sitemap pages with a maximum of five concurrent requests, and verifies HTTP 200, HTML content type, final route, matching canonical and Open Graph URLs, descriptions, indexability, social-card metadata and parseable structured data. It also validates robots.txt, both PNG assets, branded HTTP 404, HTTPS and www-to-apex redirects. Old GitHub project-URL redirection is diagnostic only.
+
+**Important:** This workflow is deliberately **not** a pull-request gate, because GitHub Pages does not deploy PR branches to the production domain. PRs run `node --test tests/check-live-seo.test.mjs` against a local server instead; that test includes failing canonical, stale sitemap, missing-image and soft-404 scenarios. After merging, first confirm GitHub Pages deployment is complete, then manually run the live audit and investigate any errors. Scheduled checks use `main` and can also expose external DNS/CDN outages.
+
+The production crawl does **not** assert that Google indexed the URLs, their ranking, the number of impressions, Core Web Vitals, or the accuracy of the editorial content. Those require Search Console, user experience measurements and source review.
+
 ## Actions required outside the repository
 
 ### Google Search Console (domain property)

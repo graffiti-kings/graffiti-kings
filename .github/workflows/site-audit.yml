@@ -20,7 +20,11 @@ jobs:
         with:
           node-version: '24'
       - name: Verify JavaScript syntax
-        run: node --check js/main.js
+        run: |
+          node --check js/main.js
+          node --check scripts/check-live-seo.mjs
+      - name: Test live SEO crawler using an offline fixture
+        run: node --test tests/check-live-seo.test.mjs
       - name: Audit internal links and SEO
         run: node scripts/check-site.mjs
       - name: Validate social metadata, schema and technical SEO
