@@ -45,6 +45,8 @@ export async function auditLiveSite({ baseUrl = SITE, checkHosts = baseUrl === S
         });
         if (retryableStatuses.has(response.status) && attempt < maxAttempts) {
           results.retries++;
+          // Release the failed response before opening another connection.
+          try { await response.body?.cancel(); } catch { /* Retry still applies. */ }
           await new Promise(resolve => setTimeout(resolve, retryDelayMs * (2 ** (attempt - 1))));
           continue;
         }
