@@ -8,6 +8,8 @@ const SITE = 'https://graffitikings.com';
 const PRODUCTION = new URL(SITE);
 const imagePaths = ['/favicon.png', '/images/GK_NIFTYHEADS_niftys.png'];
 const timeoutMs = 15000;
+const maxAttempts = 3;
+const retryableStatuses = new Set([408, 429, 500, 502, 503, 504]);
 
 function unique(values) { return [...new Set(values)]; }
 function attrs(tag) {
@@ -23,25 +25,46 @@ function htmlTags(head, name) {
   return [...head.matchAll(new RegExp('<' + name + '\\b[^>]*>', 'gi'))].map(m => attrs(m[0]));
 }
 
-export async function auditLiveSite({ baseUrl = SITE, checkHosts = baseUrl === SITE, fetchFn = fetch } = {}) {
+export async function auditLiveSite({ baseUrl = SITE, checkHosts = baseUrl === SITE, fetchFn = fetch, retryDelayMs = 400 } = {}) {
   const errors = [];
   const warnings = [];
-  const results = { checkedPages: 0, sitemapCount: 0, checkedImages: 0, checkedRedirects: 0 };
+  const results = { checkedPages: 0, sitemapCount: 0, checkedImages: 0, checkedRedirects: 0, retries: 0, recoveredRequests: 0 };
   const requestBase = new URL(baseUrl);
   const target = (path) => new URL(path, requestBase).toString();
 
   async function request(url, options = {}) {
-    try {
-      const response = await fetchFn(url, {
-        redirect: options.redirect || 'follow',
-        signal: AbortSignal.timeout(timeoutMs),
-        headers: { 'User-Agent': 'GraffitiKingsLiveSEOCrawl/1.0' }
-      });
-      return response;
-    } catch (error) {
-      errors.push('Network failure for ' + url + ': ' + error.message);
-      return null;
+    // A single 503 from the CDN must not fail the whole sitemap crawl.
+    // Retry only temporary failures, and still report the last response if
+    // the problem persists; permanent HTTP errors are never hidden.
+    for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+      try {
+        const response = await fetchFn(url, {
+          redirect: options.redirect || 'follow',
+          signal: AbortSignal.timeout(timeoutMs),
+          headers: { 'User-Agent': 'GraffitiKingsLiveSEOCrawl/1.0' }
+        });
+        if (retryableStatuses.has(response.status) && attempt < maxAttempts) {
+          results.retries++;
+          // Release the failed response before opening another connection.
+          try { await response.body?.cancel(); } catch { /* Retry still applies. */ }
+          await new Promise(resolve => setTimeout(resolve, retryDelayMs * (2 ** (attempt - 1))));
+          continue;
+        }
+        if (attempt > 1 && !retryableStatuses.has(response.status)) {
+          results.recoveredRequests++;
+          warnings.push('Recovered transient failure on attempt ' + attempt + ': ' + url);
+        }
+        return response;
+      } catch (error) {
+        if (attempt === maxAttempts) {
+          errors.push('Network failure after ' + attempt + ' attempts for ' + url + ': ' + error.message);
+          return null;
+        }
+        results.retries++;
+        await new Promise(resolve => setTimeout(resolve, retryDelayMs * (2 ** (attempt - 1))));
+      }
     }
+    return null;
   }
   async function read(url, expectedStatus, expectedType) {
     const response = await request(url);
@@ -90,7 +113,7 @@ export async function auditLiveSite({ baseUrl = SITE, checkHosts = baseUrl === S
     try { return new URL(u).origin === SITE; } catch { return false; }
   }).map(u => [u, new URL(u).pathname]);
 
-  // Avoid burst-loading GitHub Pages. Five simultaneous requests maximum.
+  // Avoid burst-loading GitHub Pages. Three simultaneous requests maximum.
   let nextIndex = 0;
   async function worker() {
     while (nextIndex < paths.length) {
@@ -127,7 +150,7 @@ export async function auditLiveSite({ baseUrl = SITE, checkHosts = baseUrl === S
       }
     }
   }
-  await Promise.all(Array.from({length: 5}, () => worker()));
+  await Promise.all(Array.from({length: 3}, () => worker()));
 
   for (const path of imagePaths) {
     const url = target(path);
@@ -188,6 +211,7 @@ async function main() {
   console.log('Live SEO:', JSON.stringify({
     sitemapURLs: report.sitemapCount, verifiedPages: report.checkedPages,
     images: report.checkedImages, hostRedirects: report.checkedRedirects,
+    retries: report.retries, recovered: report.recoveredRequests,
     errors: report.errors.length, warnings: report.warnings.length
   }));
   if (report.errors.length) process.exitCode = 1;

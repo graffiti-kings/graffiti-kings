@@ -117,3 +117,53 @@ test('a 404 response with archive branding but no wiki navigation is rejected', 
       'Branding alone should not pass the custom 404 check without navigation');
   } finally { await server.close(); }
 });
+
+test('a one-off HTTP 503 on a published page is retried and then passes', async () => {
+  let pixelRequests = 0;
+  const server = await fixtureServer(({ pathname }) => {
+    if (pathname !== '/factions/pixel-pushers.html') return null;
+    pixelRequests++;
+    if (pixelRequests === 1) return { status: 503, type: 'text/html', body: 'temporary service unavailable' };
+    return null;
+  });
+  try {
+    const result = await auditLiveSite({ baseUrl: server.baseUrl, checkHosts: false, retryDelayMs: 0 });
+    assert.deepEqual(result.errors, []);
+    assert.equal(result.checkedPages, expectedPages);
+    assert.equal(pixelRequests, 2);
+    assert.equal(result.retries, 1);
+    assert.equal(result.recoveredRequests, 1);
+  } finally { await server.close(); }
+});
+
+test('three consecutive HTTP 503 responses still fail the live crawl', async () => {
+  let pixelRequests = 0;
+  const server = await fixtureServer(({ pathname }) => {
+    if (pathname !== '/factions/pixel-pushers.html') return null;
+    pixelRequests++;
+    return { status: 503, type: 'text/html', body: 'service unavailable' };
+  });
+  try {
+    const result = await auditLiveSite({ baseUrl: server.baseUrl, checkHosts: false, retryDelayMs: 0 });
+    assert.ok(result.errors.some(e => e.includes('pixel-pushers.html: HTTP 503')));
+    assert.equal(result.checkedPages, expectedPages - 1);
+    assert.equal(pixelRequests, 3);
+    assert.equal(result.retries, 2);
+    assert.equal(result.recoveredRequests, 0);
+  } finally { await server.close(); }
+});
+
+test('permanent 404 on a published page fails without retries', async () => {
+  let requests = 0;
+  const server = await fixtureServer(({ pathname }) => {
+    if (pathname !== '/factions/pixel-pushers.html') return null;
+    requests++;
+    return { status: 404, type: 'text/html', body: 'not found' };
+  });
+  try {
+    const result = await auditLiveSite({ baseUrl: server.baseUrl, checkHosts: false, retryDelayMs: 0 });
+    assert.ok(result.errors.some(e => e.includes('pixel-pushers.html: HTTP 404')));
+    assert.equal(requests, 1);
+    assert.equal(result.retries, 0);
+  } finally { await server.close(); }
+});
