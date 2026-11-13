@@ -86,3 +86,34 @@ test('a missing favicon and soft 404 are both rejected', async () => {
     assert.ok(result.errors.some(e => e.includes('expected 404')));
   } finally { await server.close(); }
 });
+
+test('a generic HTTP 404 with the words Page not found is not accepted as our custom page', async () => {
+  const server = await fixtureServer(({ pathname }) => {
+    if (!pathname.startsWith('/page-not-found-seo-monitor-')) return null;
+    return {
+      status: 404,
+      body: '<!doctype html><html><body><h1>Page not found</h1><p>Generic hosting error</p></body></html>'
+    };
+  });
+  try {
+    const result = await auditLiveSite({ baseUrl: server.baseUrl, checkHosts: false });
+    assert.ok(result.errors.some(e => e.includes('Custom Graffiti Kings 404 page')),
+      'A generic 404 page should fail the branded-404 check');
+  } finally { await server.close(); }
+});
+
+test('a 404 response with archive branding but no wiki navigation is rejected', async () => {
+  const server = await fixtureServer(({ pathname }) => {
+    if (!pathname.startsWith('/page-not-found-seo-monitor-')) return null;
+    return {
+      status: 404,
+      body: '<!doctype html><html><body><h1>Page not found</h1>' +
+        '<p>That page is not in the Graffiti Kings archive.</p></body></html>'
+    };
+  });
+  try {
+    const result = await auditLiveSite({ baseUrl: server.baseUrl, checkHosts: false });
+    assert.ok(result.errors.some(e => e.includes('Custom Graffiti Kings 404 page')),
+      'Branding alone should not pass the custom 404 check without navigation');
+  } finally { await server.close(); }
+});
