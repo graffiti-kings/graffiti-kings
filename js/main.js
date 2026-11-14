@@ -17,6 +17,8 @@ const siteIndex = [
   { title: 'Charlie Buster Artist Press Web Source Network', type: 'Archive', url: 'pages/charlie-buster-source-network.html' },
   { title: 'Darren Cullen SER Documented History', type: 'Archive', url: 'pages/darren-cullen-ser-history.html' },
   { title: 'Graffiti Kings Press Web and Social Sources', type: 'Archive', url: 'pages/graffiti-kings-web-network.html' },
+  { title: 'Original Graffiti Kings 2019 Website Wayback Archive Services', type: 'Archive', url: 'pages/graffiti-kings-original-website-archive.html' },
+  { title: 'Graffiti Kings Historic Marvel Jack Daniels Stefflon Don Campaigns', type: 'Archive', url: 'pages/graffiti-kings-legacy-campaigns.html' },
   { title: 'Graffiti Queens Decentraland 2021 Exhibition', type: 'Archive', url: 'pages/graffiti-queens-decentraland-2021.html' },
   { title: 'Graffiti Kings WAX NFT Collections', type: 'Archive', url: 'pages/graffiti-kings-wax-nft-collections.html' },
   { title: 'Graffiti Queens Second NFT Art Festival 2022', type: 'Archive', url: 'pages/graffiti-queens-nft-festival-2022.html' },
@@ -127,6 +129,7 @@ function buildCanonicalHeader() {
         <li><a href="${prefixPath('index.html')}">Home</a></li>
         <li><a href="${prefixPath('about.html')}">About</a></li>
         <li><a href="${prefixPath('history.html')}">History</a></li>
+        <li><a href="${prefixPath('pages/graffiti-kings-original-website-archive.html')}">Old Site Archive</a></li>
         <li><a href="${prefixPath('factions/index.html')}">Factions</a></li>
         <li><a href="${prefixPath('characters/index.html')}">Characters</a></li>
         <li><a href="${prefixPath('pages/mechanics.html')}">Mechanics</a></li>

@@ -24,7 +24,7 @@ jobs:
           node --check js/main.js
           node --check scripts/check-live-seo.mjs
       - name: Test live SEO crawler using an offline fixture
-        run: node --test tests/check-live-seo.test.mjs
+        run: node --test tests/*.test.mjs
       - name: Audit internal links and SEO
         run: node scripts/check-site.mjs
       - name: Validate social metadata, schema and technical SEO
