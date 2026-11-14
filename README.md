@@ -25,6 +25,7 @@ The site's lore features **Block Topia**, **the Grid**, **40 factions**, the **H
 | [Mechanics](pages/mechanics.html) | Fictional world systems and mechanics |
 | [Music](pages/music.html) | Music and culture within the project |
 | [NFT collections](pages/nft-collections.html) | Collectibles and their place in the universe |
+| [WAXP and Graffiti Kings](pages/waxp.html) | Full source-cited guide to WAX native currency, wallets, resources, AtomicAssets, the seven collections, governance and safety |
 | [Submit lore](pages/submit-lore.html) | Lore submission information |
 | [SER documented history](pages/darren-cullen-ser-history.html) | Source-led career history with external interviews, railway murals, ITV, auction records and WAX reporting |
 | [Press, website and social-source network](pages/graffiti-kings-web-network.html) | Categorised research directory of journalism, broadcast, auction, radio, project sites and declared social handles |
