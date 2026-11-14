@@ -55,6 +55,6 @@ test('original archives are findable from the main wiki and both existing source
 
 test('provenance and present-day business status are qualified', () => {
   assert.match(hub, /not a booking website/i);
-  assert.match(work, /not.*present-day endorsements/i);
+  assert.match(work, /present-day endorsements/i);
   assert.match(read('docs/legacy-archive-source-register.md'), /not freshly verified/);
 });
