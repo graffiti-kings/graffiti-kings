@@ -34,6 +34,10 @@ The site's lore features **Block Topia**, **the Grid**, **40 factions**, the **H
 | [Graffiti Kings Web3 partnerships](pages/graffiti-kings-web3-partnerships.html) | SYNC Network and Alien Worlds source records, grant listings and historical project claims |
 | [Crypto Moonboys / GKniftyHEADS / GraffPUNKS network](pages/crypto-moonboys-gkniftyheads-network.html) | Current official creator-umbrella model, two routes, licence limits, radio, games, sources and 3008 fiction boundaries |
 | [Bitcoin Kid x Invasion Toys archive](pages/bitcoin-kid-invasion-toys-archive.html) | Externally published designer-toy and WAX NFT plans with source date, rarity arithmetic and delivery-status caveats |
+| [Charlie Buster: Grime Art and Saatchi original works](pages/charlie-buster-grime-art-history.html) | Artist Grime Art history and five independently catalogued Saatchi paintings |
+| [Charlie Buster NO BALL GAMES NBG WAX XRP KIDs](pages/charlie-buster-no-ball-games-nbg.html) | Sign-flip brand, WAX $NBG fan-token documents, XRPL XRP KIDs and fictional 2035 lore |
+| [Charlie Buster TREEF Project and Regeneration](pages/charlie-buster-treef-project.html) | TREEF publication, GraffPUNKS Hydro-Nexus article and clearly marked unverified ecological proposals |
+| [Charlie Buster Artist Press Web Source Network](pages/charlie-buster-source-network.html) | 57 curated external art, project, writing, social and marketplace references |
 
 When the site is published, these paths are accessible relative to the website URL above.
 
