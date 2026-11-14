@@ -28,6 +28,8 @@ The site's lore features **Block Topia**, **the Grid**, **40 factions**, the **H
 | [WAXP and Graffiti Kings](pages/waxp.html) | Full source-cited guide to WAX native currency, wallets, resources, AtomicAssets, the seven collections, governance and safety |
 | [Submit lore](pages/submit-lore.html) | Lore submission information |
 | [SER documented history](pages/darren-cullen-ser-history.html) | Source-led career history with external interviews, railway murals, ITV, auction records and WAX reporting |
+| [Original Graffiti Kings website archive](pages/graffiti-kings-original-website-archive.html) | 2019–2020 .co.uk homepage and work-index Wayback links, period company history, historic services and archival-method caveats |
+| [Graffiti Kings historic campaign register](pages/graffiti-kings-legacy-campaigns.html) | Direct 2019 Wayback project pages for Marvel, Jack Daniel's, Stefflon Don and Game of Thrones, plus other period projects and separate production credits |
 | [Press, website and social-source network](pages/graffiti-kings-web-network.html) | Categorised research directory of journalism, broadcast, auction, radio, project sites and declared social handles |
 | [Graffiti Queens in Decentraland (2021)](pages/graffiti-queens-decentraland-2021.html) | Independently attributed history of the all-women 2021 NFT exhibition and related Decentraland Art Week programme |
 | [Graffiti Kings WAX collection registry](pages/graffiti-kings-wax-nft-collections.html) | Seven collection identifiers and direct marketplace links, separating project claims from on-chain verification |
@@ -97,3 +99,7 @@ When proposing updates, keep navigation links valid, use the existing article te
 The SER / Graffiti Kings research pages distinguish third-party reporting, first-person interviews, historical auction catalogues, project-authored publicity and publicly declared account handles. External links are a curated reference trail; they **do not** imply an incoming backlink, current account control, endorsement or a currently operating legacy app. Real-world history must remain separate from fictional W81/Year 3008 lore. Do not copy copyrighted articles or image assets into this repository.
 
 The expanded history is at [SER documented history](pages/darren-cullen-ser-history.html); original source links and account provenance are in the [web network directory](pages/graffiti-kings-web-network.html).
+
+## Original commercial site and Wayback sources
+
+The [original Graffiti Kings .co.uk archive](pages/graffiti-kings-original-website-archive.html) and [historic campaign register](pages/graffiti-kings-legacy-campaigns.html) preserve dated links back to the old commercial website. The [source register](docs/legacy-archive-source-register.md) records capture provenance, evidence levels, gaps and future verification work. Links are historical references, **not** a currently operating graffiti mural booking service or evidence of current brand endorsement.
