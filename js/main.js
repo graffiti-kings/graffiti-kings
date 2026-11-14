@@ -9,6 +9,7 @@ const siteIndex = [
   { title: 'Mechanics', type: 'Page', url: 'pages/mechanics.html' },
   { title: 'Music', type: 'Page', url: 'pages/music.html' },
   { title: 'NFT Collections', type: 'Page', url: 'pages/nft-collections.html' },
+  { title: 'WAXP Graffiti Kings Blockchain Native Coin NFT Guide', type: 'Guide', url: 'pages/waxp.html' },
   { title: 'Submit Lore', type: 'Page', url: 'pages/submit-lore.html' },
   { title: 'Charlie Buster: Grime Art and Saatchi original works', type: 'Archive', url: 'pages/charlie-buster-grime-art-history.html' },
   { title: 'Charlie Buster NO BALL GAMES NBG WAX XRP KIDs', type: 'Archive', url: 'pages/charlie-buster-no-ball-games-nbg.html' },
