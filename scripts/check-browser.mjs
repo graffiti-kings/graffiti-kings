@@ -70,7 +70,7 @@ try {
   await page.keyboard.press('Escape');
   assert.equal(await page.locator('#header-results').isVisible(), false);
   await search.fill('zzznomatch12345');
-  await page.getByText('No matching pages. Try a name, topic or different spelling.').waitFor();
+  await page.locator('#header-results').getByText('No matching pages. Try a name, topic or different spelling.').waitFor();
   await search.fill('pirate radio');
   await search.press('Enter');
   await page.waitForURL('**/search.html?q=pirate+radio');

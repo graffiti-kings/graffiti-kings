@@ -52,3 +52,4 @@ jobs:
         with:
           name: browser-audit
           path: .audit-results/
+          include-hidden-files: true
