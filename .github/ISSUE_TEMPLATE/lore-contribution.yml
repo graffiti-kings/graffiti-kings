@@ -1,0 +1,39 @@
+name: Lore contribution or source correction
+description: Propose sourced history, fiction, a character performance or a correction for review.
+title: "Contribution: "
+body:
+  - type: markdown
+    attributes:
+      value: "Submissions and attachments are public. Do not include private contact details. A proposal becomes wiki content only after editorial review."
+  - type: dropdown
+    id: record_type
+    attributes:
+      label: Kind of contribution
+      options:
+        - Source correction or documented history
+        - Proposed fiction
+        - Character performance or local interpretation
+        - Game concept or live-feature documentation
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed text and where it belongs
+      description: Link the wiki page, explain the change and supply your proposed text.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources and continuity
+      description: Link evidence, identify conflicting accounts and name the realm or period for fiction.
+    validations:
+      required: true
+  - type: textarea
+    id: rights
+    attributes:
+      label: Credits, rights and status
+      description: Identify creators and permissions, and distinguish a proposal from an approved or live feature.
+    validations:
+      required: true

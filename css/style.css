@@ -2,9 +2,6 @@
    Graffiti Kings Wiki — Main Stylesheet
    ============================================================ */
 
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rajdhani:wght@400;500;600&display=swap');
-
 /* ── CSS Variables ── */
 :root {
   --bg:            #0a0a0a;
@@ -875,3 +872,77 @@ p {
 .table-scroll { max-width: 100%; overflow-x: auto; margin-bottom: 2rem; }
 .table-scroll .key-facts-table { min-width: 32rem; }
 .legacy-anchor, section[id] { scroll-margin-top: 7rem; }
+
+/* Shared navigation, search and accessible article entrances. */
+:root { --header-height: 80px; }
+[hidden] { display: none !important; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+.skip-link { position: fixed; top: .5rem; left: .5rem; z-index: 1000; padding: .8rem 1rem; background: var(--neon-gold); color: #000; font-weight: 700; transform: translateY(-160%); }
+.skip-link:focus { transform: translateY(0); }
+a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible { outline: 3px solid var(--neon-cyan); outline-offset: 4px; }
+#main-content { scroll-margin-top: calc(var(--header-height) + 1rem); }
+#main-content:focus { outline: none; }
+.site-header { gap: 1.25rem; flex-wrap: wrap; }
+.main-nav { flex: 1 0 auto; justify-content: flex-end; max-width: 100%; }
+.logo-link { flex-shrink: 0; }
+.nav-links { gap: clamp(.6rem, 1.3vw, 1.5rem); align-items: center; flex-wrap: wrap; }
+.nav-links a { display: inline-flex; align-items: center; min-height: 44px; white-space: nowrap; }
+.nav-links a[aria-current="page"] { color: var(--neon-gold); text-decoration: underline; text-underline-offset: .4rem; }
+.search-container { flex: 0 0 220px; min-width: 0; }
+.search-controls { display: flex; align-items: stretch; }
+.search-input { min-width: 0; width: 100%; min-height: 44px; border-radius: 4px 0 0 4px; }
+.search-submit { flex: 0 0 40px; border: 1px solid var(--neon-cyan); border-left: 0; border-radius: 0 4px 4px 0; background: #133232; color: #fff; cursor: pointer; font: 700 1rem 'Rajdhani', sans-serif; }
+.search-results { right: auto; width: min(30rem, calc(100vw - 4rem)); max-height: min(65vh, 550px); box-shadow: 0 12px 32px #000a; }
+.search-result-title, .search-result-type { display: block; }
+.search-result-count { padding: .8rem 1rem; line-height: 1.5; color: var(--text); border-bottom: 1px solid #333; }
+.search-all { display: block; padding: 1rem; color: var(--neon-cyan); font-weight: 700; }
+.breadcrumbs { max-width: 1400px; margin: 0 auto; padding: 1rem 2rem 0; font-size: .95rem; }
+.breadcrumbs ol { display: flex; flex-wrap: wrap; gap: .4rem; list-style: none; }
+.breadcrumbs li { display: inline; overflow-wrap: anywhere; }
+.breadcrumbs li + li::before { content: '/'; color: #aaa; margin-right: .4rem; }
+.breadcrumbs a { color: var(--neon-cyan); }
+.sidebar { max-height: calc(100dvh - var(--header-height) - 2rem); overflow-y: auto; overflow-x: hidden; top: calc(var(--header-height) + 1rem); scrollbar-width: thin; scrollbar-color: var(--neon-gold) #111; }
+.sidebar-section { margin-bottom: 1.15rem; }
+.sidebar-links a { display: block; padding-block: .35rem; line-height: 1.3; overflow-wrap: anywhere; }
+.footer-copy { color: #aaa; }
+section[id], .legacy-anchor { scroll-margin-top: calc(var(--header-height) + 1rem); }
+.search-page { max-width: 1000px; margin: 0 auto; padding: 2rem; }
+.search-page > p { line-height: 1.7; margin-bottom: 1rem; }
+#wiki-search-form { margin: 2rem 0; }
+#wiki-search-form label { display: block; margin-bottom: .6rem; font-weight: 700; }
+.search-page-controls { display: flex; gap: .75rem; }
+.search-page-controls input { flex: 1; width: 100%; min-width: 0; padding: .85rem; background: #111; border: 1px solid var(--neon-cyan); border-radius: 4px; color: #fff; font: inherit; font-size: 1.1rem; }
+.search-page-results { list-style: none; }
+.search-page-results li { border-top: 1px solid #333; }
+.search-page-link { display: block; padding: 1.5rem 0; text-decoration: none; }
+.search-page-link h2 { font: 600 1.5rem 'Oswald', sans-serif; }
+.search-page-link p { color: var(--text); line-height: 1.65; margin-top: .6rem; }
+
+/* Collapse before the nine-item navigation can squeeze out the search field. */
+@media (max-width: 1200px) {
+  .site-header { flex-wrap: wrap; padding: .8rem 1.25rem; }
+  .hamburger { display: none; width: 44px; height: 44px; padding: 12px 8px; margin-left: auto; }
+  .js-enabled .hamburger { display: flex; }
+  .search-container { order: 3; flex-basis: 100%; width: 100%; }
+  .search-results { width: 100%; }
+  .main-nav { display: block; position: static; flex-basis: 100%; background: #000; padding: 1rem 1.25rem; border-bottom: 2px solid var(--neon-gold); }
+  .js-enabled .main-nav { display: none; position: absolute; top: 100%; left: 0; right: 0; max-height: calc(100dvh - var(--header-height)); overflow-y: auto; }
+  .js-enabled .nav-open .main-nav { display: block; }
+  .nav-links { flex-direction: column; flex-wrap: nowrap; align-items: stretch; gap: .25rem; }
+  .nav-links a { display: flex; }
+}
+@media (max-width: 900px) {
+  .sidebar { position: static; max-height: none; overflow: visible; }
+}
+@media (max-width: 480px) {
+  .content-wrapper, .search-page { padding: 1.25rem; }
+  .breadcrumbs { padding-inline: 1.25rem; }
+  .search-page-controls { flex-wrap: wrap; }
+  .search-page-controls .btn { min-height: 44px; }
+  .factions-grid { grid-template-columns: minmax(0, 1fr); }
+  .character-grid { grid-template-columns: minmax(0, 1fr); }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  .matrix-canvas { display: none; }
+}

@@ -1,0 +1,626 @@
+{
+  "about.html": {
+    "image": "images/social/about.jpg",
+    "alt": "GRAFFITI KINGS — THE WRITING WAS ALWAYS ON THE WALL — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "characters/aleema.html": {
+    "image": "images/social/characters-aleema.jpg",
+    "alt": "Aleema — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "characters/alfie-bitcoin-kid.html": {
+    "image": "images/social/characters-alfie-bitcoin-kid.jpg",
+    "alt": "Alfie “The Bitcoin KiD” Blaze — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "characters/ava-chen.html": {
+    "image": "images/social/characters-ava-chen.jpg",
+    "alt": "Ava Chen — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "characters/billy-goat-kid.html": {
+    "image": "images/social/characters-billy-goat-kid.jpg",
+    "alt": "Billy the Goat Kid — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "characters/bit-cap-5000.html": {
+    "image": "images/social/characters-bit-cap-5000.jpg",
+    "alt": "Bit-Cap 5000 — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "characters/charlie-buster.html": {
+    "image": "images/social/characters-charlie-buster.jpg",
+    "alt": "Charlie Buster — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "characters/darren-cullen.html": {
+    "image": "images/social/characters-darren-cullen.jpg",
+    "alt": "Darren Cullen / SER — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "characters/dragan-volkov.html": {
+    "image": "images/social/characters-dragan-volkov.jpg",
+    "alt": "Dragan Volkov — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "characters/elder-codex-7.html": {
+    "image": "images/social/characters-elder-codex-7.jpg",
+    "alt": "Elder Codex-7 — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "characters/forklord-you.html": {
+    "image": "images/social/characters-forklord-you.jpg",
+    "alt": "Forklord You — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "characters/forksplit.html": {
+    "image": "images/social/characters-forksplit.jpg",
+    "alt": "Forksplit — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "characters/grit.html": {
+    "image": "images/social/characters-grit.jpg",
+    "alt": "GRIT — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "characters/grit42.html": {
+    "image": "images/social/characters-grit42.jpg",
+    "alt": "Grit42 — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "characters/hex-tagger-prime.html": {
+    "image": "images/social/characters-hex-tagger-prime.jpg",
+    "alt": "HEX-TAGGER PRIME — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "characters/index.html": {
+    "image": "images/social/characters-index.jpg",
+    "alt": "People and Characters — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "characters/iris-7.html": {
+    "image": "images/social/characters-iris-7.jpg",
+    "alt": "Iris-7 — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "characters/jodie-zoom.html": {
+    "image": "images/social/characters-jodie-zoom.jpg",
+    "alt": "Jodie ZOOM 2000 — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "characters/lady-ink.html": {
+    "image": "images/social/characters-lady-ink.jpg",
+    "alt": "Lady-INK — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "characters/loopfiend.html": {
+    "image": "images/social/characters-loopfiend.jpg",
+    "alt": "Loopfiend — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "characters/m1ntr-k1ll.html": {
+    "image": "images/social/characters-m1ntr-k1ll.jpg",
+    "alt": "M1NTR-K1LL — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "characters/null-the-prophet.html": {
+    "image": "images/social/characters-null-the-prophet.jpg",
+    "alt": "NULL THE PROPHET — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "characters/patchwork.html": {
+    "image": "images/social/characters-patchwork.jpg",
+    "alt": "Patchwork — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "characters/pyralith.html": {
+    "image": "images/social/characters-pyralith.jpg",
+    "alt": "Pyralith — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "characters/queen-sarah-pfly.html": {
+    "image": "images/social/characters-queen-sarah-pfly.jpg",
+    "alt": "Queen Sarah P-fly — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "characters/quell.html": {
+    "image": "images/social/characters-quell.jpg",
+    "alt": "Quell — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "characters/rune-tag.html": {
+    "image": "images/social/characters-rune-tag.jpg",
+    "alt": "Rune Tag — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "characters/samael-exe.html": {
+    "image": "images/social/characters-samael-exe.jpg",
+    "alt": "Samael.exe — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "characters/sarah-pu51fly.html": {
+    "image": "images/social/characters-sarah-pu51fly.jpg",
+    "alt": "Sarah PU51FLY — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "characters/satorebel.html": {
+    "image": "images/social/characters-satorebel.jpg",
+    "alt": "SatoRebel — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "characters/sister-halcyon.html": {
+    "image": "images/social/characters-sister-halcyon.jpg",
+    "alt": "Sister Halcyon — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "characters/snipey-d-man.html": {
+    "image": "images/social/characters-snipey-d-man.jpg",
+    "alt": "Snipey D-Man Sirus — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "characters/the-princess.html": {
+    "image": "images/social/characters-the-princess.jpg",
+    "alt": "The Princess — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "characters/thera-9.html": {
+    "image": "images/social/characters-thera-9.jpg",
+    "alt": "Thera-9 — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "characters/thorne-architect.html": {
+    "image": "images/social/characters-thorne-architect.jpg",
+    "alt": "Thorne the Architect — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "characters/whitewasher.html": {
+    "image": "images/social/characters-whitewasher.jpg",
+    "alt": "The Whitewasher — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/all-city-bulls.html": {
+    "image": "images/social/factions-all-city-bulls.jpg",
+    "alt": "All City Bulls — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/arcade-scribes.html": {
+    "image": "images/social/factions-arcade-scribes.jpg",
+    "alt": "Arcade Scribes — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/belief-miners.html": {
+    "image": "images/social/factions-belief-miners.jpg",
+    "alt": "Belief Miners — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/binlords.html": {
+    "image": "images/social/factions-binlords.jpg",
+    "alt": "BinLords — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/bitcoin-kid-army.html": {
+    "image": "images/social/factions-bitcoin-kid-army.jpg",
+    "alt": "Bitcoin Kid Army — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/brush-daughters.html": {
+    "image": "images/social/factions-brush-daughters.jpg",
+    "alt": "Brush Daughters — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/burn-crews.html": {
+    "image": "images/social/factions-burn-crews.jpg",
+    "alt": "Burn Crews — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/compound-believers.html": {
+    "image": "images/social/factions-compound-believers.jpg",
+    "alt": "Compound Believers — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/cross-chain-couriers.html": {
+    "image": "images/social/factions-cross-chain-couriers.jpg",
+    "alt": "Cross-Chain Couriers — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/croydon-oracles.html": {
+    "image": "images/social/factions-croydon-oracles.jpg",
+    "alt": "Croydon Oracles — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/crypto-badgers.html": {
+    "image": "images/social/factions-crypto-badgers.jpg",
+    "alt": "Crypto Badgers — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/crypto-moongirls-eternal.html": {
+    "image": "images/social/factions-crypto-moongirls-eternal.jpg",
+    "alt": "Crypto Moongirls — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/deep-holders.html": {
+    "image": "images/social/factions-deep-holders.jpg",
+    "alt": "Deep Holders — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/echo-mothers.html": {
+    "image": "images/social/factions-echo-mothers.jpg",
+    "alt": "Echo Mothers — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/eternal-porch-keepers.html": {
+    "image": "images/social/factions-eternal-porch-keepers.jpg",
+    "alt": "Eternal Porch Keepers — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/fractal-taggers.html": {
+    "image": "images/social/factions-fractal-taggers.jpg",
+    "alt": "Fractal Taggers — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/genesis-anchors.html": {
+    "image": "images/social/factions-genesis-anchors.jpg",
+    "alt": "Genesis Anchors — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/gkniftyheads.html": {
+    "image": "images/social/factions-gkniftyheads.jpg",
+    "alt": "GKniftyHEADS — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/graffpunks.html": {
+    "image": "images/social/factions-graffpunks.jpg",
+    "alt": "GraffPUNKS — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/grid-ghosts.html": {
+    "image": "images/social/factions-grid-ghosts.jpg",
+    "alt": "Grid Ghosts — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/hodl-layer-sentinels.html": {
+    "image": "images/social/factions-hodl-layer-sentinels.jpg",
+    "alt": "HODL Layer Sentinels — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/hodl-x-warriors.html": {
+    "image": "images/social/factions-hodl-x-warriors.jpg",
+    "alt": "HODL X Warriors — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/hodlwarriors.html": {
+    "image": "images/social/factions-hodlwarriors.jpg",
+    "alt": "HODL Warriors — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/house-of-rackinsats-eternal.html": {
+    "image": "images/social/factions-house-of-rackinsats-eternal.jpg",
+    "alt": "House of Rackinsats — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/index.html": {
+    "image": "images/social/factions-index.jpg",
+    "alt": "Factions, Armies and Traditions — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/league-of-keepers.html": {
+    "image": "images/social/factions-league-of-keepers.jpg",
+    "alt": "League of Keepers — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/level-lords.html": {
+    "image": "images/social/factions-level-lords.jpg",
+    "alt": "Level Lords — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/lost-moonboys.html": {
+    "image": "images/social/factions-lost-moonboys.jpg",
+    "alt": "Lost Moonboys — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/mutant-pasteups.html": {
+    "image": "images/social/factions-mutant-pasteups.jpg",
+    "alt": "Mutant Pasteups — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/no-ball-games-legion.html": {
+    "image": "images/social/factions-no-ball-games-legion.jpg",
+    "alt": "NoBallGames Legion — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/nomad-bears.html": {
+    "image": "images/social/factions-nomad-bears.jpg",
+    "alt": "Nomad Bears — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/nomad-drip-house.html": {
+    "image": "images/social/factions-nomad-drip-house.jpg",
+    "alt": "Nomad Drip House — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/null-priests.html": {
+    "image": "images/social/factions-null-priests.jpg",
+    "alt": "Null Priests — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/pixel-pushers.html": {
+    "image": "images/social/factions-pixel-pushers.jpg",
+    "alt": "Pixel Pushers — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/porch-accord-diplomats.html": {
+    "image": "images/social/factions-porch-accord-diplomats.jpg",
+    "alt": "Porch Accord Diplomats — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/porch-poets.html": {
+    "image": "images/social/factions-porch-poets.jpg",
+    "alt": "Porch Poets — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/quest-givers.html": {
+    "image": "images/social/factions-quest-givers.jpg",
+    "alt": "Quest Givers — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/rackinsats-fashion-house.html": {
+    "image": "images/social/factions-rackinsats-fashion-house.jpg",
+    "alt": "Rackinsats Fashion House — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/sam-watchers.html": {
+    "image": "images/social/factions-sam-watchers.jpg",
+    "alt": "SAM Watchers — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/stencil-witches.html": {
+    "image": "images/social/factions-stencil-witches.jpg",
+    "alt": "Stencil Witches — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/tag-lords.html": {
+    "image": "images/social/factions-tag-lords.jpg",
+    "alt": "Tag Lords — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/tag-rush-crew.html": {
+    "image": "images/social/factions-tag-rush-crew.jpg",
+    "alt": "Tag Rush Crew — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/the-unnamed-fortieth.html": {
+    "image": "images/social/factions-the-unnamed-fortieth.jpg",
+    "alt": "The Unnamed Fortieth — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/whale-lords-eternal.html": {
+    "image": "images/social/factions-whale-lords-eternal.jpg",
+    "alt": "Whale Lords — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/whitewall-remnants.html": {
+    "image": "images/social/factions-whitewall-remnants.jpg",
+    "alt": "Whitewall Remnants — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "factions/wildstyle-collective.html": {
+    "image": "images/social/factions-wildstyle-collective.jpg",
+    "alt": "Wildstyle Collective — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "history.html": {
+    "image": "images/social/history.jpg",
+    "alt": "Graffiti Kings History and Mythology Timeline — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "index.html": {
+    "image": "images/social/index.jpg",
+    "alt": "Graffiti Kings Wiki — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "pages/bitcoin-kid-invasion-toys-archive.html": {
+    "image": "images/social/pages-bitcoin-kid-invasion-toys-archive.jpg",
+    "alt": "BITCOIN KID, INVASION TOYS & CRYPTO MOONBOYS — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "pages/charlie-buster-grime-art-history.html": {
+    "image": "images/social/pages-charlie-buster-grime-art-history.jpg",
+    "alt": "CHARLIE BUSTER AND GRIME ART — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "pages/charlie-buster-no-ball-games-nbg.html": {
+    "image": "images/social/pages-charlie-buster-no-ball-games-nbg.jpg",
+    "alt": "NO BALL GAMES / $NBG / XRP KIDs — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "pages/charlie-buster-source-network.html": {
+    "image": "images/social/pages-charlie-buster-source-network.jpg",
+    "alt": "CHARLIE BUSTER: PRESS, ART & WEB NETWORK — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "pages/charlie-buster-treef-project.html": {
+    "image": "images/social/pages-charlie-buster-treef-project.jpg",
+    "alt": "TREEF PROJECT: REGENERATION AND CULTURE — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "pages/crypto-moonboys-gkniftyheads-network.html": {
+    "image": "images/social/pages-crypto-moonboys-gkniftyheads-network.jpg",
+    "alt": "CRYPTO MOONBOYS / GKNIFTYHEADS / GRAFFPUNKS — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "pages/darren-cullen-ser-history.html": {
+    "image": "images/social/pages-darren-cullen-ser-history.jpg",
+    "alt": "DARREN CULLEN / SER: DOCUMENTED HISTORY — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "pages/graffiti-kings-legacy-campaigns.html": {
+    "image": "images/social/pages-graffiti-kings-legacy-campaigns.jpg",
+    "alt": "GRAFFITI KINGS HISTORIC CAMPAIGNS — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "pages/graffiti-kings-original-website-archive.html": {
+    "image": "images/social/pages-graffiti-kings-original-website-archive.jpg",
+    "alt": "ORIGINAL GRAFFITI KINGS WEBSITE ARCHIVE — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "pages/graffiti-kings-wax-nft-collections.html": {
+    "image": "images/social/pages-graffiti-kings-wax-nft-collections.jpg",
+    "alt": "GRAFFITI KINGS: WAX NFT COLLECTIONS — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "pages/graffiti-kings-web-network.html": {
+    "image": "images/social/pages-graffiti-kings-web-network.jpg",
+    "alt": "GRAFFITI KINGS / SER: PRESS & WEB NETWORK — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "pages/graffiti-kings-web3-partnerships.html": {
+    "image": "images/social/pages-graffiti-kings-web3-partnerships.jpg",
+    "alt": "GRAFFITI KINGS: WEB3 PARTNERSHIPS — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "pages/graffiti-queens-decentraland-2021.html": {
+    "image": "images/social/pages-graffiti-queens-decentraland-2021.jpg",
+    "alt": "GRAFFITI QUEENS — DECENTRALAND 2021 — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "pages/graffiti-queens-nft-festival-2022.html": {
+    "image": "images/social/pages-graffiti-queens-nft-festival-2022.jpg",
+    "alt": "GRAFFITI QUEENS — 2022 NFT ART FESTIVAL — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "pages/mechanics.html": {
+    "image": "images/social/pages-mechanics.jpg",
+    "alt": "Story Mechanics and Participation — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "pages/music.html": {
+    "image": "images/social/pages-music.jpg",
+    "alt": "Music and Street Signal — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "pages/nft-collections.html": {
+    "image": "images/social/pages-nft-collections.jpg",
+    "alt": "NFT Collections and Character Artefacts — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "pages/submit-lore.html": {
+    "image": "images/social/pages-submit-lore.jpg",
+    "alt": "Contribute Lore — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "pages/waxp.html": {
+    "image": "images/social/pages-waxp.jpg",
+    "alt": "WAXP & GRAFFITI KINGS — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  },
+  "search.html": {
+    "image": "images/social/search.jpg",
+    "alt": "Search the wiki — Graffiti Kings Wiki",
+    "width": 1200,
+    "height": 630
+  }
+}

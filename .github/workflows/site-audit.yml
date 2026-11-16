@@ -22,10 +22,33 @@ jobs:
       - name: Verify JavaScript syntax
         run: |
           node --check js/main.js
+          node --check js/search.js
           node --check scripts/check-live-seo.mjs
+      - name: Check generated search data is current
+        run: node scripts/build-search-index.mjs --check
       - name: Test live SEO crawler using an offline fixture
         run: node --test tests/*.test.mjs
       - name: Audit internal links and SEO
         run: node scripts/check-site.mjs
       - name: Validate social metadata, schema and technical SEO
         run: node scripts/check-seo.mjs
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - name: Install Chromium for browser regression checks
+        run: npx playwright install --with-deps chromium
+      - name: Test mobile, tablet, desktop and keyboard interactions
+        run: npm run test:browser
+      - name: Save screenshots and local performance measurements
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-audit
+          path: .audit-results/

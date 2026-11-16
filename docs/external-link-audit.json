@@ -1,0 +1,2667 @@
+{
+  "checkedAt": "2026-11-16T16:23:44.477Z",
+  "summary": {
+    "reachable": 195,
+    "missing": 0,
+    "unverified": 41
+  },
+  "links": [
+    {
+      "url": "https://agoradigital.art/blog-nfts-in-digital-art-tokens-or-tokenism/",
+      "pages": [
+        "history.html",
+        "pages/graffiti-kings-web-network.html",
+        "pages/graffiti-queens-decentraland-2021.html"
+      ],
+      "status": 200,
+      "finalURL": "https://agoradigital.art/blog-nfts-in-digital-art-tokens-or-tokenism/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://alienworlds.io/blogs/presenting-galactic-hubs-season-1-grant-recipients/",
+      "pages": [
+        "about.html",
+        "history.html",
+        "pages/darren-cullen-ser-history.html",
+        "pages/graffiti-kings-wax-nft-collections.html",
+        "pages/graffiti-kings-web-network.html",
+        "pages/graffiti-kings-web3-partnerships.html",
+        "pages/waxp.html"
+      ],
+      "status": 200,
+      "finalURL": "https://alienworlds.io/blogs/presenting-galactic-hubs-season-1-grant-recipients/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://alienworlds.medium.com/galactic-hubs-season-1-future-grantees-4aeedda5d99",
+      "pages": [
+        "pages/graffiti-kings-web-network.html",
+        "pages/graffiti-kings-web3-partnerships.html"
+      ],
+      "status": 403,
+      "finalURL": "https://alienworlds.medium.com/galactic-hubs-season-1-future-grantees-4aeedda5d99",
+      "result": "unverified"
+    },
+    {
+      "url": "https://archivesupport.zendesk.com/hc/en-us/articles/360004651732-Using-The-Wayback-Machine",
+      "pages": [
+        "pages/graffiti-kings-legacy-campaigns.html",
+        "pages/graffiti-kings-original-website-archive.html"
+      ],
+      "status": 200,
+      "finalURL": "https://archivesupport.zendesk.com/hc/en-us/articles/360004651732-Using-The-Wayback-Machine",
+      "result": "reachable"
+    },
+    {
+      "url": "https://atomichub.io/explorer/collection/wax-mainnet/noballgamess",
+      "pages": [
+        "pages/charlie-buster-no-ball-games-nbg.html",
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://atomichub.io/explorer/collection/wax-mainnet/noballgamess",
+      "result": "reachable"
+    },
+    {
+      "url": "https://blockleaders.io/graffiti-kings-busier-than-ever/",
+      "pages": [
+        "characters/darren-cullen.html",
+        "history.html",
+        "pages/darren-cullen-ser-history.html",
+        "pages/graffiti-kings-original-website-archive.html",
+        "pages/graffiti-kings-wax-nft-collections.html",
+        "pages/graffiti-kings-web-network.html",
+        "pages/nft-collections.html",
+        "pages/waxp.html"
+      ],
+      "status": 202,
+      "finalURL": "https://blockleaders.io/graffiti-kings-busier-than-ever/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://community.sony.cz/t5/pc-accesorios/te-has-enterado-del-evento-studioduo-de-manana/m-p/1258002",
+      "pages": [
+        "about.html",
+        "pages/darren-cullen-ser-history.html",
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://community.sony.cz/t5/pc-accesorios/te-has-enterado-del-evento-studioduo-de-manana/m-p/1258002?nobounce",
+      "result": "reachable"
+    },
+    {
+      "url": "https://crypto-moonboys.github.io/",
+      "pages": [
+        "history.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptoartnet.medium.com/crypto-artists-honor-mariupol-while-graffiti-queens-hold-nft-art-festival-in-the-metaverse-667a96633727",
+      "pages": [
+        "pages/graffiti-kings-web-network.html",
+        "pages/graffiti-kings-web3-partnerships.html",
+        "pages/graffiti-queens-decentraland-2021.html",
+        "pages/graffiti-queens-nft-festival-2022.html"
+      ],
+      "status": 403,
+      "finalURL": "https://cryptoartnet.medium.com/crypto-artists-honor-mariupol-while-graffiti-queens-hold-nft-art-festival-in-the-metaverse-667a96633727",
+      "result": "unverified"
+    },
+    {
+      "url": "https://cryptobriefing.com/pussy-riot-talk-nfts-ahead-major-graffiti-queens-expo/",
+      "pages": [
+        "characters/darren-cullen.html",
+        "pages/darren-cullen-ser-history.html",
+        "pages/graffiti-kings-web-network.html",
+        "pages/graffiti-kings-web3-partnerships.html",
+        "pages/graffiti-queens-decentraland-2021.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptobriefing.com/pussy-riot-talk-nfts-ahead-major-graffiti-queens-expo/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptogenik.medium.com/",
+      "pages": [
+        "pages/graffiti-kings-wax-nft-collections.html",
+        "pages/graffiti-kings-web3-partnerships.html"
+      ],
+      "status": 403,
+      "finalURL": "https://cryptogenik.medium.com/",
+      "result": "unverified"
+    },
+    {
+      "url": "https://cryptomoonboys.com/",
+      "pages": [
+        "pages/crypto-moonboys-gkniftyheads-network.html",
+        "pages/graffiti-kings-web-network.html",
+        "pages/mechanics.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/about/",
+      "pages": [
+        "pages/crypto-moonboys-gkniftyheads-network.html",
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/about/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/categories/",
+      "pages": [
+        "pages/crypto-moonboys-gkniftyheads-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/categories/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/games/",
+      "pages": [
+        "pages/charlie-buster-no-ball-games-nbg.html",
+        "pages/charlie-buster-source-network.html",
+        "pages/crypto-moonboys-gkniftyheads-network.html",
+        "pages/graffiti-kings-web-network.html",
+        "pages/waxp.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/games/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/gpt-users.html",
+      "pages": [
+        "pages/crypto-moonboys-gkniftyheads-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/gpt-users.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/graffiti-kings-creative-guide.html",
+      "pages": [
+        "pages/crypto-moonboys-gkniftyheads-network.html",
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/graffiti-kings-creative-guide.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/SWARMSY-Ai/",
+      "pages": [
+        "pages/crypto-moonboys-gkniftyheads-network.html",
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/SWARMSY-Ai/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/aleema-child-of-the-shard.html",
+      "pages": [
+        "characters/aleema.html",
+        "characters/jodie-zoom.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/aleema-child-of-the-shard.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/alfie-bitcoin-kid-blaze.html",
+      "pages": [
+        "characters/alfie-bitcoin-kid.html",
+        "characters/satorebel.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/alfie-bitcoin-kid-blaze.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/ava-chen.html",
+      "pages": [
+        "characters/ava-chen.html",
+        "characters/dragan-volkov.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/ava-chen.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/billy-the-goat-kid.html",
+      "pages": [
+        "characters/billy-goat-kid.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/billy-the-goat-kid.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/bit-cap-5000.html",
+      "pages": [
+        "characters/bit-cap-5000.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/bit-cap-5000.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/bitcoin-kid-army.html",
+      "pages": [
+        "characters/alfie-bitcoin-kid.html",
+        "characters/iris-7.html",
+        "characters/satorebel.html",
+        "factions/bitcoin-kid-army.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/bitcoin-kid-army.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/block-topia.html",
+      "pages": [
+        "characters/iris-7.html",
+        "characters/queen-sarah-pfly.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/block-topia.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/charlie-buster.html",
+      "pages": [
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/charlie-buster.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/crypto-moonboys.html",
+      "pages": [
+        "about.html",
+        "characters/aleema.html",
+        "characters/alfie-bitcoin-kid.html",
+        "characters/ava-chen.html",
+        "characters/billy-goat-kid.html",
+        "characters/bit-cap-5000.html",
+        "characters/charlie-buster.html",
+        "characters/darren-cullen.html",
+        "characters/dragan-volkov.html",
+        "characters/elder-codex-7.html",
+        "characters/forklord-you.html",
+        "characters/forksplit.html",
+        "characters/grit.html",
+        "characters/grit42.html",
+        "characters/hex-tagger-prime.html",
+        "characters/index.html",
+        "characters/iris-7.html",
+        "characters/jodie-zoom.html",
+        "characters/lady-ink.html",
+        "characters/loopfiend.html",
+        "characters/m1ntr-k1ll.html",
+        "characters/null-the-prophet.html",
+        "characters/patchwork.html",
+        "characters/pyralith.html",
+        "characters/queen-sarah-pfly.html",
+        "characters/quell.html",
+        "characters/rune-tag.html",
+        "characters/samael-exe.html",
+        "characters/sarah-pu51fly.html",
+        "characters/satorebel.html",
+        "characters/sister-halcyon.html",
+        "characters/snipey-d-man.html",
+        "characters/the-princess.html",
+        "characters/thera-9.html",
+        "characters/thorne-architect.html",
+        "characters/whitewasher.html",
+        "factions/all-city-bulls.html",
+        "factions/arcade-scribes.html",
+        "factions/belief-miners.html",
+        "factions/binlords.html",
+        "factions/bitcoin-kid-army.html",
+        "factions/brush-daughters.html",
+        "factions/burn-crews.html",
+        "factions/compound-believers.html",
+        "factions/cross-chain-couriers.html",
+        "factions/croydon-oracles.html",
+        "factions/crypto-badgers.html",
+        "factions/crypto-moongirls-eternal.html",
+        "factions/deep-holders.html",
+        "factions/echo-mothers.html",
+        "factions/eternal-porch-keepers.html",
+        "factions/fractal-taggers.html",
+        "factions/genesis-anchors.html",
+        "factions/gkniftyheads.html",
+        "factions/graffpunks.html",
+        "factions/grid-ghosts.html",
+        "factions/hodl-layer-sentinels.html",
+        "factions/hodl-x-warriors.html",
+        "factions/hodlwarriors.html",
+        "factions/house-of-rackinsats-eternal.html",
+        "factions/index.html",
+        "factions/league-of-keepers.html",
+        "factions/level-lords.html",
+        "factions/lost-moonboys.html",
+        "factions/mutant-pasteups.html",
+        "factions/no-ball-games-legion.html",
+        "factions/nomad-bears.html",
+        "factions/nomad-drip-house.html",
+        "factions/null-priests.html",
+        "factions/pixel-pushers.html",
+        "factions/porch-accord-diplomats.html",
+        "factions/porch-poets.html",
+        "factions/quest-givers.html",
+        "factions/rackinsats-fashion-house.html",
+        "factions/sam-watchers.html",
+        "factions/stencil-witches.html",
+        "factions/tag-lords.html",
+        "factions/tag-rush-crew.html",
+        "factions/the-unnamed-fortieth.html",
+        "factions/whale-lords-eternal.html",
+        "factions/whitewall-remnants.html",
+        "factions/wildstyle-collective.html",
+        "history.html",
+        "index.html",
+        "pages/crypto-moonboys-gkniftyheads-network.html",
+        "pages/graffiti-kings-web-network.html",
+        "pages/mechanics.html",
+        "pages/music.html",
+        "pages/nft-collections.html",
+        "pages/submit-lore.html",
+        "pages/waxp.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/crypto-moonboys.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/dragan-volkov.html",
+      "pages": [
+        "characters/ava-chen.html",
+        "characters/dragan-volkov.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/dragan-volkov.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/elder-codex-7.html",
+      "pages": [
+        "characters/elder-codex-7.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/elder-codex-7.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/first-witness-block-topia-reading.html",
+      "pages": [
+        "factions/crypto-moongirls-eternal.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/first-witness-block-topia-reading.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/first-witness-concordance.html",
+      "pages": [
+        "about.html",
+        "characters/dragan-volkov.html",
+        "characters/elder-codex-7.html",
+        "characters/index.html",
+        "characters/iris-7.html",
+        "characters/null-the-prophet.html",
+        "characters/satorebel.html",
+        "characters/thorne-architect.html",
+        "factions/arcade-scribes.html",
+        "factions/belief-miners.html",
+        "factions/binlords.html",
+        "factions/brush-daughters.html",
+        "factions/compound-believers.html",
+        "factions/cross-chain-couriers.html",
+        "factions/croydon-oracles.html",
+        "factions/crypto-badgers.html",
+        "factions/deep-holders.html",
+        "factions/echo-mothers.html",
+        "factions/eternal-porch-keepers.html",
+        "factions/genesis-anchors.html",
+        "factions/grid-ghosts.html",
+        "factions/hodl-layer-sentinels.html",
+        "factions/index.html",
+        "factions/league-of-keepers.html",
+        "factions/level-lords.html",
+        "factions/lost-moonboys.html",
+        "factions/mutant-pasteups.html",
+        "factions/nomad-drip-house.html",
+        "factions/null-priests.html",
+        "factions/pixel-pushers.html",
+        "factions/porch-accord-diplomats.html",
+        "factions/quest-givers.html",
+        "factions/rackinsats-fashion-house.html",
+        "factions/sam-watchers.html",
+        "factions/tag-rush-crew.html",
+        "factions/the-unnamed-fortieth.html",
+        "factions/whitewall-remnants.html",
+        "history.html",
+        "index.html",
+        "pages/mechanics.html",
+        "pages/music.html",
+        "pages/nft-collections.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/first-witness-concordance.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/first-witness-faction-commentaries.html",
+      "pages": [
+        "characters/sister-halcyon.html",
+        "factions/all-city-bulls.html",
+        "factions/arcade-scribes.html",
+        "factions/belief-miners.html",
+        "factions/binlords.html",
+        "factions/brush-daughters.html",
+        "factions/burn-crews.html",
+        "factions/compound-believers.html",
+        "factions/cross-chain-couriers.html",
+        "factions/croydon-oracles.html",
+        "factions/crypto-badgers.html",
+        "factions/deep-holders.html",
+        "factions/echo-mothers.html",
+        "factions/eternal-porch-keepers.html",
+        "factions/fractal-taggers.html",
+        "factions/genesis-anchors.html",
+        "factions/grid-ghosts.html",
+        "factions/hodl-layer-sentinels.html",
+        "factions/index.html",
+        "factions/league-of-keepers.html",
+        "factions/level-lords.html",
+        "factions/lost-moonboys.html",
+        "factions/mutant-pasteups.html",
+        "factions/no-ball-games-legion.html",
+        "factions/nomad-drip-house.html",
+        "factions/null-priests.html",
+        "factions/pixel-pushers.html",
+        "factions/porch-accord-diplomats.html",
+        "factions/porch-poets.html",
+        "factions/quest-givers.html",
+        "factions/rackinsats-fashion-house.html",
+        "factions/sam-watchers.html",
+        "factions/stencil-witches.html",
+        "factions/tag-lords.html",
+        "factions/tag-rush-crew.html",
+        "factions/the-unnamed-fortieth.html",
+        "factions/whale-lords-eternal.html",
+        "factions/whitewall-remnants.html",
+        "factions/wildstyle-collective.html",
+        "pages/submit-lore.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/first-witness-faction-commentaries.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/first-witness-faction-ritual-variations.html",
+      "pages": [
+        "factions/fractal-taggers.html",
+        "factions/porch-poets.html",
+        "factions/wildstyle-collective.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/first-witness-faction-ritual-variations.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/first-witness-forty-paths.html",
+      "pages": [
+        "factions/fractal-taggers.html",
+        "factions/index.html",
+        "factions/porch-poets.html",
+        "factions/wildstyle-collective.html"
+      ],
+      "result": "unverified",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/first-witness-justice-mercy-restitution.html",
+      "pages": [
+        "pages/mechanics.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/first-witness-justice-mercy-restitution.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/first-witness-master-chronology.html",
+      "pages": [
+        "about.html",
+        "history.html",
+        "index.html",
+        "pages/crypto-moonboys-gkniftyheads-network.html",
+        "pages/mechanics.html",
+        "pages/music.html",
+        "pages/nft-collections.html",
+        "pages/submit-lore.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/first-witness-master-chronology.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/first-witness-source-register.html",
+      "pages": [
+        "about.html",
+        "history.html",
+        "index.html",
+        "pages/mechanics.html",
+        "pages/music.html",
+        "pages/nft-collections.html",
+        "pages/submit-lore.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/first-witness-source-register.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/forklord-you.html",
+      "pages": [
+        "characters/forklord-you.html",
+        "characters/samael-exe.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/forklord-you.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/forksplit.html",
+      "pages": [
+        "characters/forksplit.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/forksplit.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/gkniftyheads.html",
+      "pages": [
+        "characters/alfie-bitcoin-kid.html",
+        "characters/thorne-architect.html",
+        "factions/gkniftyheads.html",
+        "pages/crypto-moonboys-gkniftyheads-network.html",
+        "pages/graffiti-kings-wax-nft-collections.html",
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/gkniftyheads.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/graffiti-kings.html",
+      "pages": [
+        "pages/crypto-moonboys-gkniftyheads-network.html",
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/graffiti-kings.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/graffpunks-24-7-radio.html",
+      "pages": [
+        "pages/crypto-moonboys-gkniftyheads-network.html",
+        "pages/graffiti-kings-web-network.html",
+        "pages/music.html"
+      ],
+      "result": "unverified",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/graffpunks-network.html",
+      "pages": [
+        "factions/graffpunks.html"
+      ],
+      "result": "unverified",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/graffpunks.html",
+      "pages": [
+        "characters/billy-goat-kid.html",
+        "characters/bit-cap-5000.html",
+        "characters/jodie-zoom.html",
+        "characters/rune-tag.html",
+        "characters/snipey-d-man.html",
+        "characters/thera-9.html",
+        "factions/burn-crews.html",
+        "factions/graffpunks.html",
+        "factions/stencil-witches.html",
+        "factions/tag-lords.html",
+        "pages/crypto-moonboys-gkniftyheads-network.html",
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/graffpunks.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/grit.html",
+      "pages": [
+        "characters/grit.html",
+        "characters/grit42.html",
+        "characters/pyralith.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/grit.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/grit42.html",
+      "pages": [
+        "characters/grit.html",
+        "characters/grit42.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/grit42.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/hard-fork-games.html",
+      "pages": [
+        "characters/aleema.html",
+        "characters/alfie-bitcoin-kid.html",
+        "characters/jodie-zoom.html",
+        "characters/queen-sarah-pfly.html",
+        "factions/hodl-x-warriors.html",
+        "factions/hodlwarriors.html",
+        "index.html",
+        "pages/mechanics.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/hard-fork-games.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/hex-tagger-prime.html",
+      "pages": [
+        "characters/hex-tagger-prime.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/hex-tagger-prime.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/hodl-warriors-army.html",
+      "pages": [
+        "factions/hodlwarriors.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/hodl-warriors-army.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/hodl-warriors.html",
+      "pages": [
+        "characters/forksplit.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/hodl-warriors.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/hodl-wars.html",
+      "pages": [
+        "characters/alfie-bitcoin-kid.html",
+        "characters/bit-cap-5000.html",
+        "characters/forksplit.html",
+        "characters/null-the-prophet.html",
+        "factions/hodlwarriors.html",
+        "index.html",
+        "pages/mechanics.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/hodl-wars.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/hodl-x-warriors.html",
+      "pages": [
+        "characters/queen-sarah-pfly.html",
+        "factions/hodl-x-warriors.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/hodl-x-warriors.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/house-of-rackinsats.html",
+      "pages": [
+        "factions/house-of-rackinsats-eternal.html",
+        "history.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/house-of-rackinsats.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/iris-7.html",
+      "pages": [
+        "characters/iris-7.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/iris-7.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/jodie-zoom-2000.html",
+      "pages": [
+        "characters/aleema.html",
+        "characters/jodie-zoom.html",
+        "characters/lady-ink.html",
+        "characters/loopfiend.html",
+        "characters/patchwork.html",
+        "characters/the-princess.html",
+        "characters/thera-9.html"
+      ],
+      "result": "unverified",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/lady-ink.html",
+      "pages": [
+        "characters/lady-ink.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/lady-ink.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/loopfiend.html",
+      "pages": [
+        "characters/loopfiend.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/loopfiend.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/m1ntr-k1ll.html",
+      "pages": [
+        "characters/m1ntr-k1ll.html",
+        "characters/samael-exe.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/m1ntr-k1ll.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/nbg.html",
+      "pages": [
+        "pages/charlie-buster-no-ball-games-nbg.html",
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/nbg.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/no-ball-games-nbg.html",
+      "pages": [
+        "factions/no-ball-games-legion.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/no-ball-games-nbg.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/null-the-prophet.html",
+      "pages": [
+        "characters/null-the-prophet.html",
+        "characters/rune-tag.html",
+        "characters/whitewasher.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/null-the-prophet.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/patchwork.html",
+      "pages": [
+        "characters/patchwork.html",
+        "characters/the-princess.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/patchwork.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/pyralith.html",
+      "pages": [
+        "characters/grit.html",
+        "characters/pyralith.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/pyralith.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/queen-sarah-p-fly.html",
+      "pages": [
+        "characters/hex-tagger-prime.html",
+        "characters/queen-sarah-pfly.html",
+        "characters/the-princess.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/queen-sarah-p-fly.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/quell.html",
+      "pages": [
+        "characters/quell.html",
+        "characters/sister-halcyon.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/quell.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/rune-tag.html",
+      "pages": [
+        "characters/rune-tag.html",
+        "characters/snipey-d-man.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/rune-tag.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/sacred-chain.html",
+      "pages": [
+        "characters/ava-chen.html",
+        "characters/lady-ink.html",
+        "index.html",
+        "pages/mechanics.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/sacred-chain.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/samaelexe.html",
+      "pages": [
+        "characters/forklord-you.html",
+        "characters/m1ntr-k1ll.html",
+        "characters/samael-exe.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/samaelexe.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/satorebel.html",
+      "pages": [
+        "characters/satorebel.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/satorebel.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/sister-halcyon.html",
+      "pages": [
+        "characters/quell.html",
+        "characters/sister-halcyon.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/sister-halcyon.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/snipey-d-man-sirus.html",
+      "pages": [
+        "characters/snipey-d-man.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/snipey-d-man-sirus.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/the-allcity-bulls.html",
+      "pages": [
+        "factions/all-city-bulls.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/the-allcity-bulls.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/the-chain-scribes.html",
+      "pages": [
+        "characters/elder-codex-7.html",
+        "characters/quell.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/the-chain-scribes.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/the-crypto-moongirls.html",
+      "pages": [
+        "characters/queen-sarah-pfly.html",
+        "characters/thera-9.html",
+        "factions/crypto-moongirls-eternal.html"
+      ],
+      "result": "unverified",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/the-evm-punks.html",
+      "pages": [
+        "characters/grit42.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/the-evm-punks.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/the-first-witness.html",
+      "pages": [
+        "about.html",
+        "characters/elder-codex-7.html",
+        "characters/null-the-prophet.html",
+        "characters/quell.html",
+        "characters/sister-halcyon.html",
+        "factions/gkniftyheads.html",
+        "index.html",
+        "pages/crypto-moonboys-gkniftyheads-network.html",
+        "pages/mechanics.html",
+        "pages/music.html",
+        "pages/nft-collections.html",
+        "pages/submit-lore.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/the-first-witness.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/the-moonlords.html",
+      "pages": [
+        "characters/grit42.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/the-moonlords.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/the-nomad-bears.html",
+      "pages": [
+        "factions/nomad-bears.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/the-nomad-bears.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/the-princess.html",
+      "pages": [
+        "characters/patchwork.html",
+        "characters/the-princess.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/the-princess.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/the-shard-mothers-of-manhattan.html",
+      "pages": [
+        "characters/aleema.html",
+        "characters/hex-tagger-prime.html",
+        "characters/jodie-zoom.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/the-shard-mothers-of-manhattan.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/the-whitewasher.html",
+      "pages": [
+        "characters/whitewasher.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/the-whitewasher.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/thera-9.html",
+      "pages": [
+        "characters/thera-9.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/thera-9.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/thorne-the-architect.html",
+      "pages": [
+        "characters/thorne-architect.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/thorne-the-architect.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/waxp.html",
+      "pages": [
+        "pages/charlie-buster-source-network.html",
+        "pages/graffiti-kings-web-network.html",
+        "pages/waxp.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/waxp.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://cryptomoonboys.com/wiki/whale-lords.html",
+      "pages": [
+        "factions/whale-lords-eternal.html"
+      ],
+      "status": 200,
+      "finalURL": "https://cryptomoonboys.com/wiki/whale-lords.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://decentraland.fandom.com/wiki/Decentraland_Weekly",
+      "pages": [
+        "pages/graffiti-kings-web-network.html",
+        "pages/graffiti-queens-decentraland-2021.html"
+      ],
+      "status": 402,
+      "finalURL": "https://decentraland.fandom.com/wiki/Decentraland_Weekly",
+      "result": "unverified"
+    },
+    {
+      "url": "https://decentraland.org/blog/announcements/art-week-2021",
+      "pages": [
+        "history.html",
+        "pages/darren-cullen-ser-history.html",
+        "pages/graffiti-kings-web-network.html",
+        "pages/graffiti-kings-web3-partnerships.html",
+        "pages/graffiti-queens-decentraland-2021.html",
+        "pages/music.html"
+      ],
+      "status": 200,
+      "finalURL": "https://decentraland.org/blog/announcements/art-week-2021",
+      "result": "reachable"
+    },
+    {
+      "url": "https://docs.alcor.exchange/api/market-data",
+      "pages": [
+        "pages/waxp.html"
+      ],
+      "status": 200,
+      "finalURL": "https://docs.alcor.exchange/api/market-data",
+      "result": "reachable"
+    },
+    {
+      "url": "https://docs.wax.io/build/core-concepts/resources",
+      "pages": [
+        "pages/waxp.html"
+      ],
+      "status": 200,
+      "finalURL": "https://docs.wax.io/build/core-concepts/resources",
+      "result": "reachable"
+    },
+    {
+      "url": "https://docs.wax.io/build/core-concepts/tokens",
+      "pages": [
+        "pages/waxp.html"
+      ],
+      "status": 200,
+      "finalURL": "https://docs.wax.io/build/core-concepts/tokens",
+      "result": "reachable"
+    },
+    {
+      "url": "https://docs.wax.io/build/tutorials/howto_atomicassets/collection_struct",
+      "pages": [
+        "pages/waxp.html"
+      ],
+      "status": 200,
+      "finalURL": "https://docs.wax.io/build/tutorials/howto_atomicassets/collection_struct",
+      "result": "reachable"
+    },
+    {
+      "url": "https://docs.wax.io/learn/about-wax/what-is-waxp-token",
+      "pages": [
+        "pages/waxp.html"
+      ],
+      "status": 200,
+      "finalURL": "https://docs.wax.io/learn/about-wax/what-is-waxp-token",
+      "result": "reachable"
+    },
+    {
+      "url": "https://docs.wax.io/learn/ecosystem/",
+      "pages": [
+        "pages/waxp.html"
+      ],
+      "status": 200,
+      "finalURL": "https://docs.wax.io/learn/ecosystem/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://docs.wax.io/learn/getting-started/",
+      "pages": [
+        "pages/waxp.html"
+      ],
+      "status": 200,
+      "finalURL": "https://docs.wax.io/learn/getting-started/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://docs.wax.io/learn/getting-started/anchor/",
+      "pages": [
+        "pages/waxp.html"
+      ],
+      "status": 200,
+      "finalURL": "https://docs.wax.io/learn/getting-started/anchor/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://docs.wax.io/learn/getting-started/get-waxp-and-fund-account",
+      "pages": [
+        "pages/waxp.html"
+      ],
+      "status": 200,
+      "finalURL": "https://docs.wax.io/learn/getting-started/get-waxp-and-fund-account",
+      "result": "reachable"
+    },
+    {
+      "url": "https://docs.wax.io/learn/getting-started/powerup-and-resources",
+      "pages": [
+        "pages/waxp.html"
+      ],
+      "status": 200,
+      "finalURL": "https://docs.wax.io/learn/getting-started/powerup-and-resources",
+      "result": "reachable"
+    },
+    {
+      "url": "https://docs.wax.io/learn/getting-started/security-and-recovery",
+      "pages": [
+        "pages/waxp.html"
+      ],
+      "status": 200,
+      "finalURL": "https://docs.wax.io/learn/getting-started/security-and-recovery",
+      "result": "reachable"
+    },
+    {
+      "url": "https://docs.wax.io/learn/getting-started/wallets",
+      "pages": [
+        "pages/waxp.html"
+      ],
+      "status": 200,
+      "finalURL": "https://docs.wax.io/learn/getting-started/wallets",
+      "result": "reachable"
+    },
+    {
+      "url": "https://fadmagazine.com/2012/08/03/darren-cullen-aka-ser-his-olympic-story/",
+      "pages": [
+        "about.html",
+        "characters/darren-cullen.html",
+        "history.html",
+        "pages/darren-cullen-ser-history.html",
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://fadmagazine.com/2012/08/03/darren-cullen-aka-ser-his-olympic-story/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rajdhani:wght@400;500;600&display=swap",
+      "pages": [
+        "about.html",
+        "characters/aleema.html",
+        "characters/alfie-bitcoin-kid.html",
+        "characters/ava-chen.html",
+        "characters/bit-cap-5000.html",
+        "characters/charlie-buster.html",
+        "characters/darren-cullen.html",
+        "characters/dragan-volkov.html",
+        "characters/elder-codex-7.html",
+        "characters/forklord-you.html",
+        "characters/forksplit.html",
+        "characters/grit42.html",
+        "characters/index.html",
+        "characters/iris-7.html",
+        "characters/m1ntr-k1ll.html",
+        "characters/null-the-prophet.html",
+        "characters/patchwork.html",
+        "characters/queen-sarah-pfly.html",
+        "characters/quell.html",
+        "characters/rune-tag.html",
+        "characters/sarah-pu51fly.html",
+        "characters/satorebel.html",
+        "characters/sister-halcyon.html",
+        "characters/snipey-d-man.html",
+        "characters/the-princess.html",
+        "characters/thorne-architect.html",
+        "characters/whitewasher.html",
+        "factions/all-city-bulls.html",
+        "factions/belief-miners.html",
+        "factions/bitcoin-kid-army.html",
+        "factions/brush-daughters.html",
+        "factions/burn-crews.html",
+        "factions/compound-believers.html",
+        "factions/cross-chain-couriers.html",
+        "factions/croydon-oracles.html",
+        "factions/crypto-badgers.html",
+        "factions/crypto-moongirls-eternal.html",
+        "factions/deep-holders.html",
+        "factions/echo-mothers.html",
+        "factions/eternal-porch-keepers.html",
+        "factions/fractal-taggers.html",
+        "factions/genesis-anchors.html",
+        "factions/gkniftyheads.html",
+        "factions/graffpunks.html",
+        "factions/grid-ghosts.html",
+        "factions/hodl-layer-sentinels.html",
+        "factions/hodl-x-warriors.html",
+        "factions/hodlwarriors.html",
+        "factions/house-of-rackinsats-eternal.html",
+        "factions/index.html",
+        "factions/level-lords.html",
+        "factions/lost-moonboys.html",
+        "factions/mutant-pasteups.html",
+        "factions/no-ball-games-legion.html",
+        "factions/nomad-bears.html",
+        "factions/nomad-drip-house.html",
+        "factions/null-priests.html",
+        "factions/pixel-pushers.html",
+        "factions/porch-accord-diplomats.html",
+        "factions/porch-poets.html",
+        "factions/quest-givers.html",
+        "factions/rackinsats-fashion-house.html",
+        "factions/sam-watchers.html",
+        "factions/stencil-witches.html",
+        "factions/tag-lords.html",
+        "factions/the-unnamed-fortieth.html",
+        "factions/whale-lords-eternal.html",
+        "factions/whitewall-remnants.html",
+        "factions/wildstyle-collective.html",
+        "history.html",
+        "index.html",
+        "pages/darren-cullen-ser-history.html",
+        "pages/mechanics.html",
+        "pages/music.html",
+        "pages/nft-collections.html",
+        "pages/submit-lore.html",
+        "search.html"
+      ],
+      "status": 200,
+      "finalURL": "https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rajdhani:wght@400;500;600&display=swap",
+      "result": "reachable"
+    },
+    {
+      "url": "https://galamirissa.art/about",
+      "pages": [
+        "pages/graffiti-kings-web-network.html",
+        "pages/graffiti-queens-nft-festival-2022.html"
+      ],
+      "status": 200,
+      "finalURL": "https://galamirissa.art/about",
+      "result": "reachable"
+    },
+    {
+      "url": "https://github.com/graffiti-kings/graffiti-kings/blob/main/docs/legacy-archive-source-register.md",
+      "pages": [
+        "pages/graffiti-kings-original-website-archive.html"
+      ],
+      "status": 200,
+      "finalURL": "https://github.com/graffiti-kings/graffiti-kings/blob/main/docs/legacy-archive-source-register.md",
+      "result": "reachable"
+    },
+    {
+      "url": "https://github.com/graffiti-kings/graffiti-kings/issues/new?template=lore-contribution.yml",
+      "pages": [
+        "pages/submit-lore.html"
+      ],
+      "result": "unverified",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "url": "https://gkniftyheads.fandom.com/wiki/CRYPTO_MOONBOYS",
+      "pages": [
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 402,
+      "finalURL": "https://gkniftyheads.fandom.com/wiki/CRYPTO_MOONBOYS",
+      "result": "unverified"
+    },
+    {
+      "url": "https://glaem.com/about/",
+      "pages": [
+        "pages/graffiti-kings-web-network.html",
+        "pages/graffiti-queens-decentraland-2021.html"
+      ],
+      "status": 200,
+      "finalURL": "https://glaem.com/about/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://graffiti-kings-radio.appstor.io/",
+      "pages": [
+        "pages/darren-cullen-ser-history.html",
+        "pages/graffiti-kings-web-network.html",
+        "pages/music.html"
+      ],
+      "status": 200,
+      "finalURL": "https://graffiti-kings-radio.appstor.io/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://graffitiartistsworldwide.co.uk/portfolio/",
+      "pages": [
+        "pages/graffiti-kings-legacy-campaigns.html",
+        "pages/graffiti-kings-original-website-archive.html",
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 503,
+      "finalURL": "https://graffitiartistsworldwide.co.uk/portfolio/",
+      "result": "unverified"
+    },
+    {
+      "url": "https://graffitikings.co.uk.clearwebstats.com/",
+      "pages": [
+        "pages/graffiti-kings-original-website-archive.html"
+      ],
+      "status": 200,
+      "finalURL": "https://graffitikings.co.uk.clearwebstats.com/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://graffitikings.co.uk/",
+      "pages": [
+        "about.html",
+        "history.html",
+        "pages/darren-cullen-ser-history.html",
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://graffitikings.co.uk/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://graffpunks.live/",
+      "pages": [
+        "about.html",
+        "pages/crypto-moonboys-gkniftyheads-network.html",
+        "pages/graffiti-kings-web-network.html",
+        "pages/music.html"
+      ],
+      "status": 403,
+      "finalURL": "https://graffpunks.live/",
+      "result": "unverified"
+    },
+    {
+      "url": "https://graffpunks.live/graffiti-kings-nfts/",
+      "pages": [
+        "pages/crypto-moonboys-gkniftyheads-network.html",
+        "pages/graffiti-kings-wax-nft-collections.html",
+        "pages/graffiti-kings-web-network.html",
+        "pages/nft-collections.html",
+        "pages/waxp.html"
+      ],
+      "status": 403,
+      "finalURL": "https://graffpunks.live/graffiti-kings-nfts/",
+      "result": "unverified"
+    },
+    {
+      "url": "https://graffpunks.live/graffiti-nfts/",
+      "pages": [
+        "pages/graffiti-kings-web-network.html",
+        "pages/waxp.html"
+      ],
+      "status": 403,
+      "finalURL": "https://graffpunks.live/graffiti-nfts/",
+      "result": "unverified"
+    },
+    {
+      "url": "https://graffpunks.substack.com/",
+      "pages": [
+        "pages/crypto-moonboys-gkniftyheads-network.html",
+        "pages/graffiti-kings-web-network.html",
+        "pages/music.html"
+      ],
+      "status": 200,
+      "finalURL": "https://graffpunks.substack.com/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://graffpunks.substack.com/p/40-year-old-graffiti-movement-launches",
+      "pages": [
+        "pages/graffiti-kings-wax-nft-collections.html",
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://graffpunks.substack.com/p/40-year-old-graffiti-movement-launches",
+      "result": "reachable"
+    },
+    {
+      "url": "https://graffpunks.substack.com/p/gk-factions-to-collect-and-hodl",
+      "pages": [
+        "pages/crypto-moonboys-gkniftyheads-network.html",
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://graffpunks.substack.com/p/gk-factions-to-collect-and-hodl",
+      "result": "reachable"
+    },
+    {
+      "url": "https://graffpunks.substack.com/p/graffiti-themed-substack-publication",
+      "pages": [
+        "pages/crypto-moonboys-gkniftyheads-network.html",
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://graffpunks.substack.com/p/graffiti-themed-substack-publication",
+      "result": "reachable"
+    },
+    {
+      "url": "https://graffpunks.substack.com/p/street-swarm-the-offline-first-tactical",
+      "pages": [
+        "pages/crypto-moonboys-gkniftyheads-network.html",
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://graffpunks.substack.com/p/street-swarm-the-offline-first-tactical",
+      "result": "reachable"
+    },
+    {
+      "url": "https://graffpunks.substack.com/p/the-gkniftyheads-the-immortal-architects",
+      "pages": [
+        "pages/crypto-moonboys-gkniftyheads-network.html",
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://graffpunks.substack.com/p/the-gkniftyheads-the-immortal-architects",
+      "result": "reachable"
+    },
+    {
+      "url": "https://graffpunks.substack.com/p/why-this-matters-now-ai-is-restructuring",
+      "pages": [
+        "pages/charlie-buster-source-network.html",
+        "pages/charlie-buster-treef-project.html"
+      ],
+      "status": 200,
+      "finalURL": "https://graffpunks.substack.com/p/why-this-matters-now-ai-is-restructuring",
+      "result": "reachable"
+    },
+    {
+      "url": "https://grimeartist.com/",
+      "pages": [
+        "pages/charlie-buster-grime-art-history.html",
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://grimeartist.com/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://internetradiouk.com/graffiti-kings/",
+      "pages": [
+        "pages/darren-cullen-ser-history.html",
+        "pages/graffiti-kings-web-network.html",
+        "pages/music.html"
+      ],
+      "status": 200,
+      "finalURL": "https://internetradiouk.com/graffiti-kings/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://invasiontoys.com/blog-sub/graffiti-kings-bitcoin-kid-free-nft-invasion-exclusive",
+      "pages": [
+        "history.html",
+        "pages/bitcoin-kid-invasion-toys-archive.html",
+        "pages/darren-cullen-ser-history.html",
+        "pages/graffiti-kings-web-network.html",
+        "pages/nft-collections.html"
+      ],
+      "status": 200,
+      "finalURL": "https://invasiontoys.com/blog-sub/graffiti-kings-bitcoin-kid-free-nft-invasion-exclusive",
+      "result": "reachable"
+    },
+    {
+      "url": "https://invasiontoys.com/blog-sub/graffiti-kings-bitcoin-kid-nft-and-physical-token-update-invasion-news",
+      "pages": [
+        "history.html",
+        "pages/bitcoin-kid-invasion-toys-archive.html",
+        "pages/crypto-moonboys-gkniftyheads-network.html",
+        "pages/darren-cullen-ser-history.html",
+        "pages/graffiti-kings-web-network.html",
+        "pages/nft-collections.html"
+      ],
+      "status": 200,
+      "finalURL": "https://invasiontoys.com/blog-sub/graffiti-kings-bitcoin-kid-nft-and-physical-token-update-invasion-news",
+      "result": "reachable"
+    },
+    {
+      "url": "https://medium.com/@GKniftyHEADS",
+      "pages": [
+        "pages/crypto-moonboys-gkniftyheads-network.html",
+        "pages/graffiti-kings-web-network.html",
+        "pages/music.html"
+      ],
+      "result": "unverified",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "url": "https://medium.com/@GKniftyHEADS/street-artist-buster-aka-charlie-buster-5b72b55be5b3",
+      "pages": [
+        "pages/charlie-buster-grime-art-history.html",
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 403,
+      "finalURL": "https://medium.com/@GKniftyHEADS/street-artist-buster-aka-charlie-buster-5b72b55be5b3",
+      "result": "unverified"
+    },
+    {
+      "url": "https://medium.com/@iamcharliebuster",
+      "pages": [
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 403,
+      "finalURL": "https://medium.com/@iamcharliebuster",
+      "result": "unverified"
+    },
+    {
+      "url": "https://medium.com/@iamcharliebuster/book-title-daddys-little-princess-15dae3711f8a",
+      "pages": [
+        "pages/charlie-buster-grime-art-history.html",
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 403,
+      "finalURL": "https://medium.com/@iamcharliebuster/book-title-daddys-little-princess-15dae3711f8a",
+      "result": "unverified"
+    },
+    {
+      "url": "https://medium.com/@iamcharliebuster/how-to-buy-set-up-waxp-and-buy-nbg-for-beginners-ebb91057ac5a",
+      "pages": [
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 403,
+      "finalURL": "https://medium.com/@iamcharliebuster/how-to-buy-set-up-waxp-and-buy-nbg-for-beginners-ebb91057ac5a",
+      "result": "unverified"
+    },
+    {
+      "url": "https://medium.com/@iamcharliebuster/nbg-10-year-token-distribution-decay-plan-8c175d24925d",
+      "pages": [
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 403,
+      "finalURL": "https://medium.com/@iamcharliebuster/nbg-10-year-token-distribution-decay-plan-8c175d24925d",
+      "result": "unverified"
+    },
+    {
+      "url": "https://medium.com/@iamcharliebuster/nbg-the-collectable-fan-token-ecosystem-1d2c90c10ae1",
+      "pages": [
+        "pages/charlie-buster-no-ball-games-nbg.html",
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 403,
+      "finalURL": "https://medium.com/@iamcharliebuster/nbg-the-collectable-fan-token-ecosystem-1d2c90c10ae1",
+      "result": "unverified"
+    },
+    {
+      "url": "https://medium.com/@iamcharliebuster/noballgames-nbg-10-year-token-distribution-breakdown-full-decay-plan-1e5ceaea7e4d",
+      "pages": [
+        "pages/charlie-buster-no-ball-games-nbg.html",
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 403,
+      "finalURL": "https://medium.com/@iamcharliebuster/noballgames-nbg-10-year-token-distribution-breakdown-full-decay-plan-1e5ceaea7e4d",
+      "result": "unverified"
+    },
+    {
+      "url": "https://medium.com/@iamcharliebuster/noballgames-nbg-token-whitepaper-5999e0512e8e",
+      "pages": [
+        "pages/charlie-buster-no-ball-games-nbg.html",
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 403,
+      "finalURL": "https://medium.com/@iamcharliebuster/noballgames-nbg-token-whitepaper-5999e0512e8e",
+      "result": "unverified"
+    },
+    {
+      "url": "https://medium.com/@iamcharliebuster/the-og-extended-full-lore-by-charlie-buster-2a675cf4b093",
+      "pages": [
+        "pages/charlie-buster-source-network.html"
+      ],
+      "result": "unverified",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "url": "https://medium.com/@iamcharliebuster/the-og-underground-graffiti-pirate-beats-digital-rebellion-729220ed543b",
+      "pages": [
+        "pages/charlie-buster-grime-art-history.html",
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 403,
+      "finalURL": "https://medium.com/@iamcharliebuster/the-og-underground-graffiti-pirate-beats-digital-rebellion-729220ed543b",
+      "result": "unverified"
+    },
+    {
+      "url": "https://medium.com/@iamcharliebuster/the-stencil-must-break-df405e5b6db5",
+      "pages": [
+        "pages/charlie-buster-grime-art-history.html",
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 403,
+      "finalURL": "https://medium.com/@iamcharliebuster/the-stencil-must-break-df405e5b6db5",
+      "result": "unverified"
+    },
+    {
+      "url": "https://medium.com/@iamcharliebuster/your-unique-named-artwork-v2-by-charlie-buster-d0a5aec06a4e",
+      "pages": [
+        "pages/charlie-buster-source-network.html"
+      ],
+      "result": "unverified",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "url": "https://medium.com/@YourDailyDoseOfArt/uk-street-artist-charlie-buster-is-quickly-becoming-one-of-the-worlds-most-sought-after-visual-9d41c8c6dd9f",
+      "pages": [
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 403,
+      "finalURL": "https://medium.com/@YourDailyDoseOfArt/uk-street-artist-charlie-buster-is-quickly-becoming-one-of-the-worlds-most-sought-after-visual-9d41c8c6dd9f",
+      "result": "unverified"
+    },
+    {
+      "url": "https://medium.com/%40GKniftyHEADS/the-crypto-protocol-the-gkniftyheads-chronicle-4e12faf53469",
+      "pages": [
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 403,
+      "finalURL": "https://medium.com/%40GKniftyHEADS/the-crypto-protocol-the-gkniftyheads-chronicle-4e12faf53469",
+      "result": "unverified"
+    },
+    {
+      "url": "https://medium.com/%40GKniftyHEADS/the-graffpunks-rise-7aeed214ad26",
+      "pages": [
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 403,
+      "finalURL": "https://medium.com/%40GKniftyHEADS/the-graffpunks-rise-7aeed214ad26",
+      "result": "unverified"
+    },
+    {
+      "url": "https://medium.com/%40iangharrison/graffiti-kings-token-mining-yield-farming-gaming-lfgk-street-art-has-a-crypto-currency-6cc9c965de79",
+      "pages": [
+        "pages/graffiti-kings-web-network.html",
+        "pages/graffiti-kings-web3-partnerships.html"
+      ],
+      "status": 403,
+      "finalURL": "https://medium.com/%40iangharrison/graffiti-kings-token-mining-yield-farming-gaming-lfgk-street-art-has-a-crypto-currency-6cc9c965de79",
+      "result": "unverified"
+    },
+    {
+      "url": "https://medium.com/%40iangharrison/iintergalactic-federation-transmission-it00001001100-f3472cd2ab63",
+      "pages": [
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 403,
+      "finalURL": "https://medium.com/%40iangharrison/iintergalactic-federation-transmission-it00001001100-f3472cd2ab63",
+      "result": "unverified"
+    },
+    {
+      "url": "https://medium.com/%40iangharrison/so-what-have-these-punks-been-up-to-a2e8edb85ce",
+      "pages": [
+        "pages/graffiti-kings-web-network.html",
+        "pages/graffiti-kings-web3-partnerships.html"
+      ],
+      "status": 403,
+      "finalURL": "https://medium.com/%40iangharrison/so-what-have-these-punks-been-up-to-a2e8edb85ce",
+      "result": "unverified"
+    },
+    {
+      "url": "https://medium.com/sync-network/graffiti-kings-partnership-950d79256497",
+      "pages": [
+        "pages/darren-cullen-ser-history.html",
+        "pages/graffiti-kings-web-network.html",
+        "pages/graffiti-kings-web3-partnerships.html"
+      ],
+      "result": "unverified",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "url": "https://medium.com/sync-network/sync-network-nft-exposition-in-decentraland-with-graffiti-kings-e84c2631b154",
+      "pages": [
+        "pages/darren-cullen-ser-history.html",
+        "pages/graffiti-kings-web-network.html",
+        "pages/graffiti-kings-web3-partnerships.html"
+      ],
+      "result": "unverified",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "url": "https://medium.com/verticalcryptoart/vca-weekly-roundup-friday-january-7th-2022-183f7cbb984b",
+      "pages": [
+        "pages/graffiti-kings-web-network.html",
+        "pages/graffiti-queens-nft-festival-2022.html"
+      ],
+      "status": 403,
+      "finalURL": "https://medium.com/verticalcryptoart/vca-weekly-roundup-friday-january-7th-2022-183f7cbb984b",
+      "result": "unverified"
+    },
+    {
+      "url": "https://mizzdczkw.com/exhibition-history-czerednikow",
+      "pages": [
+        "pages/graffiti-kings-web-network.html",
+        "pages/graffiti-queens-nft-festival-2022.html"
+      ],
+      "status": 200,
+      "finalURL": "https://mizzdczkw.com/exhibition-history-czerednikow",
+      "result": "reachable"
+    },
+    {
+      "url": "https://nbg1618.com/",
+      "pages": [
+        "pages/charlie-buster-grime-art-history.html",
+        "pages/charlie-buster-no-ball-games-nbg.html",
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://nbg1618.com/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://nbg1618.com/about/",
+      "pages": [
+        "history.html",
+        "pages/charlie-buster-grime-art-history.html",
+        "pages/charlie-buster-no-ball-games-nbg.html",
+        "pages/charlie-buster-source-network.html",
+        "pages/graffiti-kings-original-website-archive.html"
+      ],
+      "status": 200,
+      "finalURL": "https://nbg1618.com/about/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://nbg1618.com/charlie-buster-artist-timeline/",
+      "pages": [
+        "pages/charlie-buster-grime-art-history.html",
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://nbg1618.com/charlie-buster-artist-timeline/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://nbg1618.com/charlie-buster-biography/",
+      "pages": [
+        "characters/darren-cullen.html",
+        "pages/charlie-buster-grime-art-history.html",
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://nbg1618.com/charlie-buster-biography/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://nbg1618.com/charlie-buster-early-works/",
+      "pages": [
+        "pages/charlie-buster-grime-art-history.html",
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://nbg1618.com/charlie-buster-early-works/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://nbg1618.com/charlie-buster-gallery-application/",
+      "pages": [
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://nbg1618.com/charlie-buster-gallery-application/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://nbg1618.com/charlie-buster-grant-application/",
+      "pages": [
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://nbg1618.com/charlie-buster-grant-application/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://nbg1618.com/charlie-buster-media-bio/",
+      "pages": [
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://nbg1618.com/charlie-buster-media-bio/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://nbg1618.com/charlie-buster-online-archive/",
+      "pages": [
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://nbg1618.com/charlie-buster-online-archive/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://nbg1618.com/charlie-buster-press-kit/",
+      "pages": [
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://nbg1618.com/charlie-buster-press-kit/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://nbg1618.com/collections/",
+      "pages": [
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://nbg1618.com/collections/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://nbg1618.com/contact/",
+      "pages": [
+        "pages/charlie-buster-grime-art-history.html",
+        "pages/charlie-buster-no-ball-games-nbg.html",
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://nbg1618.com/contact/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://nbg1618.com/leake-street-tunnel/",
+      "pages": [
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://nbg1618.com/leake-street-tunnel/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://nbg1618.com/lore/",
+      "pages": [
+        "pages/charlie-buster-no-ball-games-nbg.html",
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://nbg1618.com/lore/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://nbg1618.com/press/",
+      "pages": [
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://nbg1618.com/press/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://nbg1618.com/projects/",
+      "pages": [
+        "pages/charlie-buster-grime-art-history.html",
+        "pages/charlie-buster-no-ball-games-nbg.html",
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://nbg1618.com/projects/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://nbg1618.com/research/",
+      "pages": [
+        "pages/charlie-buster-no-ball-games-nbg.html",
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://nbg1618.com/research/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://nbg1618.com/stories/",
+      "pages": [
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://nbg1618.com/stories/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://nbg1618.com/what-is-grime-art/",
+      "pages": [
+        "pages/charlie-buster-source-network.html",
+        "pages/music.html"
+      ],
+      "status": 200,
+      "finalURL": "https://nbg1618.com/what-is-grime-art/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://nbg1618.com/xrp/",
+      "pages": [
+        "pages/charlie-buster-no-ball-games-nbg.html",
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://nbg1618.com/xrp/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://nfthive.io/collection/dabitcoinkid",
+      "pages": [
+        "pages/graffiti-kings-wax-nft-collections.html",
+        "pages/graffiti-kings-web-network.html",
+        "pages/waxp.html"
+      ],
+      "status": 200,
+      "finalURL": "https://nfthive.io/collection/dabitcoinkid",
+      "result": "reachable"
+    },
+    {
+      "url": "https://nfthive.io/collection/gkniftyheads",
+      "pages": [
+        "pages/graffiti-kings-wax-nft-collections.html",
+        "pages/graffiti-kings-web-network.html",
+        "pages/waxp.html"
+      ],
+      "status": 200,
+      "finalURL": "https://nfthive.io/collection/gkniftyheads",
+      "result": "reachable"
+    },
+    {
+      "url": "https://nfthive.io/collection/gr4ffitiking",
+      "pages": [
+        "pages/graffiti-kings-wax-nft-collections.html",
+        "pages/graffiti-kings-web-network.html",
+        "pages/waxp.html"
+      ],
+      "status": 200,
+      "finalURL": "https://nfthive.io/collection/gr4ffitiking",
+      "result": "reachable"
+    },
+    {
+      "url": "https://nfthive.io/collection/graffiti.r2",
+      "pages": [
+        "pages/graffiti-kings-wax-nft-collections.html",
+        "pages/graffiti-kings-web-network.html",
+        "pages/waxp.html"
+      ],
+      "status": 200,
+      "finalURL": "https://nfthive.io/collection/graffiti.r2",
+      "result": "reachable"
+    },
+    {
+      "url": "https://nfthive.io/collection/graffk1ngsuk",
+      "pages": [
+        "pages/crypto-moonboys-gkniftyheads-network.html",
+        "pages/graffiti-kings-wax-nft-collections.html",
+        "pages/graffiti-kings-web-network.html",
+        "pages/waxp.html"
+      ],
+      "status": 200,
+      "finalURL": "https://nfthive.io/collection/graffk1ngsuk",
+      "result": "reachable"
+    },
+    {
+      "url": "https://nfthive.io/collection/hodlmoonboys",
+      "pages": [
+        "pages/graffiti-kings-wax-nft-collections.html",
+        "pages/graffiti-kings-web-network.html",
+        "pages/waxp.html"
+      ],
+      "status": 200,
+      "finalURL": "https://nfthive.io/collection/hodlmoonboys",
+      "result": "reachable"
+    },
+    {
+      "url": "https://nfthive.io/collection/noballgamess",
+      "pages": [
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://nfthive.io/collection/noballgamess",
+      "result": "reachable"
+    },
+    {
+      "url": "https://nfthive.io/collection/nocommentser",
+      "pages": [
+        "pages/graffiti-kings-wax-nft-collections.html",
+        "pages/graffiti-kings-web-network.html",
+        "pages/waxp.html"
+      ],
+      "status": 200,
+      "finalURL": "https://nfthive.io/collection/nocommentser",
+      "result": "reachable"
+    },
+    {
+      "url": "https://noballgames.substack.com/",
+      "pages": [
+        "pages/charlie-buster-no-ball-games-nbg.html",
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://noballgames.substack.com/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://noballgames.substack.com/p/the-nbg-xrp-kids-whitepaper",
+      "pages": [
+        "pages/charlie-buster-no-ball-games-nbg.html",
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://noballgames.substack.com/p/the-nbg-xrp-kids-whitepaper",
+      "result": "reachable"
+    },
+    {
+      "url": "https://pagecommonjournal.pagehotels.com/darren-cullen/",
+      "pages": [
+        "characters/darren-cullen.html",
+        "pages/darren-cullen-ser-history.html",
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://pagecommonjournal.pagehotels.com/darren-cullen/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://pagecommonjournal.pagehotels.com/tc/darren-cullen/",
+      "pages": [
+        "about.html"
+      ],
+      "status": 200,
+      "finalURL": "https://pagecommonjournal.pagehotels.com/tc/darren-cullen/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://socialsupermanager.wordpress.com/2021/07/15/decentraland-second-art-week-2021/",
+      "pages": [
+        "pages/graffiti-kings-web-network.html",
+        "pages/graffiti-queens-decentraland-2021.html"
+      ],
+      "status": 200,
+      "finalURL": "https://socialsupermanager.wordpress.com/2021/07/15/decentraland-second-art-week-2021/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://sould-art.com/blog/nft-graffiti-queens",
+      "pages": [
+        "characters/darren-cullen.html",
+        "pages/darren-cullen-ser-history.html",
+        "pages/graffiti-kings-web-network.html",
+        "pages/graffiti-queens-decentraland-2021.html"
+      ],
+      "status": 200,
+      "finalURL": "https://sould-art.com/blog/nft-graffiti-queens",
+      "result": "reachable"
+    },
+    {
+      "url": "https://substack.com/@treefproject/posts",
+      "pages": [
+        "pages/charlie-buster-source-network.html",
+        "pages/charlie-buster-treef-project.html"
+      ],
+      "status": 200,
+      "finalURL": "https://substack.com/@treefproject/posts",
+      "result": "reachable"
+    },
+    {
+      "url": "https://t.me/NoBallGamesOffical",
+      "pages": [
+        "pages/charlie-buster-no-ball-games-nbg.html",
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://t.me/NoBallGamesOffical",
+      "result": "reachable"
+    },
+    {
+      "url": "https://theverseverse.com/artist/vanessa-coleman",
+      "pages": [
+        "pages/graffiti-kings-web-network.html",
+        "pages/graffiti-queens-decentraland-2021.html"
+      ],
+      "status": 200,
+      "finalURL": "https://theverseverse.com/artist/vanessa-coleman",
+      "result": "reachable"
+    },
+    {
+      "url": "https://uk.linkedin.com/company/graffiti-kings-limited",
+      "pages": [
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://uk.linkedin.com/company/graffiti-kings-limited",
+      "result": "reachable"
+    },
+    {
+      "url": "https://uk.linkedin.com/in/charlie-buster-746872125",
+      "pages": [
+        "pages/charlie-buster-grime-art-history.html",
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 999,
+      "finalURL": "https://uk.linkedin.com/in/charlie-buster-746872125",
+      "result": "unverified"
+    },
+    {
+      "url": "https://uk.linkedin.com/in/darren-cullen-6944ab120",
+      "pages": [
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 999,
+      "finalURL": "https://uk.linkedin.com/in/darren-cullen-6944ab120",
+      "result": "unverified"
+    },
+    {
+      "url": "https://ukartsdirectory.wordpress.com/2013/02/23/graffiti-kings/",
+      "pages": [
+        "pages/graffiti-kings-original-website-archive.html",
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://ukartsdirectory.wordpress.com/2013/02/23/graffiti-kings/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://web.archive.org/web/*/graffitikings.co.uk/*",
+      "pages": [
+        "pages/graffiti-kings-legacy-campaigns.html",
+        "pages/graffiti-kings-original-website-archive.html",
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://web.archive.org/web/*/graffitikings.co.uk/*",
+      "result": "reachable"
+    },
+    {
+      "url": "https://web.archive.org/web/*/https://graffitikings.co.uk/",
+      "pages": [
+        "pages/graffiti-kings-original-website-archive.html"
+      ],
+      "status": 200,
+      "finalURL": "https://web.archive.org/web/*/https://graffitikings.co.uk/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://web.archive.org/web/*/https://graffitikings.co.uk/graffiti-kings/",
+      "pages": [
+        "pages/graffiti-kings-original-website-archive.html"
+      ],
+      "status": 200,
+      "finalURL": "https://web.archive.org/web/*/https://graffitikings.co.uk/graffiti-kings/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://web.archive.org/web/20191122122008/https://graffitikings.co.uk/work/jack-daniels/",
+      "pages": [
+        "pages/graffiti-kings-legacy-campaigns.html",
+        "pages/graffiti-kings-original-website-archive.html"
+      ],
+      "status": 200,
+      "finalURL": "https://web.archive.org/web/20191122122008/https://graffitikings.co.uk/work/jack-daniels/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://web.archive.org/web/20191122122032/https://graffitikings.co.uk/work/",
+      "pages": [
+        "history.html",
+        "pages/graffiti-kings-legacy-campaigns.html",
+        "pages/graffiti-kings-original-website-archive.html",
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://web.archive.org/web/20191122122032/https://graffitikings.co.uk/work/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://web.archive.org/web/20191122125121/https://graffitikings.co.uk/work/game-of-thrones/",
+      "pages": [
+        "pages/graffiti-kings-legacy-campaigns.html",
+        "pages/graffiti-kings-original-website-archive.html"
+      ],
+      "status": 200,
+      "finalURL": "https://web.archive.org/web/20191122125121/https://graffitikings.co.uk/work/game-of-thrones/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://web.archive.org/web/20191122133602/https://graffitikings.co.uk/work/marvel-studios/",
+      "pages": [
+        "pages/graffiti-kings-legacy-campaigns.html",
+        "pages/graffiti-kings-original-website-archive.html"
+      ],
+      "status": 200,
+      "finalURL": "https://web.archive.org/web/20191122133602/https://graffitikings.co.uk/work/marvel-studios/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://web.archive.org/web/20191208235829/https://graffitikings.co.uk/",
+      "pages": [
+        "history.html",
+        "pages/graffiti-kings-legacy-campaigns.html",
+        "pages/graffiti-kings-original-website-archive.html",
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://web.archive.org/web/20191208235829/https://graffitikings.co.uk/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://web.archive.org/web/20191209000718/https://graffitikings.co.uk/work/stefflon-don/",
+      "pages": [
+        "pages/graffiti-kings-legacy-campaigns.html",
+        "pages/graffiti-kings-original-website-archive.html"
+      ],
+      "status": 200,
+      "finalURL": "https://web.archive.org/web/20191209000718/https://graffitikings.co.uk/work/stefflon-don/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://web.archive.org/web/20200926042053/https://graffitikings.co.uk/work/",
+      "pages": [
+        "pages/graffiti-kings-legacy-campaigns.html",
+        "pages/graffiti-kings-original-website-archive.html",
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://web.archive.org/web/20200926042053/https://graffitikings.co.uk/work/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.artrights.me/en/women-crypto-artists/",
+      "pages": [
+        "pages/graffiti-kings-web-network.html",
+        "pages/graffiti-queens-decentraland-2021.html"
+      ],
+      "status": 200,
+      "finalURL": "https://www.artrights.me/en/women-crypto-artists/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.ewbankauctions.co.uk/20160226C-lot-740-SER-aka-Darren-Cullen-of-Graffiti-Kings-Graffiti-Art-Large-spray-on-board-depicting-a-silhouette-of-a-figure-holding-a-spray-can-framed-118cm-x-78cm-Darren-Cullen-is-a-London-based-p?arr=0&auction_id=269&box_filter=0&category=&department_id=&exclude_keyword=&export_issue=0&high_estimate=0&image_filter=0&keyword=ser&list_type=&lots_per_page=0&low_estimate=0&month=&page_no=0&paper_filter=0&search_type=&sort_by=&view=lot_detail&year=",
+      "pages": [
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://www.ewbankauctions.co.uk/20160226C-lot-740-SER-aka-Darren-Cullen-of-Graffiti-Kings-Graffiti-Art-Large-spray-on-board-depicting-a-silhouette-of-a-figure-holding-a-spray-can-framed-118cm-x-78cm-Darren-Cullen-is-a-London-based-p?arr=0&auction_id=269&box_filter=0&category=&department_id=&exclude_keyword=&export_issue=0&high_estimate=0&image_filter=0&keyword=ser&list_type=&lots_per_page=0&low_estimate=0&month=&page_no=0&paper_filter=0&search_type=&sort_by=&view=lot_detail&year=",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.ewbankauctions.co.uk/20160226C-lot-741-SER-aka-Darren-Cullen-of-Graffiti-Kings-Graffiti-Art-Large-spray-on-board-framed-118cm-x-78cm-Darren-Cullen-is-a-London-based-professional-graffiti-artist-who-is-commonly-known-by-th?arr=0&auction_id=269&box_filter=0&category=&department_id=&exclude_keyword=&export_issue=0&high_estimate=0&image_filter=0&keyword=ser&list_type=&lots_per_page=0&low_estimate=0&month=&page_no=0&paper_filter=0&search_type=&sort_by=&view=lot_detail&year=",
+      "pages": [
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://www.ewbankauctions.co.uk/20160226C-lot-741-SER-aka-Darren-Cullen-of-Graffiti-Kings-Graffiti-Art-Large-spray-on-board-framed-118cm-x-78cm-Darren-Cullen-is-a-London-based-professional-graffiti-artist-who-is-commonly-known-by-th?arr=0&auction_id=269&box_filter=0&category=&department_id=&exclude_keyword=&export_issue=0&high_estimate=0&image_filter=0&keyword=ser&list_type=&lots_per_page=0&low_estimate=0&month=&page_no=0&paper_filter=0&search_type=&sort_by=&view=lot_detail&year=",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.ewbankauctions.co.uk/Single-Owner-Collection-of-Contemporary-Art-Limited-Edition-Prints/2016-02-26?arr=&bidded_lots=0&box_filter=&category=&category_by=&currency=&department_id=&exclude_keyword=&export_issue=&filter_360=&high_estimate=&image_filter=&keyword=&list_type=&lot_no_from=&lot_no_to=&lots_per_page=all&low_estimate=&month=&page_no=&paper_filter=&search_type=&sort_by=ASC&view=bidders&year=",
+      "pages": [
+        "pages/darren-cullen-ser-history.html"
+      ],
+      "status": 200,
+      "finalURL": "https://www.ewbankauctions.co.uk/Single-Owner-Collection-of-Contemporary-Art-Limited-Edition-Prints/2016-02-26?arr=&bidded_lots=0&box_filter=&category=&category_by=&currency=&department_id=&exclude_keyword=&export_issue=&filter_360=&high_estimate=&image_filter=&keyword=&list_type=&lot_no_from=&lot_no_to=&lots_per_page=all&low_estimate=&month=&page_no=&paper_filter=&search_type=&sort_by=ASC&view=bidders&year=",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.extremeinternational.com/post/2019/12/19/extreme-brand-update-2019-q4",
+      "pages": [
+        "about.html",
+        "characters/darren-cullen.html",
+        "history.html",
+        "pages/darren-cullen-ser-history.html",
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://www.extremeinternational.com/post/2019/12/19/extreme-brand-update-2019-q4",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.floorisrising.com/podcast/yuna/",
+      "pages": [
+        "history.html",
+        "pages/graffiti-kings-web-network.html",
+        "pages/graffiti-queens-decentraland-2021.html"
+      ],
+      "status": 200,
+      "finalURL": "https://www.floorisrising.com/podcast/yuna/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.independent.co.uk/arts-entertainment/art/news/graffiti-artist-banned-from-all-olympic-sites-7956926.html",
+      "pages": [
+        "pages/darren-cullen-ser-history.html",
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://www.independent.co.uk/arts-entertainment/art/news/graffiti-artist-banned-from-all-olympic-sites-7956926.html",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.instagram.com/gkniftyheads/",
+      "pages": [
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fgkniftyheads%2F&is_from_rle",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.instagram.com/graffitikings/",
+      "pages": [
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fgraffitikings%2F&is_from_rle",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.instagram.com/graffpunks/",
+      "pages": [
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fgraffpunks%2F&is_from_rle",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.instagram.com/hodlwarriors/",
+      "pages": [
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fhodlwarriors%2F&is_from_rle",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.instagram.com/iamcharliebuster/",
+      "pages": [
+        "pages/charlie-buster-grime-art-history.html",
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://www.instagram.com/iamcharliebuster/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.instagram.com/nftbuster/",
+      "pages": [
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fnftbuster%2F&is_from_rle",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.itv.com/news/london/2012-07-23/london-tonight-launch-olympic-cab",
+      "pages": [
+        "about.html",
+        "characters/darren-cullen.html",
+        "history.html",
+        "pages/darren-cullen-ser-history.html",
+        "pages/graffiti-kings-legacy-campaigns.html",
+        "pages/graffiti-kings-original-website-archive.html",
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://www.itv.com/news/london/2012-07-23/london-tonight-launch-olympic-cab",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.itv.com/news/meridian/story/2013-07-20/graffiti-artist-paints-royal-baby",
+      "pages": [
+        "about.html"
+      ],
+      "status": 200,
+      "finalURL": "https://www.itv.com/news/meridian/story/2013-07-20/graffiti-artist-paints-royal-baby",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.nbcnews.com/tech/tech-news/welcome-decentraland-nfts-meet-virtual-world-rcna553",
+      "pages": [
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://www.nbcnews.com/tech/tech-news/welcome-decentraland-nfts-meet-virtual-world-rcna553",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.roxannedarling.com/curriculum-vitae",
+      "pages": [
+        "pages/graffiti-kings-web-network.html",
+        "pages/graffiti-queens-nft-festival-2022.html"
+      ],
+      "status": 200,
+      "finalURL": "https://www.roxannedarling.com/curriculum-vitae",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.saatchiart.com/art/Painting-ABC-TWO-HEADS/1001532/4838895/view",
+      "pages": [
+        "pages/charlie-buster-grime-art-history.html",
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://www.saatchiart.com/art/Painting-ABC-TWO-HEADS/1001532/4838895/view",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.saatchiart.com/art/Painting-DROP-THE-BOMB/1001532/4839258/view",
+      "pages": [
+        "pages/charlie-buster-grime-art-history.html",
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://www.saatchiart.com/art/Painting-DROP-THE-BOMB/1001532/4839258/view",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.saatchiart.com/art/Painting-MY-RADIANT-CHILD/1001532/4838925/view",
+      "pages": [
+        "pages/charlie-buster-grime-art-history.html",
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://www.saatchiart.com/art/Painting-MY-RADIANT-CHILD/1001532/4838925/view",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.saatchiart.com/charliebuster",
+      "pages": [
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://www.saatchiart.com/charliebuster",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.saatchiart.com/en-lt/art/Painting-Inner-Thoughts/1001532/4839050/view",
+      "pages": [
+        "pages/charlie-buster-grime-art-history.html",
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://www.saatchiart.com/en-lt/art/Painting-Inner-Thoughts/1001532/4839050/view",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.saatchiart.com/en-pr/art/Painting-Let-It-Flow/1001532/4839275/view",
+      "pages": [
+        "pages/charlie-buster-grime-art-history.html",
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://www.saatchiart.com/en-pr/art/Painting-Let-It-Flow/1001532/4839275/view",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.saatchiart.com/print/Painting-MY-RADIANT-CHILD/1001532/4838925/view",
+      "pages": [
+        "pages/charlie-buster-grime-art-history.html",
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://www.saatchiart.com/print/Painting-MY-RADIANT-CHILD/1001532/4838925/view",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.theguardian.com/artanddesign/2012/jul/18/graffiti-artist-adidas-banned-olympic",
+      "pages": [
+        "pages/darren-cullen-ser-history.html",
+        "pages/graffiti-kings-legacy-campaigns.html",
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://www.theguardian.com/artanddesign/2012/jul/18/graffiti-artist-adidas-banned-olympic",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.thejakartapost.com/life/2019/07/23/luxury-brands-gucci-louboutin-graffiti-ads-take-over-street-art",
+      "pages": [
+        "history.html",
+        "pages/darren-cullen-ser-history.html",
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 403,
+      "finalURL": "https://www.thejakartapost.com/life/2019/07/23/luxury-brands-gucci-louboutin-graffiti-ads-take-over-street-art",
+      "result": "unverified"
+    },
+    {
+      "url": "https://www.tiktok.com/@iamcharliebuster",
+      "pages": [
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://www.tiktok.com/@iamcharliebuster",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.tntmagazine.com/archive/police-raid-homes-and-arrest-graffiti-artists-in-pre-emptive-olympic-swoop/",
+      "pages": [
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://www.tntmagazine.com/archive/police-raid-homes-and-arrest-graffiti-artists-in-pre-emptive-olympic-swoop/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.toppyeton.art/toppyetoncv",
+      "pages": [
+        "pages/graffiti-kings-web-network.html",
+        "pages/graffiti-queens-decentraland-2021.html"
+      ],
+      "status": 200,
+      "finalURL": "https://www.toppyeton.art/toppyetoncv",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.vice.com/en/article/graffiti-kings-british-transport-police-arrests-olympics-london-2012/",
+      "pages": [
+        "pages/darren-cullen-ser-history.html",
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://www.vice.com/en/article/graffiti-kings-british-transport-police-arrests-olympics-london-2012/",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.youtube.com/@GKniftyHEADS/videos",
+      "pages": [
+        "pages/crypto-moonboys-gkniftyheads-network.html",
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://www.youtube.com/@GKniftyHEADS/videos?cbrd=1&ucbcb=1",
+      "result": "reachable"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=mBm_Fyb3_DU",
+      "pages": [
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://www.youtube.com/watch?v=mBm_Fyb3_DU",
+      "result": "reachable"
+    },
+    {
+      "url": "https://x.com/GKniftyHEADS",
+      "pages": [
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://x.com/GKniftyHEADS",
+      "result": "reachable"
+    },
+    {
+      "url": "https://x.com/GraffitiKings",
+      "pages": [
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://x.com/GraffitiKings",
+      "result": "reachable"
+    },
+    {
+      "url": "https://x.com/GraffPUNKS",
+      "pages": [
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://x.com/GraffPUNKS",
+      "result": "reachable"
+    },
+    {
+      "url": "https://x.com/HODLWARRIORS",
+      "pages": [
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://x.com/HODLWARRIORS",
+      "result": "reachable"
+    },
+    {
+      "url": "https://x.com/NFTBUSTER",
+      "pages": [
+        "pages/charlie-buster-grime-art-history.html",
+        "pages/charlie-buster-source-network.html",
+        "pages/graffiti-kings-web-network.html"
+      ],
+      "status": 200,
+      "finalURL": "https://x.com/NFTBUSTER",
+      "result": "reachable"
+    },
+    {
+      "url": "https://xrpl.to/nfts/noballgames",
+      "pages": [
+        "pages/charlie-buster-no-ball-games-nbg.html",
+        "pages/charlie-buster-source-network.html"
+      ],
+      "status": 403,
+      "finalURL": "https://xrpl.to/nfts/noballgames",
+      "result": "unverified"
+    }
+  ]
+}

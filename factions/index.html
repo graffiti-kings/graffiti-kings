@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Factions, Armies and Traditions — Graffiti Kings Wiki</title>
   <meta name="description" content="The updated Crypto Moonboys structure: GKniftyHEADS, All City Bulls, Nomad Bears, Bitcoin Kid Army, HODL Warriors, HODL X Warriors and archive traditions.">
-  <link rel="stylesheet" href="../css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rajdhani:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&amp;family=Rajdhani:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
   <style>
     /* Keep the main page artwork fully visible at all viewport sizes. */
     .page-logo img {
@@ -28,27 +29,39 @@
   <meta property="og:url" content="https://graffitikings.com/factions/">
   <meta property="og:title" content="Factions, Armies and Traditions — Graffiti Kings Wiki">
   <meta property="og:description" content="The updated Crypto Moonboys structure: GKniftyHEADS, All City Bulls, Nomad Bears, Bitcoin Kid Army, HODL Warriors, HODL X Warriors and archive traditions.">
-  <meta property="og:image" content="https://graffitikings.com/images/GK_NIFTYHEADS_niftys.png">
-  <meta property="og:image:alt" content="GKniftyHEADS and Graffiti Kings wiki artwork">
+  <meta property="og:image" content="https://graffitikings.com/images/social/factions-index.jpg">
+  <meta property="og:image:alt" content="Factions, Armies and Traditions — Graffiti Kings Wiki">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Factions, Armies and Traditions — Graffiti Kings Wiki">
   <meta name="twitter:description" content="The updated Crypto Moonboys structure: GKniftyHEADS, All City Bulls, Nomad Bears, Bitcoin Kid Army, HODL Warriors, HODL X Warriors and archive traditions.">
-  <meta name="twitter:image" content="https://graffitikings.com/images/GK_NIFTYHEADS_niftys.png">
+  <meta name="twitter:image" content="https://graffitikings.com/images/social/factions-index.jpg">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","@id":"https://graffitikings.com/factions/#webpage","url":"https://graffitikings.com/factions/","name":"Factions, Armies and Traditions","description":"The updated Crypto Moonboys structure: GKniftyHEADS, All City Bulls, Nomad Bears, Bitcoin Kid Army, HODL Warriors, HODL X Warriors and archive traditions.","inLanguage":"en-GB","isPartOf":{"@id":"https://graffitikings.com/#website"},"breadcrumb":{"@id":"https://graffitikings.com/factions/#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://graffitikings.com/factions/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://graffitikings.com/"},{"@type":"ListItem","position":2,"name":"Factions, Armies and Traditions","item":"https://graffitikings.com/factions/"}]}]}</script>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/jpeg">
 </head>
 <body>
-  <canvas id="matrixCanvas" class="matrix-canvas"></canvas>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <canvas id="matrixCanvas" class="matrix-canvas" aria-hidden="true"></canvas>
   <div class="scanlines"></div>
   <div class="site-wrapper">
     <header class="site-header">
       <a href="../index.html" class="logo-link"><span class="site-title">GK WIKI</span></a>
-      <button class="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
-      <nav class="main-nav">
+      <form class="search-container" action="../search.html" method="get" role="search" aria-label="Wiki search">
+        <label class="sr-only" for="header-query">Search the wiki</label>
+        <div class="search-controls"><input id="header-query" name="q" type="search" class="search-input" placeholder="Search wiki..." autocomplete="off" minlength="2" maxlength="200" required aria-controls="header-results"><button class="search-submit" type="submit" aria-label="Show all search results">Go</button></div>
+        <div id="header-results" class="search-results" role="region" aria-label="Search suggestions" hidden></div>
+        <span class="search-status sr-only" role="status" aria-live="polite"></span>
+      </form>
+      <button class="hamburger" type="button" aria-label="Toggle navigation" aria-controls="main-navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav id="main-navigation" class="main-nav" aria-label="Main navigation">
         <ul class="nav-links">
           <li><a href="../index.html">Home</a></li>
           <li><a href="../about.html">About</a></li>
           <li><a href="../history.html">History</a></li>
-          <li><a href="index.html">Factions</a></li>
+          <li><a href="../pages/graffiti-kings-original-website-archive.html">Old Site Archive</a></li>
+          <li><a href="../factions/index.html" aria-current="page">Factions</a></li>
           <li><a href="../characters/index.html">Characters</a></li>
           <li><a href="../pages/mechanics.html">Mechanics</a></li>
           <li><a href="../pages/music.html">Music</a></li>
@@ -56,8 +69,9 @@
         </ul>
       </nav>
     </header>
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><span aria-current="page">Factions, Armies and Traditions</span></li></ol></nav>
 
-    <main class="content-wrapper">
+    <main class="content-wrapper" id="main-content" tabindex="-1">
       <aside class="sidebar"><div class="sidebar-section"><div class="sidebar-title">Explore the world</div><div class="sidebar-links"><a href="../index.html">Graffiti Kings</a><a href="../about.html">About the universe</a><a href="../history.html">History &amp; timeline</a><a href="../factions/index.html">Factions &amp; armies</a><a href="../characters/index.html">People &amp; characters</a><a href="../pages/mechanics.html">Story &amp; participation</a><a href="../pages/graffiti-kings-web-network.html">Real-world sources</a><a href="https://cryptomoonboys.com/wiki/crypto-moonboys.html">Read the main Crypto Moonboys saga ↗</a></div></div></aside>
 
       <article class="main-content">
@@ -85,6 +99,7 @@
       </div>
     </footer>
   </div>
+  <script src="../js/search.js"></script>
   <script src="../js/main.js"></script>
 </body>
 </html>
