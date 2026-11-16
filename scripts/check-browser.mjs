@@ -141,6 +141,8 @@ try {
   assert.equal(await page.evaluate(() => document.getElementById('gk-radio') === window.radioIdentity && !window.radioIdentity.paused), true);
   await page.getByRole('navigation', { name: 'Main navigation' }).getByRole('link', { name: 'About', exact: true }).click();
   await page.waitForFunction(() => document.body.classList.contains('page-about-story'));
+  await page.evaluate(() => window.scrollTo(0, 1000));
+  const readingPosition = await page.evaluate(() => scrollY);
   const liveSearch = page.getByRole('searchbox', { name: 'Search the wiki', exact: true });
   await liveSearch.fill('pirate radio');
   await liveSearch.press('Enter');
@@ -148,6 +150,7 @@ try {
   assert.equal(await page.evaluate(() => document.getElementById('gk-radio') === window.radioIdentity && !window.radioIdentity.paused), true);
   await page.goBack();
   await page.waitForFunction(() => document.body.classList.contains('page-about-story'));
+  assert.ok(Math.abs(await page.evaluate(() => scrollY) - readingPosition) < 5, 'Back must restore the reading position');
   const background = await context.newPage();
   await background.goto(origin + '/history.html');
   assert.equal(await page.evaluate(() => !document.getElementById('gk-radio').paused), true);

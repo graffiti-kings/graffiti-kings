@@ -11,6 +11,12 @@
   notice.hidden = true;
   document.body.append(notice);
   let wanted = false, managed = false, generation = 0, navigation;
+  let keyNumber = 0, currentKey = 'radio-' + Date.now(), restoring = false;
+  const positions = new Map();
+  history.replaceState({ ...history.state, gkRadioKey: currentKey }, '', location.href);
+  window.addEventListener('scroll', () => {
+    if (!restoring) positions.set(currentKey, [scrollX, scrollY]);
+  }, { passive: true });
   function sync(state) {
     document.querySelectorAll('.nav-radio').forEach(button => {
       button.setAttribute('aria-pressed', String(wanted));
@@ -33,14 +39,16 @@
     audio.src = 'https://api.cryptomoonboys.com/radio/stream';
     audio.play().then(() => {
       if (attempt !== generation) return;
-      managed = true; sync();
+      managed = true; history.scrollRestoration = 'manual'; sync();
     }).catch(() => { if (attempt === generation) off('Radio unavailable. Tap Radio to retry.'); });
   });
   audio.addEventListener('playing', () => { if (wanted) sync(); });
   audio.addEventListener('waiting', () => { if (wanted) sync('…'); });
   audio.addEventListener('error', () => { if (wanted) off('Radio connection lost. Tap Radio to retry.'); });
 
-  async function navigate(url, push) {
+  async function navigate(url, push, restorePosition) {
+    if (push) positions.set(currentKey, [scrollX, scrollY]);
+    restoring = true;
     navigation?.abort();
     const controller = new AbortController(); navigation = controller;
     try {
@@ -50,7 +58,10 @@
       const wrapper = doc.querySelector('.site-wrapper');
       if (!wrapper || !doc.querySelector('.site-header')) throw new Error('Not a wiki page');
       if (controller.signal.aborted) return;
-      if (push) history.pushState(null, '', url);
+      if (push) {
+        currentKey = 'radio-' + Date.now() + '-' + (++keyNumber);
+        history.pushState({ gkRadioKey: currentKey }, '', url);
+      }
       document.title = doc.title;
       document.head.querySelectorAll('style, meta, link[rel="canonical"], script[type="application/ld+json"]').forEach(node => node.remove());
       doc.head.querySelectorAll('style, meta, link[rel="canonical"], script[type="application/ld+json"]').forEach(node => document.head.append(document.importNode(node, true)));
@@ -61,12 +72,16 @@
       document.querySelector('.site-wrapper').replaceWith(document.importNode(wrapper, true));
       initGKWiki(); sync();
       const target = url.hash ? document.getElementById(decodeURIComponent(url.hash.slice(1))) : null;
-      if (target) target.scrollIntoView(); else window.scrollTo(0, 0);
+      if (!push && restorePosition) window.scrollTo(...restorePosition);
+      else if (target) target.scrollIntoView(); else window.scrollTo(0, 0);
+      positions.set(currentKey, [scrollX, scrollY]);
       document.getElementById('main-content')?.focus({ preventScroll: true });
     } catch (error) {
       if (error.name === 'AbortError') return;
       notice.textContent = 'Page could not load. Your radio is still available; try the link again.';
       notice.hidden = false;
+    } finally {
+      if (navigation === controller) restoring = false;
     }
   }
   document.addEventListener('click', event => {
@@ -81,7 +96,14 @@
       return;
     }
     if (!url.pathname.endsWith('.html') && !url.pathname.endsWith('/')) return;
-    if (url.pathname === location.pathname && url.search === location.search && url.hash) return;
+    if (url.pathname === location.pathname && url.search === location.search && url.hash) {
+      positions.set(currentKey, [scrollX, scrollY]);
+      currentKey = 'radio-' + Date.now() + '-' + (++keyNumber);
+      history.pushState({ gkRadioKey: currentKey }, '', url);
+      document.getElementById(decodeURIComponent(url.hash.slice(1)))?.scrollIntoView();
+      positions.set(currentKey, [scrollX, scrollY]);
+      event.preventDefault(); return;
+    }
     event.preventDefault(); navigate(url, true);
   });
   document.addEventListener('submit', event => {
@@ -92,6 +114,11 @@
     const url = new URL(form.action); url.search = new URLSearchParams(new FormData(form)).toString();
     navigate(url, true);
   });
-  window.addEventListener('popstate', () => { if (managed || wanted) navigate(new URL(location.href), false); });
+  window.addEventListener('popstate', event => {
+    if (!managed && !wanted) return;
+    positions.set(currentKey, [scrollX, scrollY]);
+    currentKey = event.state?.gkRadioKey || 'radio-' + Date.now() + '-' + (++keyNumber);
+    navigate(new URL(location.href), false, positions.get(currentKey) || [0, 0]);
+  });
   sync();
 })();
