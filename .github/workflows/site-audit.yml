@@ -23,9 +23,12 @@ jobs:
         run: |
           node --check js/main.js
           node --check js/search.js
+          node --check js/radio.js
           node --check scripts/check-live-seo.mjs
       - name: Check generated search data is current
         run: node scripts/build-search-index.mjs --check
+      - name: Reject stale CSS and JavaScript versions
+        run: node scripts/version-assets.mjs --check
       - name: Test live SEO crawler using an offline fixture
         run: node --test tests/*.test.mjs
       - name: Audit internal links and SEO

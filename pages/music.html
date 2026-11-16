@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&amp;family=Rajdhani:wght@400;500;600&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/style.css?v=7f4f4283d6f1">
   <link rel="canonical" href="https://graffitikings.com/pages/music.html">
   <meta name="robots" content="max-image-preview:large">
   <meta property="og:type" content="website">
@@ -54,6 +54,7 @@
           <li><a href="../characters/index.html">Characters</a></li>
           <li><a href="../pages/mechanics.html">Mechanics</a></li>
           <li><a href="../pages/music.html" aria-current="page">Music</a></li>
+          <li><a class="nav-radio" href="../pages/music.html#live-radio">Radio</a></li>
           <li><a href="../pages/nft-collections.html">NFT Collections</a></li>
         </ul>
       </nav>
@@ -66,6 +67,12 @@
       <article class="main-content">
 <h1 class="page-title">Music and Street Signal</h1>
 <p class="page-subtitle">Broadcast, rhythm, memory and the worlds that listen.</p>
+<section id="live-radio" class="radio-panel" aria-label="GraffPUNKS live radio">
+  <div class="radio-heading"><strong>GraffPUNKS Radio</strong><span>Live stream · The same station as Moonpet</span></div>
+  <audio class="gk-radio" controls preload="none" aria-label="Play GraffPUNKS Radio" aria-describedby="radio-status" src="https://api.cryptomoonboys.com/radio/stream">Your browser does not support audio playback.</audio>
+  <p id="radio-status" class="radio-status" role="status">Press play to listen.</p>
+  <div class="radio-links"><button class="btn btn-outline radio-retry" type="button" hidden>Retry radio</button><a href="https://api.cryptomoonboys.com/radio/stream" target="_blank" rel="noopener noreferrer">Open stream separately ↗</a><a href="https://graffpunks.live/" target="_blank" rel="noopener noreferrer">Visit GraffPUNKS ↗</a></div>
+</section>
 <section class="section" id="overview"><h2 class="section-title">Street sound and the fictional world</h2>
 <p>Music connects the real Graffiti Kings culture to its fictional streets. Radio, rhythm, spoken testimony and war chants carry identity. A real broadcast, a song inside a story and a proposed game soundtrack each have a different source and status.</p></section>
 <section class="section" id="hip-hop-dna">
@@ -123,7 +130,8 @@
     </footer>
   </div>
 
-  <script src="../js/search.js"></script>
-  <script src="../js/main.js"></script>
+  <script src="../js/search.js?v=fe1bd26d5f27"></script>
+  <script src="../js/main.js?v=4c00fde821ee"></script>
+  <script src="../js/radio.js?v=4ed7f65d4f52"></script>
 </body>
 </html>

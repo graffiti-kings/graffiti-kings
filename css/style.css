@@ -946,3 +946,14 @@ section[id], .legacy-anchor { scroll-margin-top: calc(var(--header-height) + 1re
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
   .matrix-canvas { display: none; }
 }
+
+/* Native media controls remain usable even with JavaScript disabled. */
+.radio-panel { margin: 1.25rem 0 2rem; padding: 1.2rem; border: 1px solid #55512b; border-radius: 12px; background: linear-gradient(120deg, #19180e, #101414); }
+.radio-heading { display: flex; flex-wrap: wrap; align-items: baseline; gap: .4rem 1rem; margin-bottom: .85rem; }
+.radio-heading strong { font: 600 1.3rem 'Oswald', sans-serif; color: var(--neon-gold); }
+.radio-heading span { color: #ccc; }
+.gk-radio { display: block; width: 100%; max-width: 560px; min-width: 0; height: 54px; color-scheme: dark; }
+.radio-panel .radio-status { margin: .7rem 0; font-size: .95rem; }
+.radio-links { display: flex; align-items: center; flex-wrap: wrap; gap: .6rem 1.5rem; }
+.radio-links a { color: var(--neon-cyan); font-size: .95rem; }
+.radio-retry { font-size: 1rem; min-height: 44px; }
