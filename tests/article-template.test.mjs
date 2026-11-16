@@ -20,7 +20,7 @@ test('copied article templates resolve navigation and search from every supporte
 });
 
 test('article templates load the search API before its consumers', () => {
-  const scripts = [...template.matchAll(/<script\b[^>]*src="([^"]+)"/g)].map(match => match[1]);
+  const scripts = [...template.matchAll(/<script\b[^>]*src="([^"]+)"/g)].map(match => match[1].split('?')[0]);
   assert.ok(scripts.includes('../js/search.js'));
   assert.ok(scripts.indexOf('../js/search.js') < scripts.indexOf('../js/main.js'));
 });
