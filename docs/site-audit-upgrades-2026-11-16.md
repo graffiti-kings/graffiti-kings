@@ -29,12 +29,24 @@ change adds the search page, bringing the public sitemap to 104 pages.
 
 ## Verification and limits
 
-The dependency-free source audits and 23 tests pass locally. The local headless
-browser is blocked by the runtime's socket restrictions, and its browser download
-endpoint returns a non-ZIP response. The shared browser cannot connect to this
-workspace's local server. Browser verification is therefore assigned to the
-pull-request CI job; do not describe its mobile screenshots or performance numbers
-as passed until that job finishes.
+The dependency-free source audits and 23 tests pass locally and in GitHub CI.
+The browser job also passed in run 43908371580: all 104 pages were checked at
+320px and 1440px, with representative pages at 390px, 768px, 1024px and 1280px.
+Search, keyboard navigation, native Enter submission, breadcrumbs, the contribution
+route, reduced motion and JavaScript-disabled navigation passed. No page overflow
+or runtime errors were reported. The saved mobile homepage, desktop homepage and
+mobile search screenshots were visually reviewed.
+
+The unthrottled local fixture measured zero CLS at 390px and 1440px and selected
+480px / 960px AVIF artwork respectively. Lab LCP observations were 48ms / 120ms.
+These measurements describe a fast local CI server; they are not production or
+field Core Web Vitals. The browser artifact contains the full report and images.
+Local headless execution in the editing workspace was restricted, so CI supplied
+the browser evidence.
+
+The workflow action runtimes were also updated from deprecated Node 20 actions
+to the officially published Node 24 releases: checkout v7.0.1, setup-node v7.1.0
+and upload-artifact v7.0.2 (verified against their official action.yml files).
 
 External link audit: 236 unique article destinations, 195 reachable, no confirmed
 404/410 destinations, and 41 unverified because of network/access responses.
