@@ -111,6 +111,35 @@ try {
   await staticPage.goto(origin + '/about.html');
   assert.equal(await staticPage.getByRole('navigation', { name: 'Main navigation' }).isVisible(), true);
   await noJS.close();
+  // Native audio uses a deterministic WAV fixture; CI never depends on station uptime.
+  const sampleRate = 8000, samples = sampleRate * 20;
+  const wav = Buffer.alloc(44 + samples * 2);
+  wav.write('RIFF', 0); wav.writeUInt32LE(wav.length - 8, 4); wav.write('WAVEfmt ', 8);
+  wav.writeUInt32LE(16, 16); wav.writeUInt16LE(1, 20); wav.writeUInt16LE(1, 22);
+  wav.writeUInt32LE(sampleRate, 24); wav.writeUInt32LE(sampleRate * 2, 28);
+  wav.writeUInt16LE(2, 32); wav.writeUInt16LE(16, 34); wav.write('data', 36);
+  wav.writeUInt32LE(samples * 2, 40);
+  let radioRequests = 0, failRadio = true;
+  await page.route('https://api.cryptomoonboys.com/radio/stream', route => {
+    radioRequests++;
+    return failRadio ? route.abort() : route.fulfill({ status: 200, contentType: 'audio/wav', body: wav });
+  });
+  for (const pathname of ['/', '/pages/music.html']) {
+    failRadio = true;
+    const before = radioRequests;
+    await page.goto(origin + pathname, { waitUntil: 'networkidle' });
+    const audio = page.locator('.gk-radio');
+    assert.equal(await audio.getAttribute('preload'), 'none');
+    assert.equal(await audio.getAttribute('autoplay'), null);
+    assert.equal(radioRequests, before, 'Radio must not download before the visitor presses play');
+    await audio.evaluate(element => element.play().catch(() => {}));
+    await page.getByRole('button', { name: 'Retry radio' }).waitFor();
+    failRadio = false;
+    await page.getByRole('button', { name: 'Retry radio' }).click();
+    await page.waitForFunction(() => { const audio = document.querySelector('.gk-radio'); return !audio.paused && audio.readyState >= 2; });
+    await audio.evaluate(element => element.pause());
+    assert.equal(await page.locator('.radio-status').innerText(), 'Radio paused.');
+  }
   assert.deepEqual(failures, []);
   fs.writeFileSync(path.join(output, 'browser-report.json'), JSON.stringify({ pages: paths.length, widths: [320, 390, 768, 1024, 1280, 1440], measurements, note: 'Local unthrottled lab LCP and CLS; these are not field Core Web Vitals.', failures }, null, 2));
   console.log(`Browser audit passed: ${paths.length} pages, six viewport widths, search, keyboard, breadcrumbs, contribution route, reduced motion and JS-disabled navigation.`);

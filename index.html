@@ -198,7 +198,13 @@
       </nav>
     </header>
 
-    <main class="home-lore" id="main-content" tabindex="-1"><article class="main-content"><div class="page-logo"><picture>
+    <main class="home-lore" id="main-content" tabindex="-1"><article class="main-content"><section class="radio-panel" aria-label="GraffPUNKS live radio">
+  <div class="radio-heading"><strong>GraffPUNKS Radio</strong><span>Live stream · The same station as Moonpet</span></div>
+  <audio class="gk-radio" controls preload="none" aria-label="Play GraffPUNKS Radio" aria-describedby="radio-status" src="https://api.cryptomoonboys.com/radio/stream">Your browser does not support audio playback.</audio>
+  <p id="radio-status" class="radio-status" role="status">Press play to listen.</p>
+  <div class="radio-links"><button class="btn btn-outline radio-retry" type="button" hidden>Retry radio</button><a href="https://api.cryptomoonboys.com/radio/stream" target="_blank" rel="noopener noreferrer">Open stream separately ↗</a><a href="https://graffpunks.live/" target="_blank" rel="noopener noreferrer">Visit GraffPUNKS ↗</a></div>
+</section>
+<div class="page-logo"><picture>
   <source type="image/avif" srcset="images/GK_NIFTYHEADS-480.avif 480w, images/GK_NIFTYHEADS-960.avif 960w, images/GK_NIFTYHEADS-1200.avif 1200w" sizes="(max-width: 600px) calc(100vw - 40px), 520px">
   <source type="image/webp" srcset="images/GK_NIFTYHEADS-480.webp 480w, images/GK_NIFTYHEADS-960.webp 960w, images/GK_NIFTYHEADS-1200.webp 1200w" sizes="(max-width: 600px) calc(100vw - 40px), 520px">
   <img src="images/GK_NIFTYHEADS_niftys.png" width="1200" height="1200" fetchpriority="high" decoding="async" alt="GKniftyHEADS artwork">
@@ -239,5 +245,6 @@
   </div>
   <script src="js/search.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/radio.js"></script>
 </body>
 </html>
