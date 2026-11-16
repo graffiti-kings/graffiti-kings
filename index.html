@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Graffiti Kings Wiki — Graffiti Kings Wiki</title>
+  <title>Graffiti Kings — Street Art History &amp; Crypto Moonboys</title>
   <meta name="description" content="Explore Graffiti Kings history and the updated Crypto Moonboys world: Bulls, Bears, Bitcoin Kid Army, GKniftyHEADS, HODL Warriors and Block Topia.">
-  <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rajdhani:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&amp;family=Rajdhani:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
   <style>
     /* Keep the homepage artwork fully visible on desktop and mobile. */
     .home-hero .page-logo img {
@@ -153,40 +154,42 @@
   <meta property="og:site_name" content="Graffiti Kings Wiki">
   <meta property="og:locale" content="en_GB">
   <meta property="og:url" content="https://graffitikings.com/">
-  <meta property="og:title" content="Graffiti Kings Wiki — Graffiti Kings Wiki">
+  <meta property="og:title" content="Graffiti Kings — Street Art History &amp; Crypto Moonboys">
   <meta property="og:description" content="Explore Graffiti Kings history and the updated Crypto Moonboys world: Bulls, Bears, Bitcoin Kid Army, GKniftyHEADS, HODL Warriors and Block Topia.">
-  <meta property="og:image" content="https://graffitikings.com/images/GK_NIFTYHEADS_niftys.png">
-  <meta property="og:image:alt" content="GKniftyHEADS and Graffiti Kings wiki artwork">
+  <meta property="og:image" content="https://graffitikings.com/images/social/index.jpg">
+  <meta property="og:image:alt" content="Graffiti Kings Wiki — Graffiti Kings Wiki">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Graffiti Kings Wiki — Graffiti Kings Wiki">
+  <meta name="twitter:title" content="Graffiti Kings — Street Art History &amp; Crypto Moonboys">
   <meta name="twitter:description" content="Explore Graffiti Kings history and the updated Crypto Moonboys world: Bulls, Bears, Bitcoin Kid Army, GKniftyHEADS, HODL Warriors and Block Topia.">
-  <meta name="twitter:image" content="https://graffitikings.com/images/GK_NIFTYHEADS_niftys.png">
+  <meta name="twitter:image" content="https://graffitikings.com/images/social/index.jpg">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://graffitikings.com/#website","url":"https://graffitikings.com/","name":"Graffiti Kings Wiki","alternateName":"Graffiti Kings","inLanguage":"en-GB"},{"@type":"WebPage","@id":"https://graffitikings.com/#webpage","url":"https://graffitikings.com/","name":"Graffiti Kings Wiki","description":"Explore Graffiti Kings history and the updated Crypto Moonboys world: Bulls, Bears, Bitcoin Kid Army, GKniftyHEADS, HODL Warriors and Block Topia.","inLanguage":"en-GB","isPartOf":{"@id":"https://graffitikings.com/#website"}}]}</script>
   <link rel="icon" type="image/png" href="/favicon.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/jpeg">
 </head>
 <body>
-  <canvas id="matrixCanvas" class="matrix-canvas"></canvas>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <canvas id="matrixCanvas" class="matrix-canvas" aria-hidden="true"></canvas>
   <div class="scanlines"></div>
   <div class="site-wrapper">
 
     <header class="site-header">
-      <a href="index.html" class="logo-link">
-        <span class="site-title">GK WIKI</span>
-      </a>
-      <div class="search-container" style="position:relative;">
-        <input type="search" class="search-input" placeholder="Search wiki...">
-        <div class="search-results" style="display:none;"></div>
-      </div>
-      <button class="hamburger" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="main-nav">
+      <a href="index.html" class="logo-link"><span class="site-title">GK WIKI</span></a>
+      <form class="search-container" action="search.html" method="get" role="search" aria-label="Wiki search">
+        <label class="sr-only" for="header-query">Search the wiki</label>
+        <div class="search-controls"><input id="header-query" name="q" type="search" class="search-input" placeholder="Search wiki..." autocomplete="off" minlength="2" maxlength="200" required aria-controls="header-results"><button class="search-submit" type="submit" aria-label="Show all search results">Go</button></div>
+        <div id="header-results" class="search-results" role="region" aria-label="Search suggestions" hidden></div>
+        <span class="search-status sr-only" role="status" aria-live="polite"></span>
+      </form>
+      <button class="hamburger" type="button" aria-label="Toggle navigation" aria-controls="main-navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav id="main-navigation" class="main-nav" aria-label="Main navigation">
         <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html" aria-current="page">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="history.html">History</a></li>
           <li><a href="pages/graffiti-kings-original-website-archive.html">Old Site Archive</a></li>
-          <li><a href="factions/index.html">Factions &amp; armies</a></li>
+          <li><a href="factions/index.html">Factions</a></li>
           <li><a href="characters/index.html">Characters</a></li>
           <li><a href="pages/mechanics.html">Mechanics</a></li>
           <li><a href="pages/music.html">Music</a></li>
@@ -195,7 +198,11 @@
       </nav>
     </header>
 
-    <main class="home-lore"><article class="main-content"><div class="page-logo"><img src="images/GK_NIFTYHEADS_niftys.png" alt="GKniftyHEADS artwork"></div><h1 class="page-title">Graffiti Kings Wiki</h1>
+    <main class="home-lore" id="main-content" tabindex="-1"><article class="main-content"><div class="page-logo"><picture>
+  <source type="image/avif" srcset="images/GK_NIFTYHEADS-480.avif 480w, images/GK_NIFTYHEADS-960.avif 960w, images/GK_NIFTYHEADS-1200.avif 1200w" sizes="(max-width: 600px) calc(100vw - 40px), 520px">
+  <source type="image/webp" srcset="images/GK_NIFTYHEADS-480.webp 480w, images/GK_NIFTYHEADS-960.webp 960w, images/GK_NIFTYHEADS-1200.webp 1200w" sizes="(max-width: 600px) calc(100vw - 40px), 520px">
+  <img src="images/GK_NIFTYHEADS_niftys.png" width="1200" height="1200" fetchpriority="high" decoding="async" alt="GKniftyHEADS artwork">
+</picture></div><h1 class="page-title">Graffiti Kings Wiki</h1>
 <p class="page-subtitle">Street-art history, a living creator world and the Crypto Moonboys saga.</p>
 <section class="section" id="overview"><h2 class="section-title">The street, the market and the worlds beyond</h2>
 <p>Crypto Moonboys is a creator brand and a fantasy-world cast. Real people can make, inhabit and perform characters, as performers bring a film’s cast to life. The story grows from Graffiti Kings’ street-art roots into many realms, divided records and a struggle over who gets to own a name, a memory or a future.</p><p>In Year 3008, crypto rules everyday life. The <strong><a href="factions/all-city-bulls.html">All City Bulls</a></strong> and <strong><a href="factions/nomad-bears.html">Nomad Bears</a></strong> embody the market’s two sides. Both are shadowed 24/7 by undercover <a href="factions/bitcoin-kid-army.html">Bitcoin Kid Army</a> guards. <strong><a href="characters/alfie-bitcoin-kid.html">Alfie “The Bitcoin KiD” Blaze</a></strong> leads that Army and takes orders only from <strong><a href="factions/gkniftyheads.html">GKniftyHEADS</a></strong>, the underworld good guys above the two market factions and the remaining 37 GK factions.</p><p>When the underworld needs a larger army, members of all GK factions unite as the <strong><a href="factions/hodlwarriors.html">HODL Warriors</a></strong> while keeping their faction identities. The Bitcoin Kid Army and HODL Warriors are armies, not street factions. Every HODL Warrior aspires to become a <strong>HODL X Warrior</strong> of Block Topia, but that distinct status must be earned.</p><p><strong><a href="characters/queen-sarah-pfly.html">Queen Sarah P-fly</a></strong> rules Block Topia with her <strong><a href="factions/crypto-moongirls-eternal.html">Crypto Moongirls</a> army</strong> and the HODL X order. Inside, the engineered <strong>Bitcoin X Kids</strong> grow within the city’s systems. Some escape and join Alfie’s Army outside. Those movements connect the city and the underworld without making their forces the same.</p><p>All face <strong><a href="characters/null-the-prophet.html">NULL THE PROPHET</a></strong>, the Antichain threat that can sever a record from the life it should preserve. Other wars, rivalries and obligations continue. A common enemy does not settle the struggle between the street and the Queen, and the public story leaves the <strong>Final Fork unresolved</strong>.</p><p>Begin with <a href="https://cryptomoonboys.com/wiki/crypto-moonboys.html">the full Crypto Moonboys story</a> — the central long-form entrance to the saga, its wider mythology and timeline. This Graffiti Kings site connects that fiction to the documented artists, projects and source records behind it.</p></section>
@@ -230,6 +237,7 @@
     </footer>
 
   </div>
+  <script src="js/search.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

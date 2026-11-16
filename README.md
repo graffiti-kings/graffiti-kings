@@ -103,3 +103,38 @@ The expanded history is at [SER documented history](pages/darren-cullen-ser-hist
 ## Original commercial site and Wayback sources
 
 The [original Graffiti Kings .co.uk archive](pages/graffiti-kings-original-website-archive.html) and [historic campaign register](pages/graffiti-kings-legacy-campaigns.html) preserve dated links back to the old commercial website. The [source register](docs/legacy-archive-source-register.md) records capture provenance, evidence levels, gaps and future verification work. Links are historical references, **not** a currently operating graffiti mural booking service or evidence of current brand endorsement.
+
+## Search, accessibility and share assets
+
+The header is static HTML, including labelled GET search forms. `search.html` lists
+all matches, searches article text and summaries, and recognises common aliases
+such as SER and PFLY. Search data is loaded only when search is used.
+
+After editing public HTML, run:
+
+```bash
+node scripts/build-search-index.mjs
+npm run check
+```
+
+Page-specific share cards are committed under `images/social/`, with their map in
+`images/social/manifest.json`. Rebuild cards and responsive AVIF/WebP artwork with
+`python scripts/build-social-cards.py` (Pillow with AVIF/WebP support and DejaVu
+fonts), then rebuild the search index. The site itself remains static and requires
+no image-generation service, Python process or frontend build on the host.
+
+For browser checks, install development dependencies with `npm ci`, then run
+`npx playwright install chromium` and `npm run test:browser`. The pull-request
+workflow checks mobile through desktop layouts, keyboard search, native Enter
+submission, reduced motion and navigation with JavaScript disabled. Screenshots
+and local LCP/CLS measurements are uploaded as the `browser-audit` artifact.
+Those measurements are lab observations, not field Core Web Vitals.
+
+`npm run audit:external` performs a read-only audit of external **article links**
+and writes `docs/external-link-audit.json`. Access blocks and timeouts remain
+unverified; only repeated 404/410 responses are classified as missing. Historical
+Wayback timestamps are retained as source provenance.
+
+Visitors can propose changes through the public, structured GitHub contribution
+form linked from `pages/submit-lore.html`. Submissions require a GitHub account
+and editorial review before publication.

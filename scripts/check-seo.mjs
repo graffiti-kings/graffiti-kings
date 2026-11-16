@@ -6,7 +6,7 @@ import path from 'node:path';
 const ROOT = process.cwd();
 const HOME = 'https://graffitikings.com/';
 const SITE_NAME = 'Graffiti Kings Wiki';
-const SOCIAL_IMAGE = HOME + 'images/GK_NIFTYHEADS_niftys.png';
+const socialCards = JSON.parse(fs.readFileSync(path.join(ROOT, 'images/social/manifest.json'), 'utf8'));
 const errors = [];
 const warnings = [];
 const pages = [];
@@ -59,6 +59,9 @@ for (const file of pages) {
   const html = text(file);
   const head = html.split(/<\/head>/i)[0];
   const url = urlFor(file);
+  const card = socialCards[file];
+  if (!card || !fs.existsSync(path.join(ROOT, card.image))) errors.push(file + ': missing page-specific share card');
+  const socialImage = HOME + (card?.image || 'missing.jpg');
   const metas = [...head.matchAll(/<meta\b[^>]*>/gi)].map((m) => attrs(m[0]));
   const titleTags = [...head.matchAll(/<title\b[^>]*>([\s\S]*?)<\/title>/gi)];
   if (titleTags.length !== 1) errors.push(file + ': expected exactly one page title');
@@ -84,14 +87,15 @@ for (const file of pages) {
   const expected = [
     ['og:type', 'website'], ['og:site_name', SITE_NAME], ['og:locale', 'en_GB'],
     ['og:url', url], ['og:title', title], ['og:description', description],
-    ['og:image', SOCIAL_IMAGE], ['og:image:alt', 'GKniftyHEADS and Graffiti Kings wiki artwork'],
+    ['og:image', socialImage], ['og:image:alt', card?.alt],
+    ['og:image:width', '1200'], ['og:image:height', '630'], ['og:image:type', 'image/jpeg'],
   ];
   for (const [key, value] of expected) {
     if (getMeta(metas, 'property', key, file) !== value) errors.push(file + ': incorrect ' + key);
   }
   for (const [key, value] of [
     ['twitter:card', 'summary_large_image'], ['twitter:title', title],
-    ['twitter:description', description], ['twitter:image', SOCIAL_IMAGE]
+    ['twitter:description', description], ['twitter:image', socialImage]
   ]) {
     if (getMeta(metas, 'name', key, file) !== value) errors.push(file + ': incorrect ' + key);
   }
@@ -108,11 +112,11 @@ for (const file of pages) {
   const crumbs = graph.filter((g) => g['@type'] === 'BreadcrumbList');
   const pageType = file === 'about.html' ? 'AboutPage' : file === 'characters/index.html' || file === 'factions/index.html' ? 'CollectionPage' : 'WebPage';
   if (!web || web.url !== url || web['@id'] !== url + '#webpage' || web['@type'] !== pageType || web.isPartOf?.['@id'] !== HOME + '#website' || web.description !== description || web.inLanguage !== 'en-GB') errors.push(file + ': invalid WebPage structured data');
+  const icon = [...head.matchAll(/<link\b[^>]*\brel=["']icon["'][^>]*>/gi)];
+  if (icon.length !== 1 || attrs(icon[0][0]).href !== '/favicon.png') errors.push(file + ': favicon must link to /favicon.png');
   if (file === 'index.html') {
     if (site.length !== 1 || site[0].name !== SITE_NAME || site[0].url !== HOME || site[0]['@id'] !== HOME + '#website') errors.push('homepage: invalid WebSite site-name data');
     if (crumbs.length !== 0) errors.push('homepage: unexpected breadcrumb');
-    const icon = [...head.matchAll(/<link\b[^>]*\brel=["']icon["'][^>]*>/gi)];
-    if (icon.length !== 1 || attrs(icon[0][0]).href !== '/favicon.png') errors.push('homepage: favicon must link to /favicon.png');
   } else {
     if (site.length) errors.push(file + ': WebSite schema only belongs on homepage');
     if (crumbs.length !== 1 || web?.breadcrumb?.['@id'] !== url + '#breadcrumb') errors.push(file + ': missing breadcrumb graph');
@@ -127,8 +131,10 @@ for (const file of pages) {
     imageCount++;
     const image = attrs(m[0]);
     if (image.alt === undefined) errors.push(file + ': image missing alt attribute');
+    if (!Number(image.width) || !Number(image.height)) errors.push(file + ': image needs explicit dimensions');
   }
 }
+if (new Set(Object.values(socialCards).map(card => card.image)).size !== pages.length) errors.push('Share cards must be unique for every public page');
 validatePNG('favicon.png', 48, true);
 validatePNG('images/GK_NIFTYHEADS_niftys.png', 200);
 

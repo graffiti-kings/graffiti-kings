@@ -33,7 +33,7 @@ test('legacy pages use distinct self canonicals and accessible page structure', 
     const canonical = 'https://graffitikings.com/' + file;
     assert.ok(html.includes('<link rel="canonical" href="' + canonical + '">'));
     assert.equal([...html.matchAll(/<h1\b/gi)].length, 1);
-    assert.ok(html.includes('<main class="content-wrapper">'));
+    assert.match(html, /<main class="content-wrapper"[^>]*id="main-content"/);
     assert.ok(html.includes('rel="noopener noreferrer"'));
     assert.ok(html.includes('<script type="application/ld+json">'));
     assert.ok(html.includes('../js/main.js'));

@@ -80,9 +80,24 @@ if (!files.has('robots.txt') || !read('robots.txt').includes(home + 'sitemap.xml
   errors.push('robots.txt must advertise the canonical sitemap');
 }
 
-const searchIndex = [...read('js/main.js').matchAll(/\burl:\s*'([^']+)'/g)].map((match) => match[1]);
+const searchIndex = JSON.parse(read('js/search-index.js').match(/window.GK_SEARCH_INDEX = ([\s\S]*);\s*$/)[1]).map(item => item.url);
 for (const file of searchIndex) {
   if (!files.has(file)) errors.push('search index missing target: ' + file);
+}
+for (const file of publicPages) {
+  if (searchIndex.filter(entry => entry === file).length !== 1) errors.push(file + ': must have exactly one generated search entry');
+  const html = read(file);
+  if (!html.includes('class="skip-link" href="#main-content"')) errors.push(file + ': missing skip link');
+  if (!/<main\b[^>]*id="main-content"[^>]*tabindex="-1"/.test(html)) errors.push(file + ': missing focusable main target');
+  if (!html.includes('for="header-query"')) errors.push(file + ': search needs an explicit label');
+  if (file !== 'index.html' && !html.includes('aria-label="Breadcrumb"')) errors.push(file + ': missing visible breadcrumbs');
+  for (const match of html.matchAll(/\bsrcset="([^"]+)"/g)) {
+    for (const candidate of match[1].split(',')) {
+      const src = candidate.trim().split(/\s+/)[0];
+      const target = new URL(src, home + file).pathname.slice(1);
+      if (!files.has(target)) errors.push(file + ': missing responsive image ' + src);
+    }
+  }
 }
 
 if (errors.length) {

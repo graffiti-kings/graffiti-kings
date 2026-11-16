@@ -107,197 +107,219 @@ const siteIndex = [
 ];
 
 function isNestedPage() {
-  const path = window.location.pathname;
-  return path.includes('/characters/') || path.includes('/factions/') || path.includes('/pages/');
+  return /\/(characters|factions|pages)\//.test(window.location.pathname);
 }
+function prefixPath(url) { return isNestedPage() ? '../' + url : url; }
 
-function prefixPath(url) {
-  return isNestedPage() ? '../' + url : url;
-}
-
-function buildCanonicalHeader() {
-  const header = document.querySelector('.site-header');
-  if (!header || header.dataset.gkHeaderBuilt === 'true') return;
-  header.dataset.gkHeaderBuilt = 'true';
-  header.innerHTML = `
-    <a href="${prefixPath('index.html')}" class="logo-link"><span class="site-title">GK WIKI</span></a>
-    <div class="search-container" style="position:relative;">
-      <input type="search" class="search-input" placeholder="Search wiki..." autocomplete="off">
-      <div class="search-results" style="display:none;"></div>
-    </div>
-    <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
-    <nav class="main-nav">
-      <ul class="nav-links">
-        <li><a href="${prefixPath('index.html')}">Home</a></li>
-        <li><a href="${prefixPath('about.html')}">About</a></li>
-        <li><a href="${prefixPath('history.html')}">History</a></li>
-        <li><a href="${prefixPath('pages/graffiti-kings-original-website-archive.html')}">Old Site Archive</a></li>
-        <li><a href="${prefixPath('factions/index.html')}">Factions</a></li>
-        <li><a href="${prefixPath('characters/index.html')}">Characters</a></li>
-        <li><a href="${prefixPath('pages/mechanics.html')}">Mechanics</a></li>
-        <li><a href="${prefixPath('pages/music.html')}">Music</a></li>
-        <li><a href="${prefixPath('pages/nft-collections.html')}">NFT Collections</a></li>
-      </ul>
-    </nav>`;
-}
-
-function bindHamburger() {
-  const hamburger = document.querySelector('.hamburger');
-  const siteHeader = document.querySelector('.site-header');
-  if (!hamburger || !siteHeader || hamburger.dataset.gkBound) return;
-  hamburger.dataset.gkBound = 'true';
-  hamburger.addEventListener('click', () => {
-    siteHeader.classList.toggle('nav-open');
-    hamburger.classList.toggle('active');
-    hamburger.setAttribute('aria-expanded', String(siteHeader.classList.contains('nav-open')));
+let indexPromise;
+function loadSearchIndex() {
+  if (window.GK_SEARCH_INDEX) return Promise.resolve(window.GK_SEARCH_INDEX);
+  if (indexPromise) return indexPromise;
+  indexPromise = new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    script.src = prefixPath('js/search-index.js');
+    script.onload = () => {
+      script.remove();
+      if (Array.isArray(window.GK_SEARCH_INDEX)) resolve(window.GK_SEARCH_INDEX);
+      else { indexPromise = null; reject(new Error('Search data unavailable')); }
+    };
+    script.onerror = () => { script.remove(); indexPromise = null; reject(new Error('Search data unavailable')); };
+    document.head.appendChild(script);
   });
+  return indexPromise;
+}
+
+function makeResult(item, fullPage = false) {
+  const link = document.createElement('a');
+  link.href = prefixPath(item.url);
+  link.className = fullPage ? 'search-page-link' : 'search-result-item';
+  const title = document.createElement(fullPage ? 'h2' : 'span');
+  title.className = 'search-result-title';
+  title.textContent = item.title;
+  const type = document.createElement('span');
+  type.className = 'search-result-type';
+  type.textContent = item.type;
+  link.append(title, type);
+  if (fullPage) {
+    const summary = document.createElement('p');
+    summary.textContent = item.summary;
+    link.append(summary);
+  }
+  return link;
 }
 
 function bindSearch() {
-  const input = document.querySelector('.search-input');
-  const results = document.querySelector('.search-results');
-  if (!input || !results || input.dataset.gkSearchBound) return;
-  input.dataset.gkSearchBound = 'true';
-  input.addEventListener('input', function () {
-    const query = this.value.toLowerCase().trim();
-    if (query.length < 2) {
-      results.style.display = 'none';
-      results.innerHTML = '';
-      return;
+  const form = document.querySelector('.search-container');
+  const input = form?.querySelector('.search-input');
+  const results = form?.querySelector('.search-results');
+  const status = form?.querySelector('.search-status');
+  if (!input || !results) return;
+  let version = 0;
+  function close() {
+    version++;
+    results.hidden = true;
+  }
+  async function update() {
+    const request = ++version;
+    const query = input.value.trim();
+    if (window.GKSearch.normalize(query).length < 2) { close(); status.textContent = ''; return; }
+    status.textContent = 'Searching the wiki…';
+    try {
+      const index = await loadSearchIndex();
+      if (request !== version) return;
+      const matches = window.GKSearch.search(index, query);
+      results.replaceChildren();
+      const count = document.createElement('p');
+      count.className = 'search-result-count';
+      count.textContent = matches.length ? `${matches.length} matching ${matches.length === 1 ? 'page' : 'pages'}` : 'No matching pages. Try a name, topic or different spelling.';
+      results.append(count);
+      matches.slice(0, 6).forEach(item => results.append(makeResult(item)));
+      if (matches.length) {
+        const all = document.createElement('a');
+        all.className = 'search-all';
+        all.href = prefixPath('search.html') + '?q=' + encodeURIComponent(query);
+        all.textContent = `View all ${matches.length} results →`;
+        results.append(all);
+      }
+      status.textContent = count.textContent;
+      results.hidden = false;
+    } catch {
+      if (request !== version) return;
+      results.replaceChildren();
+      const message = document.createElement('p');
+      message.className = 'search-result-count';
+      message.textContent = 'Search could not load. Check your connection and try again.';
+      results.append(message);
+      status.textContent = message.textContent;
+      results.hidden = false;
     }
-    const matches = siteIndex.filter((item) => item.title.toLowerCase().includes(query));
-    if (!matches.length) {
-      results.style.display = 'none';
-      results.innerHTML = '';
-      return;
+  }
+  input.addEventListener('input', update);
+  input.addEventListener('focus', () => {
+    // Lazy-load 103+ article texts only when the visitor uses search.
+    loadSearchIndex().catch(() => {});
+    if (input.value.trim().length >= 2) update();
+  });
+  input.addEventListener('keydown', event => {
+    if (event.key === 'ArrowDown' && !results.hidden) {
+      const first = results.querySelector('a');
+      if (first) { event.preventDefault(); first.focus(); }
     }
-    results.innerHTML = matches.slice(0, 12).map((item) => `
-      <a href="${prefixPath(item.url)}" class="search-result-item">
-        <div class="search-result-title">${item.title}</div>
-        <div class="search-result-type">${item.type}</div>
-      </a>`).join('');
-    results.style.display = 'block';
+    if (event.key === 'Escape') close();
   });
-  document.addEventListener('click', (event) => {
-    if (!event.target.closest('.search-container')) results.style.display = 'none';
+  results.addEventListener('keydown', event => {
+    const links = [...results.querySelectorAll('a')];
+    const position = links.indexOf(document.activeElement);
+    if (event.key === 'Escape') { event.preventDefault(); input.focus(); close(); }
+    if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+      event.preventDefault();
+      const next = position + (event.key === 'ArrowDown' ? 1 : -1);
+      if (next < 0) input.focus();
+      else links[Math.min(next, links.length - 1)]?.focus();
+    }
   });
+  document.addEventListener('click', event => { if (!form.contains(event.target)) close(); });
+  form.addEventListener('focusout', event => { if (!form.contains(event.relatedTarget)) close(); });
 }
 
-function applyWikiLayoutFixes() {
-  if (!document.getElementById('gk-layout-fix-style')) {
-    const style = document.createElement('style');
-    style.id = 'gk-layout-fix-style';
-    style.textContent = `
-      body .site-header { gap: 1.25rem; }
-      body .search-container { flex: 0 0 auto; }
-      body .sidebar {
-        height: auto !important;
-        max-height: calc(100vh - 112px) !important;
-        overflow-y: auto !important;
-        overflow-x: hidden !important;
-        scrollbar-width: thin !important;
-        scrollbar-color: var(--neon-gold) #111 !important;
-      }
-      body .sidebar::-webkit-scrollbar { width: 8px !important; }
-      body .sidebar::-webkit-scrollbar-track { background: #111 !important; border-radius: 8px !important; }
-      body .sidebar::-webkit-scrollbar-thumb { background: var(--neon-gold) !important; border-radius: 8px !important; }
-      body .sidebar-section { margin-bottom: 1.15rem !important; }
-      body .sidebar-title { margin-bottom: 0.65rem !important; padding-bottom: 0.4rem !important; }
-      body .sidebar-links a {
-        display: block !important;
-        line-height: 1.18 !important;
-        padding-top: 0.28rem !important;
-        padding-bottom: 0.28rem !important;
-        padding-left: 0.65rem !important;
-        font-size: 0.88rem !important;
-        word-break: normal !important;
-        overflow-wrap: anywhere !important;
-      }
-      @media (max-width: 900px) {
-        body .site-header { flex-wrap: wrap; }
-        body .search-container { order: 3; width: 100%; }
-        body .search-input { width: 100%; }
-        body .sidebar {
-          position: relative !important;
-          top: auto !important;
-          max-height: none !important;
-          overflow: visible !important;
-        }
-      }
-    `;
-    document.head.appendChild(style);
+async function initSearchPage() {
+  const form = document.getElementById('wiki-search-form');
+  if (!form) return;
+  const input = form.querySelector('input');
+  const status = document.getElementById('wiki-search-status');
+  const list = document.getElementById('wiki-search-results');
+  const query = new URLSearchParams(window.location.search).get('q') || '';
+  input.value = query;
+  try {
+    const index = await loadSearchIndex();
+    const matches = query.trim() ? window.GKSearch.search(index, query) : index;
+    status.textContent = query.trim() ? `${matches.length} ${matches.length === 1 ? 'result' : 'results'} for “${query}”` : `Browse all ${index.length} pages, or search by name or topic.`;
+    if (query.trim() && window.GKSearch.normalize(query).length < 2) status.textContent = 'Enter at least two letters or numbers to search.';
+    else if (!matches.length) status.textContent += '. Try a different spelling or a broader topic.';
+    list.replaceChildren();
+    matches.forEach(item => {
+      const row = document.createElement('li');
+      row.append(makeResult(item, true));
+      list.append(row);
+    });
+  } catch {
+    status.textContent = 'Search could not load. Check your connection, then reload this page. You can also browse Characters or Factions from the navigation.';
   }
-  const isDesktop = window.matchMedia('(min-width: 901px)').matches;
-  document.querySelectorAll('.sidebar').forEach((sidebar) => {
-    if (isDesktop) {
-      sidebar.style.setProperty('height', 'auto', 'important');
-      sidebar.style.setProperty('max-height', 'calc(100vh - 112px)', 'important');
-      sidebar.style.setProperty('overflow-y', 'auto', 'important');
-      sidebar.style.setProperty('overflow-x', 'hidden', 'important');
-      sidebar.style.setProperty('position', 'sticky', 'important');
-      sidebar.style.setProperty('top', '80px', 'important');
-    } else {
-      ['height', 'max-height', 'overflow-y', 'overflow-x', 'position', 'top'].forEach((property) => sidebar.style.removeProperty(property));
+}
+
+function initNavigation() {
+  document.documentElement.classList.add('js-enabled');
+  const header = document.querySelector('.site-header');
+  const button = header?.querySelector('.hamburger');
+  if (!header || !button) return;
+  const close = () => {
+    header.classList.remove('nav-open');
+    button.setAttribute('aria-expanded', 'false');
+  };
+  button.addEventListener('click', () => {
+    const open = header.classList.toggle('nav-open');
+    button.setAttribute('aria-expanded', String(open));
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && header.classList.contains('nav-open')) {
+      close(); button.focus();
     }
   });
-  document.querySelectorAll('.sidebar-links a').forEach((link) => {
-    if (!link.dataset.gkCleaned) {
-      const cleaned = link.textContent.replace(/^[^\p{L}\p{N}]+/u, '').replace(/\s+/g, ' ').trim();
-      if (cleaned) link.textContent = cleaned;
-      link.dataset.gkCleaned = 'true';
+  document.addEventListener('click', event => { if (!header.contains(event.target)) close(); });
+  const updateHeight = () => document.documentElement.style.setProperty('--header-height', header.offsetHeight + 'px');
+  if (window.ResizeObserver) new ResizeObserver(updateHeight).observe(header);
+  updateHeight();
+  window.matchMedia('(min-width: 1201px)').addEventListener('change', close);
+}
+
+function initMatrix() {
+  const canvas = document.getElementById('matrixCanvas');
+  const ctx = canvas?.getContext('2d');
+  if (!ctx) return;
+  const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const chars = Array.from('ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$₿⚡🎨');
+  const fontSize = 14;
+  let drops = [];
+  let frame = 0;
+  let previous = 0;
+  function resize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    drops = Array(Math.ceil(canvas.width / fontSize)).fill(1);
+  }
+  function draw(time) {
+    if (document.hidden || motion.matches) { frame = 0; return; }
+    if (time - previous >= 50) {
+      previous = time;
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = '#FFD700';
+      ctx.font = fontSize + 'px monospace';
+      drops.forEach((y, i) => {
+        ctx.fillText(chars[Math.floor(Math.random() * chars.length)], i * fontSize, y * fontSize);
+        if (y * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
+        drops[i]++;
+      });
     }
-  });
+    frame = window.requestAnimationFrame(draw);
+  }
+  function sync() {
+    window.cancelAnimationFrame(frame);
+    frame = 0;
+    if (motion.matches) ctx.clearRect(0, 0, canvas.width, canvas.height);
+    if (!document.hidden && !motion.matches) frame = window.requestAnimationFrame(draw);
+  }
+  resize(); sync();
+  window.addEventListener('resize', resize);
+  document.addEventListener('visibilitychange', sync);
+  motion.addEventListener('change', sync);
 }
 
 function initGKWiki() {
-  buildCanonicalHeader();
-  bindHamburger();
+  initNavigation();
   bindSearch();
-  applyWikiLayoutFixes();
+  initSearchPage();
+  initMatrix();
 }
-
-document.addEventListener('DOMContentLoaded', initGKWiki);
-window.addEventListener('load', initGKWiki);
-window.addEventListener('resize', applyWikiLayoutFixes);
-setTimeout(initGKWiki, 250);
-setTimeout(initGKWiki, 1000);
-
-// Matrix Rain Animation
-const canvas = document.getElementById('matrixCanvas');
-if (canvas) {
-  const ctx = canvas.getContext('2d');
-  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$₿⚡🎨';
-  const fontSize = 14;
-  const drops = [];
-  function resizeMatrix() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    const previousColumns = drops.length;
-    drops.length = Math.ceil(canvas.width / fontSize);
-    for (let i = previousColumns; i < drops.length; i++) drops[i] = 1;
-  }
-  resizeMatrix();
-  function drawMatrix() {
-    ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = '#FFD700';
-    ctx.font = fontSize + 'px monospace';
-    drops.forEach((y, i) => {
-      const char = chars[Math.floor(Math.random() * chars.length)];
-      ctx.fillText(char, i * fontSize, y * fontSize);
-      if (y * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
-      drops[i]++;
-    });
-  }
-  setInterval(drawMatrix, 50);
-  window.addEventListener('resize', resizeMatrix);
-}
-
-// Smooth scroll for TOC links
-document.querySelectorAll('.toc a[href^="#"]').forEach((link) => {
-  link.addEventListener('click', function (event) {
-    event.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-});
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initGKWiki, { once: true });
+else initGKWiki();

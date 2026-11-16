@@ -1,0 +1,13 @@
+{
+  "name": "graffiti-kings-wiki",
+  "private": true,
+  "scripts": {
+    "check": "node scripts/build-search-index.mjs --check && node scripts/check-site.mjs && node scripts/check-seo.mjs && node --test tests/*.test.mjs",
+    "test:browser": "node scripts/check-browser.mjs",
+    "search:build": "node scripts/build-search-index.mjs",
+    "audit:external": "node scripts/check-external-links.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}
