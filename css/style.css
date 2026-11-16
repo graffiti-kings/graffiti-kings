@@ -947,13 +947,8 @@ section[id], .legacy-anchor { scroll-margin-top: calc(var(--header-height) + 1re
   .matrix-canvas { display: none; }
 }
 
-/* Native media controls remain usable even with JavaScript disabled. */
-.radio-panel { margin: 1.25rem 0 2rem; padding: 1.2rem; border: 1px solid #55512b; border-radius: 12px; background: linear-gradient(120deg, #19180e, #101414); }
-.radio-heading { display: flex; flex-wrap: wrap; align-items: baseline; gap: .4rem 1rem; margin-bottom: .85rem; }
-.radio-heading strong { font: 600 1.3rem 'Oswald', sans-serif; color: var(--neon-gold); }
-.radio-heading span { color: #ccc; }
-.gk-radio { display: block; width: 100%; max-width: 560px; min-width: 0; height: 54px; color-scheme: dark; }
-.radio-panel .radio-status { margin: .7rem 0; font-size: .95rem; }
-.radio-links { display: flex; align-items: center; flex-wrap: wrap; gap: .6rem 1.5rem; }
-.radio-links a { color: var(--neon-cyan); font-size: .95rem; }
-.radio-retry { font-size: 1rem; min-height: 44px; }
+/* One persistent radio toggle, shared across every page. */
+.nav-radio { display: inline-flex; align-items: center; gap: .5rem; min-height: 44px; padding: .35rem .75rem; border: 1px solid #8f7a20; border-radius: 999px; color: var(--neon-gold); background: #151407; font: inherit; font-family: 'Oswald', sans-serif; cursor: pointer; white-space: nowrap; }
+.radio-state { font: 600 .7rem 'Rajdhani', sans-serif; }
+.nav-radio[aria-pressed="true"] { color: #b7ffb3; border-color: #88de80; background: #102510; }
+.radio-notice { position: fixed; bottom: 1rem; left: 50%; transform: translateX(-50%); z-index: 1000; max-width: calc(100vw - 2rem); padding: .8rem 1rem; background: #111; border: 1px solid var(--neon-gold); border-radius: 8px; color: #fff; }
