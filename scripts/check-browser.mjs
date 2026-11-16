@@ -151,6 +151,9 @@ try {
   await page.goBack();
   await page.waitForFunction(() => document.body.classList.contains('page-about-story'));
   assert.ok(Math.abs(await page.evaluate(() => scrollY) - readingPosition) < 5, 'Back must restore the reading position');
+  await page.getByRole('link', { name: 'Skip to content' }).focus();
+  await page.keyboard.press('Enter');
+  assert.equal(await page.evaluate(() => document.activeElement.id), 'main-content');
   const background = await context.newPage();
   await background.goto(origin + '/history.html');
   assert.equal(await page.evaluate(() => !document.getElementById('gk-radio').paused), true);

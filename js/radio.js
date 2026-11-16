@@ -100,7 +100,9 @@
       positions.set(currentKey, [scrollX, scrollY]);
       currentKey = 'radio-' + Date.now() + '-' + (++keyNumber);
       history.pushState({ gkRadioKey: currentKey }, '', url);
-      document.getElementById(decodeURIComponent(url.hash.slice(1)))?.scrollIntoView();
+      const target = document.getElementById(decodeURIComponent(url.hash.slice(1)));
+      target?.scrollIntoView();
+      if (link.classList.contains('skip-link')) target?.focus({ preventScroll: true });
       positions.set(currentKey, [scrollX, scrollY]);
       event.preventDefault(); return;
     }
