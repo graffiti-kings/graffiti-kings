@@ -148,6 +148,10 @@ function makeResult(item, fullPage = false) {
   return link;
 }
 
+let pageEvents;
+let headerObserver;
+let matrixStarted = false;
+
 function bindSearch() {
   const form = document.querySelector('.search-container');
   const input = form?.querySelector('.search-input');
@@ -218,7 +222,7 @@ function bindSearch() {
       else links[Math.min(next, links.length - 1)]?.focus();
     }
   });
-  document.addEventListener('click', event => { if (!form.contains(event.target)) close(); });
+  document.addEventListener('click', event => { if (!form.contains(event.target)) close(); }, { signal: pageEvents.signal });
   form.addEventListener('focusout', event => { if (!form.contains(event.relatedTarget)) close(); });
 }
 
@@ -264,18 +268,19 @@ function initNavigation() {
     if (event.key === 'Escape' && header.classList.contains('nav-open')) {
       close(); button.focus();
     }
-  });
-  document.addEventListener('click', event => { if (!header.contains(event.target)) close(); });
+  }, { signal: pageEvents.signal });
+  document.addEventListener('click', event => { if (!header.contains(event.target)) close(); }, { signal: pageEvents.signal });
   const updateHeight = () => document.documentElement.style.setProperty('--header-height', header.offsetHeight + 'px');
-  if (window.ResizeObserver) new ResizeObserver(updateHeight).observe(header);
+  if (window.ResizeObserver) { headerObserver = new ResizeObserver(updateHeight); headerObserver.observe(header); }
   updateHeight();
-  window.matchMedia('(min-width: 1201px)').addEventListener('change', close);
+  window.matchMedia('(min-width: 1201px)').addEventListener('change', close, { signal: pageEvents.signal });
 }
 
 function initMatrix() {
   const canvas = document.getElementById('matrixCanvas');
   const ctx = canvas?.getContext('2d');
-  if (!ctx) return;
+  if (!ctx || matrixStarted) return;
+  matrixStarted = true;
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const chars = Array.from('ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$₿⚡🎨');
   const fontSize = 14;
@@ -316,6 +321,9 @@ function initMatrix() {
 }
 
 function initGKWiki() {
+  pageEvents?.abort();
+  headerObserver?.disconnect();
+  pageEvents = new AbortController();
   initNavigation();
   bindSearch();
   initSearchPage();
