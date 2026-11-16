@@ -11,6 +11,12 @@ fs.mkdirSync(output, { recursive: true });
 const mime = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.png': 'image/png', '.jpg': 'image/jpeg', '.avif': 'image/avif', '.webp': 'image/webp', '.json': 'application/json', '.xml': 'application/xml' };
 const server = createServer((req, res) => {
   const url = new URL(req.url, 'http://localhost');
+  // Exercise the actual template at its intended depth without adding public pages.
+  if (/^\/(pages|characters|factions)\/template-preview\.html$/.test(url.pathname)) {
+    res.writeHead(200, { 'Content-Type': 'text/html' });
+    res.end(fs.readFileSync(path.join(root, '_article-template.html')));
+    return;
+  }
   let file = path.resolve(root, '.' + decodeURIComponent(url.pathname));
   if (!file.startsWith(root + path.sep) && file !== root) { res.writeHead(403); res.end(); return; }
   if (fs.existsSync(file) && fs.statSync(file).isDirectory()) file = path.join(file, 'index.html');
@@ -86,6 +92,17 @@ try {
   assert.equal(await page.evaluate(() => document.activeElement.id), 'main-content');
   await page.goto(origin + '/pages/submit-lore.html');
   assert.match(await page.getByRole('link', { name: 'Open the contribution form on GitHub' }).getAttribute('href'), /template=lore-contribution.yml/);
+  for (const directory of ['pages', 'characters', 'factions']) {
+    await page.goto(`${origin}/${directory}/template-preview.html`);
+    const templateSearch = page.getByRole('searchbox', { name: 'Search the wiki', exact: true });
+    await templateSearch.fill('SER');
+    await page.locator('#header-results .search-result-item').first().waitFor();
+    assert.ok((await page.locator('#header-results').innerText()).includes('Darren'));
+    assert.equal(await page.locator('.logo-link').getAttribute('href'), '../index.html');
+    await templateSearch.press('Enter');
+    await page.waitForURL(origin + '/search.html?q=SER');
+    await page.locator('#wiki-search-results li').first().waitFor();
+  }
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.goto(origin + '/');
   assert.equal(await page.locator('#matrixCanvas').isVisible(), false);
