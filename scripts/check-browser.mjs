@@ -128,7 +128,7 @@ try {
     failRadio = true;
     const before = radioRequests;
     await page.goto(origin + pathname, { waitUntil: 'networkidle' });
-    assert.ok((await page.getByRole('link', { name: 'Radio', exact: true }).getAttribute('href')).endsWith('pages/music.html#live-radio'));
+    assert.ok((await page.getByRole('link', { name: 'Radio', exact: true, includeHidden: true }).getAttribute('href')).endsWith('pages/music.html#live-radio'));
     assert.equal(await page.locator('.skip-link').evaluate(element => element.getBoundingClientRect().bottom <= 0), true, 'Skip link stays offscreen until keyboard focus');
     if (pathname !== '/') assert.equal(await page.locator('.breadcrumbs ol').evaluate(element => getComputedStyle(element).display), 'flex');
     const audio = page.locator('.gk-radio');
